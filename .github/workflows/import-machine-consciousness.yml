@@ -8,15 +8,19 @@
 name: Import canonical Machine Consciousness
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - '.github/workflows/import-machine-consciousness.yml'
 permissions:
   contents: write
 jobs:
   import:
     runs-on: ubuntu-latest
     steps:
+      - name: Verify disclosure authorization
+        env:
+          SOURCE_TOKEN: ${{ secrets.LEEWAY_SOURCE_READ_TOKEN }}
+          PUBLIC_APPROVED: ${{ vars.LEEWAY_APPROVE_PUBLIC_SOURCE_IMPORT }}
+        run: |
+          test -n "$SOURCE_TOKEN"
+          test "$PUBLIC_APPROVED" = true
       - name: Checkout destination
         uses: actions/checkout@v4
         with:
@@ -25,6 +29,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: 4citeB4U/Leeway-Runtime-Fabric
+          token: ${{ secrets.LEEWAY_SOURCE_READ_TOKEN }}
           ref: a3b7b9acfdfeface485322872734eb929db41498
           path: source
           persist-credentials: false
