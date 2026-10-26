@@ -1,0 +1,54 @@
+# LEEWAY HEADER — DO NOT REMOVE
+# REGION: LEEWAY.MACHINE_CONSCIOUSNESS; TAG: SOURCE_MIGRATION_SNAPSHOT_20261026
+# WHO: LeeWay Industries; WHAT: Import exact reviewed source tree
+# WHY: Independent repository embodiment with source SHA provenance
+# WHERE: GitHub Actions; WHEN: 2026-10-26
+# HOW: pinned checkout, byte-preserving copy, manifest, no production start
+# AUTHORITY: creator-approved; LICENSE: per-source
+name: Import canonical Machine Consciousness
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/import-machine-consciousness.yml'
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout destination
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Checkout pinned canonical source
+        uses: actions/checkout@v4
+        with:
+          repository: 4citeB4U/Leeway-Runtime-Fabric
+          ref: a3b7b9acfdfeface485322872734eb929db41498
+          path: source
+          persist-credentials: false
+      - name: Import only Machine Consciousness source and verify byte identity
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f source/machine-consciousness/carrier-server.mjs
+          test ! -e machine-consciousness/carrier-server.mjs || { echo "Source already imported; refusing overwrite"; exit 1; }
+          mkdir -p machine-consciousness provenance
+          cp -a source/machine-consciousness/. machine-consciousness/
+          # Never export a nested source checkout or user runtime state.
+          rm -rf source
+          find machine-consciousness -type f -print0 | sort -z | xargs -0 sha256sum > provenance/machine-consciousness-source-sha256.txt
+          test "$(find machine-consciousness -type f | wc -l)" -ge 79
+          sha256sum --check provenance/machine-consciousness-source-sha256.txt
+          printf 'source_repo=4citeB4U/Leeway-Runtime-Fabric\nsource_commit=a3b7b9acfdfeface485322872734eb929db41498\nsource_prefix=machine-consciousness/\nqualification=SOURCE_SNAPSHOT_ONLY\n' > provenance/source-snapshot.txt
+      - name: Commit byte-preserving source snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "leeway-source-migration[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add machine-consciousness provenance
+          git diff --cached --quiet && exit 0
+          git commit -m "Import canonical Machine Consciousness source snapshot (pinned Runtime Fabric SHA)"
+          git push
