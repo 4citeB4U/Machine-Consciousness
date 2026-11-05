@@ -71,6 +71,12 @@ node --test training/tests/foundation.test.mjs
 
 The canonical Machine Consciousness runtime stays deterministic and non-LLM. Provider outputs and local weights are evidence sources until a separate LeeWay admission record promotes a native capability.
 
+The current Gemini training tranche also contributes a bounded Agent Lee voice policy:
+continuous conversation, concurrent governed work, interruption-versus-backchannel
+handling, and evidence-bound speech. Its physical voice equations live in the Formula
+repository's experimental shadow layer at commit `f4b9e4c`; they are measurements only,
+not a new authority or active voice controller.
+
 ## Formula advisory execution
 
 The Formula is a federated mathematical provider, not a copied kernel. The advisory runner calls the verified canonical Formula endpoint with a pinned MC-G8 cognition window. It records the actual input/result hashes and explicitly leaves action policy, Veritas, Receipt Authority, and Learning Ledger admission untouched.

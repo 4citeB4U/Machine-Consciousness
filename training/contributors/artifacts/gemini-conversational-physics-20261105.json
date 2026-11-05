@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0.0",
+  "artifactType": "LEEWAY_CONTRIBUTOR_CAPABILITY_CAPSULE",
+  "artifactId": "gemini-conversational-physics-20261105",
+  "contributorId": "online-gemini",
+  "status": "OBSERVED_TRANSFER_CANDIDATE",
+  "authority": "Evidence input only; not Formula, Runtime, Veritas, Device Bridge, or Learning Ledger authority.",
+  "sourceEvidence": {
+    "kind": "user-supplied-conversation-export",
+    "reference": "C:/Users/Leona/.codex/attachments/3b454fea-92fa-466d-a3ee-1c1d69776828/Pasted text.txt",
+    "sha256": "caa6c7e64a71effccca548f68aabfbae0e43622bf2f56a1fbacd27efc7cfffbf",
+    "observedAt": "2026-11-04T22:15:07-06:00"
+  },
+  "capabilities": [
+    {
+      "capabilityId": "gemini-concurrent-governed-presence",
+      "kind": "method",
+      "statement": "Treat speech, interaction, cognition, work, and continuity as coordinated time-indexed loops under one Agent Lee identity.",
+      "nativeUse": "Shapes the Agent Lee conversational presence contract without creating a second executive."
+    },
+    {
+      "capabilityId": "gemini-interruption-epoch-policy",
+      "kind": "constraint",
+      "statement": "Distinguish a backchannel from a floor-taking interruption; a true interruption stops stale playback and updates active context.",
+      "nativeUse": "Feeds the existing epoch-based interruption and stale-output rejection path."
+    },
+    {
+      "capabilityId": "gemini-evidence-bound-speech",
+      "kind": "constraint",
+      "statement": "Agent Lee may announce admitted work, but may not speak an unverified completion or result merely because a fast path predicted it.",
+      "nativeUse": "Binds spoken output to execution evidence and receipt state."
+    },
+    {
+      "capabilityId": "gemini-voice-physics-measurement",
+      "kind": "domain-knowledge",
+      "statement": "Use acoustic, electrical, channel, and thermal equations as calibrated physical measurements before any Formula mapping.",
+      "nativeUse": "Implemented as an experimental Formula shadow layer at commit f4b9e4c; the v1 kernel remains unchanged."
+    }
+  ],
+  "evaluation": {
+    "nativeArtifactCreated": true,
+    "formulaShadowCommit": "f4b9e4c315fe2a370c9bf7309b77de643cccaef1",
+    "formulaShadowTests": "4/4 PASS",
+    "canonicalGoldenVector": "PASS",
+    "activeVoiceRuntime": "NOT_QUALIFIED",
+    "veritas": "NOT_RUN",
+    "learningLedger": "NOT_UPDATED"
+  },
+  "claimBoundary": "This capsule contains bounded ideas observable in one user-supplied Gemini conversation export. It does not extract Gemini weights, hidden training, private reasoning, or provider internals, and it does not claim the referenced external voice projects are production-qualified for LeeWay."
+}

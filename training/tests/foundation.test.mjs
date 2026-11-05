@@ -88,7 +88,7 @@ test('four contributor lanes are registered without falsely claiming four captur
   assert.equal(states['online-chatgpt'], 'PENDING_CAPTURE');
   assert.equal(states['online-gemini'], 'OBSERVED');
   assert.equal(result.packets.find(packet => packet.contributorId === 'local-antigravity').contributionCount, 3);
-  assert.equal(result.packets.find(packet => packet.contributorId === 'online-gemini').contributionCount, 3);
+  assert.equal(result.packets.find(packet => packet.contributorId === 'online-gemini').contributionCount, 7);
   assert.equal(result.learningLedger, 'NOT_UPDATED');
 });
 

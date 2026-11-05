@@ -5,7 +5,7 @@
     "displayName": "Separate online Gemini session",
     "channel": "online",
     "registeredAt": "2026-11-05T03:30:00Z",
-    "observedAt": "2026-11-05T02:26:09Z"
+    "observedAt": "2026-11-05T04:15:07Z"
   },
   "capabilities": [
     {
@@ -22,6 +22,21 @@
       "name": "governed conversation loop",
       "description": "Keep transcript admission, action dispatch, response output, and receipts distinct.",
       "evidenceRefs": ["training/contributors/artifacts/gemini-native-methods.json"]
+    },
+    {
+      "name": "concurrent governed conversational presence",
+      "description": "Keep speech, cognition, work, and continuity coordinated while preserving one Agent Lee identity.",
+      "evidenceRefs": ["training/contributors/artifacts/gemini-conversational-physics-20261105.json", "commit:f4b9e4c"]
+    },
+    {
+      "name": "evidence-bound interruption and speech",
+      "description": "Distinguish backchannels from interruptions and prevent speculative speech from claiming unverified results.",
+      "evidenceRefs": ["training/contributors/artifacts/gemini-conversational-physics-20261105.json"]
+    },
+    {
+      "name": "voice-path physical measurement",
+      "description": "Measure acoustic, electrical, channel, and thermal limits as SI quantities before Formula mapping.",
+      "evidenceRefs": ["training/contributors/artifacts/gemini-conversational-physics-20261105.json", "commit:f4b9e4c"]
     }
   ],
   "contributions": [
@@ -44,22 +59,48 @@
       "statement": "Keep transcript admission, action dispatch, response output, and receipt evidence as separate boundaries.",
       "nativeArtifactRefs": ["training/contributors/artifacts/gemini-native-methods.json"],
       "acceptanceTestRefs": ["training/tests/foundation.test.mjs"]
+    },
+    {
+      "contributionId": "gemini-concurrent-governed-presence",
+      "kind": "method",
+      "statement": "Speech, cognition, work, and continuity are coordinated time-indexed loops under one Agent Lee identity.",
+      "nativeArtifactRefs": ["training/contributors/artifacts/gemini-conversational-physics-20261105.json"],
+      "acceptanceTestRefs": ["training/tests/foundation.test.mjs"]
+    },
+    {
+      "contributionId": "gemini-interruption-epoch-policy",
+      "kind": "constraint",
+      "statement": "Backchannels and floor-taking interruptions are distinct; a true interruption invalidates stale playback and updates active context.",
+      "nativeArtifactRefs": ["training/contributors/artifacts/gemini-conversational-physics-20261105.json"]
+    },
+    {
+      "contributionId": "gemini-evidence-bound-speech",
+      "kind": "constraint",
+      "statement": "Spoken output cannot claim a result is complete or verified before execution evidence exists.",
+      "nativeArtifactRefs": ["training/contributors/artifacts/gemini-conversational-physics-20261105.json"]
+    },
+    {
+      "contributionId": "gemini-voice-physics-measurement",
+      "kind": "domain-knowledge",
+      "statement": "Physical voice equations are measurement inputs and require calibration before they can influence a Formula mapping.",
+      "nativeArtifactRefs": ["training/contributors/artifacts/gemini-conversational-physics-20261105.json", "commit:f4b9e4c"]
     }
   ],
   "limits": [
-    "Only two user-supplied Gemini conversation exports are captured; this is not the entirety of Gemini's knowledge or training.",
+    "Three user-supplied Gemini conversation exports are captured; this is not the entirety of Gemini's knowledge or training.",
     "The exports' unsupported verified-status claims were not promoted without local proof.",
     "This packet does not extract Gemini weights, hidden training, private reasoning, or provider internals.",
-    "No phone call or native-device action was executed from this capsule."
+    "No phone call or native-device action was executed from this capsule.",
+    "The voice-physics Formula layer is experimental shadow mathematics; it is not an active voice policy or production adapter."
   ],
   "provenance": {
     "sourceType": "observed-response",
     "rightsReviewed": false,
-    "notes": "User-supplied conversation exports were hashed and summarized into a bounded capability capsule; provider terms and commercial rights remain unreviewed."
+    "notes": "User-supplied conversation exports were hashed and summarized into bounded capability capsules; provider terms and commercial rights remain unreviewed."
   },
   "admission": {
     "status": "OBSERVED",
     "deterministicNativeArtifactCreated": true,
-    "reason": "Observed response exports captured and converted to a non-authorizing native capability capsule; evaluation and rights gates remain pending."
+    "reason": "Observed response exports captured and converted to non-authorizing native capability capsules; Formula shadow tests pass, while evaluation and rights gates remain pending."
   }
 }

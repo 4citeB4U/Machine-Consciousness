@@ -2,7 +2,7 @@
   "schemaVersion": "1.0.0",
   "artifactType": "LEEWAY_CONTRIBUTOR_INTAKE_REGISTRY",
   "status": "CAPTURE_STATE_RECORDED",
-  "generatedAt": "2026-11-05T04:08:46.947Z",
+  "generatedAt": "2026-11-05T04:19:30.704Z",
   "authorityBoundary": "Contributor packets are evidence inputs; this registry does not grant Formula, Veritas, execution, or Learning Ledger authority.",
   "expectedContributors": [
     "local-antigravity",
@@ -49,12 +49,12 @@
       "file": "online-gemini.packet.json",
       "contributorId": "online-gemini",
       "captureStatus": "OBSERVED",
-      "contributionCount": 3,
-      "capabilityCount": 3,
+      "contributionCount": 7,
+      "capabilityCount": 6,
       "nativeArtifactCreated": true,
       "eligibleForEvaluation": false,
       "errors": [],
-      "packetSha256": "9188e7de50a9cd090e235fb7d6a9a86817332cd0fa5e95a51f5aeb157d59e026"
+      "packetSha256": "1ba1d3ddc676b134451c320dee8486a97a182541ec511675010552e0e3ceb61f"
     }
   ],
   "learningLedger": "NOT_UPDATED"
