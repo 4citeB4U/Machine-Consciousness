@@ -89,3 +89,6 @@ node training/scripts/run-formula-advisory.mjs `
 
 This closes the Formula execution evidence gap, not the MC-G9 causal gap. The next mathematical gate remains a matched `NO_FORMULA` versus `FORMULA_ADVISORY` evaluation on held-out cases, followed only later by a separately authorized single-variable policy intervention.
 
+## Runtime constitution
+
+The Machine Consciousness core is deterministic and non-LLM. Its runtime constitution is [`contracts/leeway-runtime-constitution.v1.json`](contracts/leeway-runtime-constitution.v1.json): Agent Lee identity and persona delivery are fail-closed; the LeeWay Engineering Loop is mandatory; inference may enter only through LeeWay Edge GPU; and Continuum is the only durable storage/database authority. LeeWay VRAM/LDWMD may provide an ephemeral working set for measured read/write acceleration, but its telemetry and qualified outcomes must return to Continuum and host-RAM/accounting states are never reported as physical GPU VRAM.

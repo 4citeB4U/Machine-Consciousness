@@ -18,6 +18,21 @@ test('repository blocks model weights from Git', () => {
   assert.match(gitignore, /training\/runs/);
 });
 
+test('runtime constitution binds identity, engineering loop, inference and storage authority', () => {
+  const constitution = JSON.parse(readFileSync(path.join(repoRoot, 'training', 'contracts', 'leeway-runtime-constitution.v1.json'), 'utf8'));
+  assert.equal(constitution.identity, 'Agent Lee');
+  assert.deepEqual(constitution.engineeringLoop, [
+    'INVESTIGATE', 'DIAGNOSE', 'PLAN', 'IMPLEMENT', 'TEST', 'VALIDATE',
+    'REPAIR', 'RETEST', 'VERIFY', 'EVIDENCE', 'CHECKPOINT', 'CONTINUE'
+  ]);
+  assert.equal(constitution.personaGate.failClosed, true);
+  assert.equal(constitution.personaGate.requiredPrefix, 'Creator, Agent Lee');
+  assert.equal(constitution.inferenceAuthority.mode, 'LEEWAY_EDGE_GPU_ONLY');
+  assert.equal(constitution.storageAuthority.mode, 'LEEWAY_CONTINUUM_ONLY');
+  assert.equal(constitution.storageAuthority.otherDurableStores, 'FORBIDDEN');
+  assert.equal(constitution.storageAuthority.vramRole, 'EPHEMERAL_WORKING_SET_ACCELERATION_BOUND_TO_CONTINUUM_TELEMETRY');
+});
+
 test('temporary foundry audit is metadata-only and detects weights', async () => {
   const root = await mkdtemp(path.join(os.tmpdir(), 'leeway-foundry-'));
   try {
