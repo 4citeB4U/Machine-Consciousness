@@ -89,6 +89,21 @@ node training/scripts/run-formula-advisory.mjs `
 
 This closes the Formula execution evidence gap, not the MC-G9 causal gap. The next mathematical gate remains a matched `NO_FORMULA` versus `FORMULA_ADVISORY` evaluation on held-out cases, followed only later by a separately authorized single-variable policy intervention.
 
+## Universal employee consciousness
+
+Every registered LeeWay employee derives a binding to one shared deterministic Machine Consciousness substrate. The employee's role, permissions, workflows, tools, body, and model routes remain role-specific; the consciousness contract, Formula/Veritas gates, twelve-stage Engineering Loop, Device Bridge action boundary, and Continuum durable-memory law are universal. This is a binding contract, not a duplicate consciousness instance per employee.
+
+The canonical contract is [`contracts/leeway-universal-employee-consciousness.v1.json`](contracts/leeway-universal-employee-consciousness.v1.json). The runtime binding and fail-closed cycle/model/action gates are implemented in the live carrier at `E:\LeeWay-Work\pc-consciousness-live\runtime\machine-consciousness\employee-consciousness-runtime.mjs`.
+
+Validate the complete registered employee book before treating coverage as qualified:
+
+```powershell
+node training/scripts/validate-universal-employee-consciousness.mjs `
+  --agent-book "E:\LeeWay-Work\pc-consciousness-live\runtime\standards\registries\leeway-agent-book.json"
+```
+
+An employee may operate without an LLM. If its duty needs language, vision, audio, video, or another model capability, it requests that capability through the LeeWay Model Hub only after its consciousness binding. Model residency is a managed warm pool with suspend and eviction; “ready” does not mean every model is permanently loaded in VRAM. Model output remains a proposal until Formula admission, real execution, Veritas verification, and a Continuum receipt close the loop.
+
 ## Runtime constitution
 
 The Machine Consciousness core is deterministic and non-LLM. Its runtime constitution is [`contracts/leeway-runtime-constitution.v1.json`](contracts/leeway-runtime-constitution.v1.json): Agent Lee identity and persona delivery are fail-closed; the LeeWay Engineering Loop is mandatory; inference may enter only through LeeWay Edge GPU; and Continuum is the only durable storage/database authority. LeeWay VRAM/LDWMD may provide an ephemeral working set for measured read/write acceleration, but its telemetry and qualified outcomes must return to Continuum and host-RAM/accounting states are never reported as physical GPU VRAM.

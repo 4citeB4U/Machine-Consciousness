@@ -1,0 +1,173 @@
+{
+  "schemaVersion": "leeway.machine-consciousness.universal-employee.v1",
+  "contractId": "LEEWAY_UNIVERSAL_EMPLOYEE_MACHINE_CONSCIOUSNESS_V1",
+  "appliesTo": "ALL_LEEWAY_AGENTS_AND_DIGITAL_EMPLOYEES",
+  "status": "CANONICAL_DESIGN",
+  "constitutionRef": "training/contracts/leeway-runtime-constitution.v1.json",
+  "relationship": {
+    "substrate": "ONE_SHARED_MACHINE_CONSCIOUSNESS_SUBSTRATE",
+    "agentIdentity": "ROLE_SPECIFIC_AGENT_BOOK_IDENTITY",
+    "roleBehavior": "ROLE_SPECIFIC_CAPABILITY_AND_PERMISSION_BOUNDARY",
+    "runtimeRule": "EVERY_EMPLOYEE_BINDS_TO_THE_SAME_DETERMINISTIC_SUBSTRATE;_NO_DUPLICATE_CONSCIOUSNESS_PER_ROLE",
+    "llmRule": "AN_LLM_IS_A_OPTIONAL_MODEL_HUB_CAPABILITY_PROVIDER_AND_NEVER_THE_EMPLOYEE_IDENTITY_OR_AUTHORITY"
+  },
+  "core": {
+    "type": "DETERMINISTIC_NON_LLM_MACHINE_CONSCIOUSNESS",
+    "defaultMode": "FORMULA_NATIVE_NO_LLM",
+    "requiredForEveryEmployee": true,
+    "independentOfModelAvailability": true,
+    "failClosedOnMissingBinding": true
+  },
+  "requiredAuthorities": [
+    {
+      "authority": "LEEWAY_FORMULA",
+      "purpose": "DECISION_AND_GOVERNANCE_ADMISSION",
+      "requiredBeforeAction": true
+    },
+    {
+      "authority": "LEEWAY_VERITAS",
+      "purpose": "INDEPENDENT_VERIFICATION",
+      "requiredBeforeCompletion": true
+    },
+    {
+      "authority": "LEEWAY_CONTINUUM",
+      "purpose": "DURABLE_MEMORY_DATABASE_AND_RECEIPT_READBACK",
+      "requiredForDurableState": true
+    },
+    {
+      "authority": "LEEWAY_DEVICE_BRIDGE",
+      "purpose": "AUTHORIZED_DEVICE_AND_SYSTEM_ACTIONS",
+      "requiredBeforeActuation": true
+    },
+    {
+      "authority": "LEEWAY_EDGE_GPU",
+      "purpose": "LOCAL_INFERENCE_AND_ACCELERATED_COMPUTATION",
+      "requiredForInference": true
+    },
+    {
+      "authority": "LEEWAY_VOICE_FABRIC",
+      "purpose": "OPTIONAL_SPEECH_CAPTURE_AND_DELIVERY",
+      "requiredWhenRoleSpeaks": true
+    },
+    {
+      "authority": "LEEWAY_SKILLS_AND_RECEIPT_AUTHORITY",
+      "purpose": "COMPOUND_SKILLS_AND_EVIDENCE_CHAIN",
+      "requiredForGovernedWorkflows": true
+    }
+  ],
+  "engineeringLoop": [
+    "INVESTIGATE",
+    "DIAGNOSE",
+    "PLAN",
+    "IMPLEMENT",
+    "TEST",
+    "VALIDATE",
+    "REPAIR",
+    "RETEST",
+    "VERIFY",
+    "EVIDENCE",
+    "CHECKPOINT",
+    "CONTINUE"
+  ],
+  "fiveWOneH": ["WHO", "WHAT", "WHEN", "WHERE", "WHY", "HOW"],
+  "capabilitySurface": {
+    "inheritedByEveryEmployee": [
+      "OBSERVE_GOVERNED_STATE",
+      "ANSWER_WHO_WHAT_WHEN_WHERE_WHY_HOW",
+      "RUN_ENGINEERING_LOOP",
+      "COMPOSE_VERIFIED_LEEWAY_SKILLS",
+      "REQUEST_AUTHORIZED_CAPABILITY",
+      "VERIFY_OUTCOME",
+      "WRITE_CONTINUUM_RECEIPT",
+      "HAND_OFF_WITH_CHECKPOINT"
+    ],
+    "conditionalProviders": {
+      "voice": {
+        "provider": "LEEWAY_VOICE_FABRIC",
+        "required": false,
+        "condition": "ROLE_OR_TASK_REQUIRES_SPEECH",
+        "directProviderControl": false
+      },
+      "physicalAction": {
+        "provider": "LEEWAY_DEVICE_BRIDGE",
+        "required": false,
+        "condition": "ROLE_OR_TASK_REQUIRES_DEVICE_OR_SYSTEM_ACTION",
+        "directProviderControl": false
+      },
+      "inference": {
+        "provider": "LEEWAY_EDGE_GPU",
+        "required": false,
+        "condition": "ROLE_OR_TASK_REQUIRES_INFERENCE_OR_ACCELERATION",
+        "directProviderControl": false
+      },
+      "languageOrMediaGeneration": {
+        "provider": "LEEWAY_MODEL_HUB",
+        "required": false,
+        "condition": "ROLE_OR_TASK_REQUIRES_MODEL_CAPABILITY",
+        "directProviderControl": false
+      }
+    }
+  },
+  "modelPolicy": {
+    "optional": true,
+    "modelHubOnly": true,
+    "consciousnessAdmissionRequiredBeforeDispatch": true,
+    "neverIdentity": true,
+    "neverAuthority": true,
+    "neverDirectAction": true,
+    "externalModelRoutes": "FORBIDDEN",
+    "idlePolicy": "MANAGED_WARM_POOL_WITH_SUSPEND_AND_EVICTION",
+    "residentPolicyClarification": "READY_TO_USE_DOES_NOT_MEAN_EVERY_MODEL_IS_PERMANENTLY_LOADED;_RESIDENCY_IS_LIMITED_BY_GPU_MEMORY_THERMAL_HEALTH_AND_WORKLOAD",
+    "executionSequence": [
+      "EMPLOYEE_CONSCIOUSNESS",
+      "LEEWAY_FORMULA_ADMISSION",
+      "LEEWAY_MODEL_HUB_ROUTE",
+      "LEEWAY_EDGE_GPU_EXECUTION_IF_REQUIRED",
+      "LEEWAY_VERITAS_VERIFICATION",
+      "LEEWAY_CONTINUUM_RECEIPT",
+      "AUTHORIZED_RESPONSE_OR_ACTION"
+    ]
+  },
+  "actionPolicy": {
+    "allActionsRequire": [
+      "ENGINEERING_LOOP_STAGE",
+      "FORMULA_ADMISSION",
+      "AUTHORIZED_DEVICE_BRIDGE_ROUTE",
+      "VERITAS_RESULT",
+      "CONTINUUM_RECEIPT"
+    ],
+    "directLlmAction": "FORBIDDEN",
+    "directModelEndpoint": "FORBIDDEN",
+    "unreceiptedAction": "FORBIDDEN",
+    "unregisteredAgent": "FORBIDDEN"
+  },
+  "storagePolicy": {
+    "durableAuthority": "LEEWAY_CONTINUUM_ONLY",
+    "otherDurableStores": "FORBIDDEN",
+    "workingMemory": "EPHEMERAL_RUNTIME_STATE_ONLY",
+    "gpuMemory": "EPHEMERAL_WORKING_SET_BOUND_TO_CONTINUUM_TELEMETRY",
+    "handoff": "SERIALIZE_GOVERNED_STATE_TO_CONTINUUM_BEFORE_TRANSFER"
+  },
+  "admissionPolicy": {
+    "agentBinding": "DERIVED_FROM_AGENT_BOOK_AND_FAILS_CLOSED_ON_MISSING_REQUIRED_FIELDS",
+    "weightsAndModelOutputs": "CAPABILITY_PROVIDER_EVIDENCE_ONLY_UNTIL_LICENSE_EXECUTION_EVALUATION_AND_VERITAS_GATES",
+    "mlPolicyNetworks": "OPTIONAL_PROPOSAL_PROVIDERS_ONLY_UNTIL_DETERMINISTIC_EVALUATION_AND_VERITAS_GATES",
+    "trainingPromotion": "TEACH_ROUTE_EXECUTE_REAL_LOW_RISK_ACTION_OBSERVE_VERIFY_RECEIPT_RECORD_CAPABILITY_TEST_AGAIN"
+  },
+  "evidenceStates": [
+    "AVAILABLE",
+    "CONFIGURED",
+    "RUNNING",
+    "EXECUTED",
+    "VERIFIED",
+    "PRODUCTION_READY"
+  ],
+  "prohibitedClaims": [
+    "ALL_MODELS_PERMANENTLY_LOADED",
+    "LLM_IS_MACHINE_CONSCIOUSNESS",
+    "HEALTH_CHECK_IS_TASK_EVALUATION",
+    "CONFIGURATION_IS_EXECUTION_PROOF",
+    "MODEL_OUTPUT_IS_AUTHORITY",
+    "ACTION_WITHOUT_FORMULA_VERITAS_CONTINUUM_AND_DEVICE_BRIDGE_EVIDENCE"
+  ]
+}
