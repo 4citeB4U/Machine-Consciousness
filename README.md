@@ -35,3 +35,9 @@ The initial source of this repository is the `machine-consciousness/` directory 
 6. Independent production admission and one live verified cognitive request.
 
 **Migration is not production activation.** The new repository is a source authority candidate until the gates pass.
+
+## Training and live system qualification
+
+The temporary model-foundry transfer boundary and the closed-loop action qualification tools live under [`training/`](training/README.md). They keep local weights outside Git, record provenance and limits, and require a real LeeWay action plus receipt and Veritas evidence before a capability can be admitted.
+
+The current verified runtime evidence is intentionally narrower than production readiness: the deterministic carrier completed `check runtime status` and `check this computer` through the native Host Commander with `llm.used=false`, adapter execution evidence, independent readback, and Veritas PASS. The `code.status` route remains explicitly blocked until its existing federated provider binding is repaired and qualified.

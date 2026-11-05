@@ -1,0 +1,22 @@
+# Local model material is a temporary foundry input, never repository source.
+*.safetensors
+*.safetensors.index.json
+*.gguf
+*.ggml
+*.bin
+*.pt
+*.pth
+*.onnx
+models/
+model-hub/
+.ollama/
+
+# Local runtime output, secrets, and machine-specific evidence.
+.env
+.env.*
+training/runs/
+training/local-results/
+receipts/local/
+*.local.json
+*.local.ndjson
+

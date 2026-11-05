@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/4citeB4U/Machine-Consciousness/schemas/capability-profile.schema.json",
+  "title": "LeeWay Native Capability Profile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "capabilityId", "status", "operations", "evidence"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "capabilityId": { "type": "string", "minLength": 1 },
+    "status": { "enum": ["PROPOSED", "IMPLEMENTED", "EXECUTED", "VERIFIED", "ADMITTED", "REJECTED"] },
+    "domains": { "type": "array", "items": { "type": "string" } },
+    "operations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["operationId", "risk", "requiresReceipt"],
+        "properties": {
+          "operationId": { "type": "string" },
+          "risk": { "enum": ["READ_ONLY", "LOW", "MEDIUM", "HIGH"] },
+          "requiresReceipt": { "const": true },
+          "providerCapability": { "type": "string" }
+        }
+      }
+    },
+    "limits": { "type": "array", "items": { "type": "string" } },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sourceRefs", "testRefs"],
+      "properties": {
+        "sourceRefs": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "testRefs": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "receiptRefs": { "type": "array", "items": { "type": "string" } },
+        "veritasDecision": { "enum": ["PASS", "FAIL", "PENDING", "NOT_RUN"] }
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/4citeB4U/Machine-Consciousness/schemas/foundry-artifact.schema.json",
+  "title": "LeeWay Temporary Foundry Artifact",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "artifactId", "source", "observation", "disposition", "provenance"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "artifactId": { "type": "string", "minLength": 1 },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "locator"],
+      "properties": {
+        "kind": { "enum": ["local-model", "local-model-family", "hugging-face-cache", "ollama-cache", "contributor-packet", "remote-declaration"] },
+        "locator": { "type": "string", "minLength": 1 },
+        "revision": { "type": "string" },
+        "license": { "type": "string" },
+        "licenseEvidence": { "type": "string" }
+      }
+    },
+    "observation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "inferenceStarted", "fileCount", "totalBytes"],
+      "properties": {
+        "status": { "enum": ["MISSING", "DIRECTORY_EMPTY", "MANIFEST_ONLY", "WEIGHTS_PRESENT", "UNCLASSIFIED_FILES", "REMOTE_DECLARED"] },
+        "inferenceStarted": { "const": false },
+        "fileCount": { "type": "integer", "minimum": 0 },
+        "totalBytes": { "type": "integer", "minimum": 0 },
+        "weightFiles": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["relativePath", "bytes"],
+            "properties": {
+              "relativePath": { "type": "string" },
+              "bytes": { "type": "integer", "minimum": 0 },
+              "sha256": { "type": "string", "pattern": "^[A-Fa-f0-9]{64}$" }
+            }
+          }
+        }
+      }
+    },
+    "capabilityDomains": { "type": "array", "items": { "type": "string" } },
+    "disposition": { "enum": ["TEMPORARY_FOUNDRY_ONLY", "TRANSFER_CANDIDATE", "TRANSFER_VERIFIED", "RETIRED"] },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["observedAt", "observer", "sourceAccess"],
+      "properties": {
+        "observedAt": { "type": "string", "format": "date-time" },
+        "observer": { "type": "string", "minLength": 1 },
+        "sourceAccess": { "enum": ["READ_ONLY", "READ_ONLY_HASHED"] },
+        "evidenceRefs": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "transfer": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "eligible": { "type": "boolean" },
+        "admitted": { "type": "boolean" },
+        "evidenceRefs": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}

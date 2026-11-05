@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/4citeB4U/Machine-Consciousness/schemas/receipt-index-record.schema.json",
+  "title": "LeeWay Training Receipt Index Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "receiptId", "phase", "status", "sourceRefs", "evidence"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "receiptId": { "type": "string", "minLength": 1 },
+    "phase": { "enum": ["INVESTIGATE", "DIAGNOSE", "PLAN", "IMPLEMENT", "TEST", "VALIDATE", "REPAIR", "RETEST", "VERIFY", "EVIDENCE", "CHECKPOINT", "CONTINUE"] },
+    "status": { "enum": ["PASS", "FAIL", "BLOCKED", "PENDING"] },
+    "sourceRefs": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["observedAt", "observer", "outcome"],
+      "properties": {
+        "observedAt": { "type": "string", "format": "date-time" },
+        "observer": { "type": "string" },
+        "outcome": { "type": "string", "minLength": 1 },
+        "hash": { "type": "string" }
+      }
+    }
+  }
+}

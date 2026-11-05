@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/4citeB4U/Machine-Consciousness/schemas/live-action-probe.schema.json",
+  "title": "LeeWay Live Action Probe Result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "probeId", "action", "result", "evidence"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "probeId": { "type": "string", "minLength": 1 },
+    "action": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["providerCapability", "risk", "readOnly"],
+      "properties": {
+        "providerCapability": { "type": "string", "minLength": 1 },
+        "risk": { "enum": ["READ_ONLY", "LOW"] },
+        "readOnly": { "type": "boolean" },
+        "description": { "type": "string" }
+      }
+    },
+    "result": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "executed", "verified"],
+      "properties": {
+        "status": { "enum": ["PASS", "FAIL", "EXECUTED_UNVERIFIED", "BLOCKED"] },
+        "executed": { "type": "boolean" },
+        "verified": { "type": "boolean" },
+        "provider": { "type": "string" },
+        "receiptHash": { "type": "string" }
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["receiptRef", "veritas"],
+      "properties": {
+        "receiptRef": { "type": "string", "minLength": 1 },
+        "veritas": { "enum": ["PASS", "FAIL", "PENDING", "NOT_RUN"] },
+        "llmUsed": { "type": "boolean" },
+        "notes": { "type": "string" }
+      }
+    }
+  }
+}
