@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/4citeB4U/Machine-Consciousness/schemas/federate-web-transport.schema.json",
+  "title": "LeeWay Federate Web Transport Binding",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "providerId", "repository", "role", "authorityBoundary", "capabilityState", "admission"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "providerId": { "const": "leeway-federate-web" },
+    "repository": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["url", "revision", "localPath"],
+      "properties": {
+        "url": { "const": "https://github.com/4citeB4U/Leeway-Federate-Web" },
+        "revision": { "type": "string", "pattern": "^[0-9a-f]{40}$" },
+        "localPath": { "type": "string", "minLength": 1 }
+      }
+    },
+    "role": { "enum": ["WEB_DISCOVERY_SURFACE", "MANUAL_WEBRTC_PEER_TRANSPORT", "FEDERATED_RUNTIME_TRANSPORT_CANDIDATE"] },
+    "authorityBoundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["ownsRuntimeAuthority", "ownsFormulaAuthority", "ownsVeritasAuthority", "ownsReceiptAuthority", "requiresCanonicalRuntimeAdapter"],
+      "properties": {
+        "ownsRuntimeAuthority": { "const": false },
+        "ownsFormulaAuthority": { "const": false },
+        "ownsVeritasAuthority": { "const": false },
+        "ownsReceiptAuthority": { "const": false },
+        "requiresCanonicalRuntimeAdapter": { "const": true }
+      }
+    },
+    "capabilityState": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["browserRuntime", "manualPairing", "localBrowserTransport", "livePeerFederation", "nativeRuntimeBridge"],
+      "properties": {
+        "browserRuntime": { "enum": ["IMPLEMENTED", "UNVERIFIED", "BLOCKED"] },
+        "manualPairing": { "enum": ["IMPLEMENTED", "UNVERIFIED", "BLOCKED"] },
+        "localBrowserTransport": { "enum": ["VERIFIED", "UNVERIFIED", "BLOCKED"] },
+        "livePeerFederation": { "enum": ["IMPLEMENTED", "UNVERIFIED", "BLOCKED"] },
+        "nativeRuntimeBridge": { "enum": ["IMPLEMENTED", "UNVERIFIED", "BLOCKED"] }
+      }
+    },
+    "admission": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "requiredEvidence"],
+      "properties": {
+        "status": { "enum": ["SOURCE_VERIFIED_TRANSPORT_UNVERIFIED", "LOCAL_BROWSER_TRANSPORT_VERIFIED_RUNTIME_UNVERIFIED", "TRANSPORT_VERIFIED", "REJECTED"] },
+        "requiredEvidence": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "receiptRef": { "type": "string" },
+        "veritas": { "enum": ["PASS", "FAIL", "PENDING", "NOT_RUN"] }
+      }
+    }
+  }
+}

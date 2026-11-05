@@ -22,6 +22,19 @@ The current live acceptance pattern is the existing C3-1 harness in the federate
 
 The repository wrapper in `scripts/live-capability-probe.mjs` delegates to that authoritative harness. It does not create a second runtime, listener, model server, or authority system.
 
+## Federate Web boundary
+
+`4citeB4U/Leeway-Federate-Web` is the selected web-federation transport source. Its browser runtime, signed manual pairing, and WebRTC data channel are transport capabilities; they are not a Runtime Fabric execution provider by themselves. The read-only audit in `scripts/audit-federate-web.mjs` pins the checkout and enforces the repository's own boundary: explicit attachment, no duplicated authority, and a required canonical Runtime Fabric adapter.
+
+```powershell
+node training/scripts/audit-federate-web.mjs `
+  --repo "E:\LeeWay-Work\Leeway-Federate-Web" `
+  --browser-receipt "E:\LeeWay-Work\Leeway-Federate-Web\test-results\peer-retest-20261105.json" `
+  --out training/runs/federate-web-audit.json
+```
+
+The current browser receipt can qualify local two-context transport as `VERIFIED`, but the audit remains `LOCAL_BROWSER_TRANSPORT_VERIFIED_RUNTIME_UNVERIFIED` until two independent nodes, Runtime dispatch permission, Veritas pre/post evidence, canonical receipts, and alternate-host recovery are proven. A GitHub Pages page, a peer ID, or a browser-local connection does not close the `code.status` provider gate.
+
 ## Commands
 
 Audit local artifacts without starting inference:

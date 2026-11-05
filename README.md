@@ -41,3 +41,5 @@ The initial source of this repository is the `machine-consciousness/` directory 
 The temporary model-foundry transfer boundary and the closed-loop action qualification tools live under [`training/`](training/README.md). They keep local weights outside Git, record provenance and limits, and require a real LeeWay action plus receipt and Veritas evidence before a capability can be admitted.
 
 The current verified runtime evidence is intentionally narrower than production readiness: the deterministic carrier completed `check runtime status` and `check this computer` through the native Host Commander with `llm.used=false`, adapter execution evidence, independent readback, and Veritas PASS. The `code.status` route remains explicitly blocked until its existing federated provider binding is repaired and qualified.
+
+The selected federation transport source is [4citeB4U/Leeway-Federate-Web](https://github.com/4citeB4U/Leeway-Federate-Web). Its pinned source audit and real browser proof qualify local signed WebRTC transport; they do not yet qualify independent-node federation, canonical Runtime dispatch, Veritas, or production execution.

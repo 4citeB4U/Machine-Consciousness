@@ -6,6 +6,7 @@ import path from 'node:path';
 import test from 'node:test';
 import { auditRoot } from '../scripts/audit-local-foundry.mjs';
 import { summarizeReceipt } from '../scripts/live-capability-probe.mjs';
+import { auditFederateWeb } from '../scripts/audit-federate-web.mjs';
 
 const repoRoot = path.resolve(import.meta.dirname, '..', '..');
 
@@ -60,5 +61,19 @@ test('authoritative live receipt is recognized when present', () => {
   assert.equal(summary.postGate, 'PASS');
   assert.equal(summary.veritas, 'PASS');
   assert.equal(summary.llmUsed, false);
+});
+
+test('Federate Web is admitted as a transport source, not a duplicate authority', () => {
+  const result = auditFederateWeb('E:/LeeWay-Work/Leeway-Federate-Web', {
+    browserReceipt: 'E:/LeeWay-Work/Leeway-Federate-Web/test-results/peer-retest-20261105.json'
+  });
+  assert.equal(result.sourceState, 'PRESENT_CLEAN');
+  assert.equal(result.role, 'MANUAL_WEBRTC_PEER_TRANSPORT');
+  assert.equal(result.runtimeState, 'UNVERIFIED');
+  assert.equal(result.authorityBoundary.noAuthorityDuplication, true);
+  assert.equal(result.browserProof.status, 'PASS');
+  assert.equal(result.capabilityState.localBrowserTransport, 'VERIFIED');
+  assert.equal(result.capabilityState.livePeerFederation, 'UNVERIFIED');
+  assert.equal(result.admission.status, 'LOCAL_BROWSER_TRANSPORT_VERIFIED_RUNTIME_UNVERIFIED');
 });
 
