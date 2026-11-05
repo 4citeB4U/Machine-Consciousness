@@ -1,0 +1,98 @@
+{
+  "schemaVersion": "1.0.0",
+  "artifactType": "MACHINE_CONSCIOUSNESS_FORMULA_ADVISORY",
+  "status": "EXECUTED_NOT_ADMITTED",
+  "generatedAt": "2026-11-05T04:04:42.040Z",
+  "source": {
+    "repository": "4citeB4U/Leeway-formula-live",
+    "sourceCommit": "1746d52",
+    "sourcePath": "experiments/machine-consciousness-v0/outputs/mc-g8/source-window.json",
+    "sourceWindowSha256": "0ba8c79e36474c99b39f4f3d17a5e83ff6e7b0cdd227adc46176034364d3b85d",
+    "sourceWindowGate": "MC-G8",
+    "provenance": "SIMULATED",
+    "cycles": 16,
+    "dimensions": [
+      "belief_entropy_nats",
+      "precision_weighted_prediction_error",
+      "valence_free_energy_rate",
+      "belief_information_gain_nats",
+      "selected_policy_expected_free_energy",
+      "global_access_ratio"
+    ]
+  },
+  "formula": {
+    "id": "LEEWAY-FORMULA-v1.0",
+    "adapterId": "runtime-state-v1",
+    "health": {
+      "status": "LEEWAY_FORMULA_V1_PASS",
+      "formula": "LEEWAY-FORMULA-v1.0",
+      "loaded": true,
+      "goldenVectorPass": true,
+      "specValid": true,
+      "adapterRegistryPass": true,
+      "expectedDecimal": [
+        4,
+        50,
+        63,
+        59,
+        48,
+        69
+      ],
+      "expectedBase64": [
+        "E",
+        "y",
+        "/",
+        "7",
+        "w",
+        "BF"
+      ],
+      "specHash": "2f4604f143e2f7c3bc2fe315f2faa2c7d9b8b188151a0fab9f6cebea3e155f9b",
+      "specMdHash": "dd9f2f7d23dcc8076d7d3c9e1f194b596bff041e8b25dc003348c8554db7b16d",
+      "timestamp": "2026-11-05T04:04:41.932Z",
+      "hostScope": "formula-only",
+      "kernelIntegrity": "VERIFIED_AT_STARTUP"
+    },
+    "requestHash": "436ac47ec7ee0b26b30b051754060106e44cdb7c015baa38f0f614b25a86558b",
+    "inputHash": "513f612ca2076bad61eab407b884b9898185608d4fd29a64541a446ed9945bbe",
+    "resultHash": "caf9cd55d7608052e1e9cbc3b00d1862ba24ebe5a40b47fab87110bc038d43a8",
+    "decimalState": [
+      69,
+      68,
+      67,
+      65,
+      13,
+      64
+    ],
+    "base64State": [
+      "BF",
+      "BE",
+      "BD",
+      "BB",
+      "N",
+      "BA"
+    ],
+    "evaluatedAt": "2026-11-05T04:04:42.030Z",
+    "hostTraceId": "f9bde3ea-2998-46a8-a553-d255fc92b33b",
+    "requestedTraceId": "MC-TRAINING-FORMULA-ADVISORY-1793851481871",
+    "receipt": {
+      "state": "PRESENT",
+      "path": "C:\\Users\\Leona\\.codex\\leeway\\Leeway-formula-live\\runtime\\canonical\\receipts\\leeway-formula\\leeway-formula-run-20261105040442-f9bde3ea.json",
+      "sha256": "f42bd7a588128fd52ec0554c7a48d2e4be58c09db015df0d109ce0f4202ec6d8"
+    }
+  },
+  "policy": {
+    "mode": "FORMULA_ADVISORY",
+    "actionPolicyIntervention": false,
+    "actionAuthorized": false,
+    "providerDispatch": false
+  },
+  "verification": {
+    "formulaPreGate": "PASS",
+    "execution": "EXECUTED",
+    "interpretation": "NOT_PROMOTED",
+    "veritas": "NOT_RUN",
+    "receiptAuthority": "NOT_RUN",
+    "learningLedger": "NOT_UPDATED"
+  },
+  "claimBoundary": "The canonical Formula executed against a pinned simulated cognition window. This is a real advisory execution, not proof of causal behavioral improvement, semantic interpretation, live autonomy, or consciousness."
+}

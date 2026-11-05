@@ -1,0 +1,74 @@
+{
+  "schemaVersion": "1.0.0",
+  "contributorId": "local-codex",
+  "identity": {
+    "displayName": "Local Codex / Agent Lee engineering lane",
+    "channel": "local",
+    "modelId": "codex",
+    "registeredAt": "2026-11-05T03:30:00Z",
+    "observedAt": "2026-11-05T03:30:00Z"
+  },
+  "capabilities": [
+    {
+      "name": "governed repository engineering",
+      "description": "Investigate, preserve authority boundaries, implement bounded changes, and verify them with inspectable tests.",
+      "evidenceRefs": ["README.md", "training/README.md", "commit:89cce5c"],
+      "liveActionReceipt": "E:/LeeWay-Work/pc-consciousness-live/runtime/receipts/machine-consciousness/MACHINE-CONSCIOUSNESS-TRAINING-LIVE-PROBE-20261104.json"
+    },
+    {
+      "name": "metadata-first foundry audit",
+      "description": "Inventory local model artifacts without starting inference or moving weights into the canonical repository.",
+      "evidenceRefs": ["training/scripts/audit-local-foundry.mjs", "training/runs/foundry-audit-20261105.json"]
+    },
+    {
+      "name": "bounded LeeWay action qualification",
+      "description": "Route a read-only capability through the existing runtime and require receipt, post-gate, and Veritas evidence.",
+      "evidenceRefs": ["training/scripts/live-capability-probe.mjs", "training/contracts/live-action-probe.schema.json"],
+      "liveActionReceipt": "E:/LeeWay-Work/pc-consciousness-live/runtime/receipts/machine-consciousness/MACHINE-CONSCIOUSNESS-TRAINING-LIVE-PROBE-20261104.json"
+    },
+    {
+      "name": "federation transport boundary audit",
+      "description": "Qualify local browser WebRTC transport while refusing to treat it as Runtime Fabric or Device Bridge authority.",
+      "evidenceRefs": ["training/scripts/audit-federate-web.mjs", "training/runs/federate-web-audit-20261105.json", "commit:89cce5c"]
+    }
+  ],
+  "contributions": [
+    {
+      "contributionId": "codex-deterministic-core-boundary",
+      "kind": "constraint",
+      "statement": "Machine Consciousness remains deterministic and non-LLM; model outputs and weights are evidence sources until native admission.",
+      "nativeArtifactRefs": ["README.md", "training/README.md"],
+      "acceptanceTestRefs": ["training/tests/foundation.test.mjs"]
+    },
+    {
+      "contributionId": "codex-closed-loop-action-proof",
+      "kind": "method",
+      "statement": "A capability is not learned from an answer alone; it must route through LeeWay, execute a bounded action, produce a receipt, and be tested again.",
+      "nativeArtifactRefs": ["training/README.md", "training/scripts/live-capability-probe.mjs"],
+      "acceptanceTestRefs": ["training/tests/foundation.test.mjs"]
+    },
+    {
+      "contributionId": "codex-provider-boundary-discipline",
+      "kind": "constraint",
+      "statement": "Federate Web is a transport capability, not a duplicate Runtime Fabric, Formula, Veritas, Device Bridge, or privileged router.",
+      "nativeArtifactRefs": ["training/contracts/federate-web-transport.schema.json", "training/scripts/audit-federate-web.mjs"],
+      "acceptanceTestRefs": ["training/tests/foundation.test.mjs"]
+    }
+  ],
+  "limits": [
+    "This packet records observed artifacts and methods, not Codex private weights or hidden training data.",
+    "It does not represent Gemini, online ChatGPT, or Antigravity contributions.",
+    "It does not grant Formula semantic authority, action authority, Veritas approval, or Learning Ledger admission.",
+    "The referenced local model weights remain outside this repository and were not loaded by this packet."
+  ],
+  "provenance": {
+    "sourceType": "local-artifact",
+    "rightsReviewed": false,
+    "notes": "Observed from the current Machine-Consciousness implementation and qualification evidence; licensing and independent admission remain separate gates."
+  },
+  "admission": {
+    "status": "OBSERVED",
+    "deterministicNativeArtifactCreated": true,
+    "reason": "Captured local implementation evidence; evaluation and Learning Ledger admission remain pending."
+  }
+}

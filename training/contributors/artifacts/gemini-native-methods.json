@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0.0",
+  "artifactType": "LEEWAY_CONTRIBUTOR_CAPABILITY_CAPSULE",
+  "artifactId": "gemini-native-first-architecture-20261105",
+  "contributorId": "online-gemini",
+  "status": "OBSERVED_TRANSFER_CANDIDATE",
+  "authority": "Evidence input only; not Formula, Runtime, Veritas, Device Bridge, or Learning Ledger authority.",
+  "sourceEvidence": [
+    {
+      "kind": "user-supplied-conversation-export",
+      "reference": "C:/Users/Leona/.codex/attachments/f4703918-7d77-4fc5-a11c-2ae3a9e25ad2/Pasted text.txt",
+      "sha256": "49884c9cfe3463d19fa7ba7dba9bfa7caa472e39bffbb4a88d2922a763949d56",
+      "observedAt": "2026-11-04T20:22:30-06:00"
+    },
+    {
+      "kind": "user-supplied-conversation-export",
+      "reference": "C:/Users/Leona/.codex/attachments/cb522b99-bcfc-4111-bf4d-268807078a28/Pasted text.txt",
+      "sha256": "29b662fce5b8bbf113fa86c161b02ed2e098ce22df4a68668b017c6814b180f4",
+      "observedAt": "2026-11-04T20:26:09-06:00"
+    }
+  ],
+  "capabilities": [
+    {
+      "capabilityId": "gemini-deterministic-first-routing",
+      "kind": "method",
+      "statement": "Use deterministic transport, state machines, validation, and transactional dispatch first; use a small model only for bounded semantic ambiguity.",
+      "nativeUse": "Shapes capability admission and fallback routing; it does not authorize an action."
+    },
+    {
+      "capabilityId": "gemini-native-device-sequencing",
+      "kind": "method",
+      "statement": "Represent native-device interaction as an observable sequence of app invocation, input, acoustic/system observation, governed handoff, and post-action verification.",
+      "nativeUse": "Shapes future Device Bridge capability contracts; this capsule does not claim phone dialing was executed."
+    },
+    {
+      "capabilityId": "gemini-governed-conversation-loop",
+      "kind": "constraint",
+      "statement": "Keep transcript admission, action dispatch, response output, and receipt evidence as separate boundaries.",
+      "nativeUse": "Aligns contributor evidence with LeeWay Runtime, Veritas, and receipt boundaries."
+    }
+  ],
+  "evaluation": {
+    "nativeArtifactCreated": true,
+    "localActionExecuted": false,
+    "formulaExecuted": false,
+    "veritas": "NOT_RUN",
+    "learningLedger": "NOT_UPDATED"
+  },
+  "claimBoundary": "This capsule contains only the bounded ideas observable in two user-supplied Gemini conversation exports. It does not extract Gemini weights, hidden training, private reasoning, or provider internals, and it does not promote the exports' unsupported verification claims."
+}

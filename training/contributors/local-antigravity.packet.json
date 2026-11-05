@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "contributorId": "local-antigravity",
+  "identity": {
+    "displayName": "Local Antigravity session",
+    "channel": "local",
+    "registeredAt": "2026-11-05T03:30:00Z",
+    "observedAt": "2026-10-29T05:13:55Z"
+  },
+  "capabilities": [
+    {
+      "name": "architecture critique",
+      "description": "Bounded systems critique and comparison under LeeWay standards supremacy.",
+      "evidenceRefs": ["training/contributors/artifacts/antigravity-architecture-review.json", "work/c3-two-worker-collaboration-20261029/standards/skills-university/benchmarks/enterprise-intelligence-target/assistant-body-contribution-map.json"]
+    },
+    {
+      "name": "runtime mapping",
+      "description": "Distinguish a mapped runtime surface from actual execution evidence.",
+      "evidenceRefs": ["training/contributors/artifacts/antigravity-architecture-review.json", "work/c3-two-worker-collaboration-20261029/standards/skills-university/receipts/leeway-vscode-creator-ui-runtime-map-receipt.md"]
+    },
+    {
+      "name": "proof-oriented delivery review",
+      "description": "Associate implementation claims with explicit build, HTTP, screenshot, and truth-status evidence.",
+      "evidenceRefs": ["training/contributors/artifacts/antigravity-architecture-review.json", "work/c3-two-worker-collaboration-20261029/standards/skills-university/receipts/leeway-vscode-creator-ui-implementation-receipt.md"]
+    }
+  ],
+  "contributions": [
+    {
+      "contributionId": "antigravity-architecture-critique",
+      "kind": "method",
+      "statement": "Architecture critique is a bounded assistant-body contribution and cannot replace LeeWay standards or certify a receipt.",
+      "nativeArtifactRefs": ["training/contributors/artifacts/antigravity-architecture-review.json"],
+      "acceptanceTestRefs": ["training/tests/foundation.test.mjs"]
+    },
+    {
+      "contributionId": "antigravity-runtime-mapping",
+      "kind": "method",
+      "statement": "Mapped UI/runtime surfaces must remain distinct from live execution evidence.",
+      "nativeArtifactRefs": ["training/contributors/artifacts/antigravity-architecture-review.json", "work/c3-two-worker-collaboration-20261029/standards/skills-university/receipts/leeway-vscode-creator-ui-runtime-map-receipt.md"]
+    },
+    {
+      "contributionId": "antigravity-proof-oriented-delivery",
+      "kind": "evaluation",
+      "statement": "Implementation reports should carry explicit proof artifacts and truth-status boundaries.",
+      "nativeArtifactRefs": ["training/contributors/artifacts/antigravity-architecture-review.json", "work/c3-two-worker-collaboration-20261029/standards/skills-university/receipts/leeway-vscode-creator-ui-implementation-receipt.md"]
+    }
+  ],
+  "limits": [
+    "The evidence is from prior local receipts and registries, not a live Antigravity runtime connection in this turn.",
+    "The receipts' implementation claims were not independently re-executed as part of this intake.",
+    "This packet does not extract Antigravity weights, hidden training, private reasoning, or provider internals.",
+    "No Machine-Consciousness action was executed from this capsule."
+  ],
+  "provenance": {
+    "sourceType": "local-artifact",
+    "rightsReviewed": false,
+    "notes": "Existing local receipts and assistant-body registry were hashed and summarized into a bounded capability capsule; independent execution and rights gates remain pending."
+  },
+  "admission": {
+    "status": "OBSERVED",
+    "deterministicNativeArtifactCreated": true,
+    "reason": "Prior local Antigravity-attributed artifacts were captured and converted to a non-authorizing capability capsule; independent evaluation remains pending."
+  }
+}

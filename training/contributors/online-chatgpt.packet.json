@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "1.0.0",
+  "contributorId": "online-chatgpt",
+  "identity": {
+    "displayName": "Separate online ChatGPT session",
+    "channel": "online",
+    "registeredAt": "2026-11-05T03:30:00Z"
+  },
+  "capabilities": [],
+  "contributions": [],
+  "limits": [
+    "No separate online ChatGPT response, export, runtime identity, or rights review has been captured in this repository.",
+    "The current Codex conversation is not proof of a separate online ChatGPT contributor lane."
+  ],
+  "provenance": {
+    "sourceType": "registry-only",
+    "rightsReviewed": false,
+    "notes": "Registration placeholder only; awaiting an actual response or export from the separate online ChatGPT lane."
+  },
+  "admission": {
+    "status": "PENDING_CAPTURE",
+    "deterministicNativeArtifactCreated": false,
+    "reason": "No source response or export supplied."
+  }
+}

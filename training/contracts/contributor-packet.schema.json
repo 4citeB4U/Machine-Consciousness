@@ -11,11 +11,12 @@
     "identity": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["displayName", "channel", "observedAt"],
+      "required": ["displayName", "channel", "registeredAt"],
       "properties": {
         "displayName": { "type": "string", "minLength": 1 },
         "channel": { "enum": ["local", "online", "human"] },
         "modelId": { "type": "string" },
+        "registeredAt": { "type": "string", "format": "date-time" },
         "observedAt": { "type": "string", "format": "date-time" }
       }
     },
@@ -33,13 +34,29 @@
         }
       }
     },
+    "contributions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["contributionId", "kind", "statement", "nativeArtifactRefs"],
+        "properties": {
+          "contributionId": { "type": "string", "minLength": 1 },
+          "kind": { "enum": ["method", "constraint", "implementation", "evaluation", "domain-knowledge"] },
+          "statement": { "type": "string", "minLength": 1 },
+          "nativeArtifactRefs": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+          "acceptanceTestRefs": { "type": "array", "items": { "type": "string" } },
+          "contentSha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+        }
+      }
+    },
     "limits": { "type": "array", "items": { "type": "string" } },
     "provenance": {
       "type": "object",
       "additionalProperties": false,
       "required": ["sourceType", "rightsReviewed"],
       "properties": {
-        "sourceType": { "enum": ["observed-response", "local-artifact", "human-authored", "provider-documentation"] },
+        "sourceType": { "enum": ["observed-response", "local-artifact", "human-authored", "provider-documentation", "registry-only"] },
         "rightsReviewed": { "type": "boolean" },
         "notes": { "type": "string" }
       }
@@ -49,9 +66,10 @@
       "additionalProperties": false,
       "required": ["status", "deterministicNativeArtifactCreated"],
       "properties": {
-        "status": { "enum": ["OBSERVED", "EVALUATED", "VERIFIED", "REJECTED", "ADMITTED"] },
+        "status": { "enum": ["PENDING_CAPTURE", "OBSERVED", "EVALUATED", "VERIFIED", "REJECTED", "ADMITTED"] },
         "deterministicNativeArtifactCreated": { "type": "boolean" },
-        "veritasReceipt": { "type": "string" }
+        "veritasReceipt": { "type": "string" },
+        "reason": { "type": "string" }
       }
     }
   }

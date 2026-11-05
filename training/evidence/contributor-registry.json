@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.0.0",
+  "artifactType": "LEEWAY_CONTRIBUTOR_INTAKE_REGISTRY",
+  "status": "CAPTURE_STATE_RECORDED",
+  "generatedAt": "2026-11-05T04:08:46.947Z",
+  "authorityBoundary": "Contributor packets are evidence inputs; this registry does not grant Formula, Veritas, execution, or Learning Ledger authority.",
+  "expectedContributors": [
+    "local-antigravity",
+    "local-codex",
+    "online-chatgpt",
+    "online-gemini"
+  ],
+  "missingContributors": [],
+  "packets": [
+    {
+      "file": "local-antigravity.packet.json",
+      "contributorId": "local-antigravity",
+      "captureStatus": "OBSERVED",
+      "contributionCount": 3,
+      "capabilityCount": 3,
+      "nativeArtifactCreated": true,
+      "eligibleForEvaluation": false,
+      "errors": [],
+      "packetSha256": "75232c6ecfca60fe732ddff0d1ce97c34076dc6487828ebe4e62d32afbd34335"
+    },
+    {
+      "file": "local-codex.packet.json",
+      "contributorId": "local-codex",
+      "captureStatus": "OBSERVED",
+      "contributionCount": 3,
+      "capabilityCount": 4,
+      "nativeArtifactCreated": true,
+      "eligibleForEvaluation": false,
+      "errors": [],
+      "packetSha256": "648d45659ea02bc91e20db91294abac58187cf7ddc2635917d424c2e0cb0c2f5"
+    },
+    {
+      "file": "online-chatgpt.packet.json",
+      "contributorId": "online-chatgpt",
+      "captureStatus": "PENDING_CAPTURE",
+      "contributionCount": 0,
+      "capabilityCount": 0,
+      "nativeArtifactCreated": false,
+      "eligibleForEvaluation": false,
+      "errors": [],
+      "packetSha256": "60f786932de38d12d8fd834563e544260d846600e4b47d3e4309b2f9fd2b0643"
+    },
+    {
+      "file": "online-gemini.packet.json",
+      "contributorId": "online-gemini",
+      "captureStatus": "OBSERVED",
+      "contributionCount": 3,
+      "capabilityCount": 3,
+      "nativeArtifactCreated": true,
+      "eligibleForEvaluation": false,
+      "errors": [],
+      "packetSha256": "9188e7de50a9cd090e235fb7d6a9a86817332cd0fa5e95a51f5aeb157d59e026"
+    }
+  ],
+  "learningLedger": "NOT_UPDATED"
+}

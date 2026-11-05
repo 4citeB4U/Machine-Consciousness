@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "1.0.0",
+  "contributorId": "online-gemini",
+  "identity": {
+    "displayName": "Separate online Gemini session",
+    "channel": "online",
+    "registeredAt": "2026-11-05T03:30:00Z",
+    "observedAt": "2026-11-05T02:26:09Z"
+  },
+  "capabilities": [
+    {
+      "name": "deterministic-first hybrid architecture",
+      "description": "Use native system primitives and deterministic state machines first, with a bounded model fallback for ambiguity.",
+      "evidenceRefs": ["training/contributors/artifacts/gemini-native-methods.json", "attachment-sha256:49884c9cfe3463d19fa7ba7dba9bfa7caa472e39bffbb4a88d2922a763949d56"]
+    },
+    {
+      "name": "native device interaction sequencing",
+      "description": "Decompose device interaction into invocation, input, observation, governed handoff, and verification boundaries.",
+      "evidenceRefs": ["training/contributors/artifacts/gemini-native-methods.json", "attachment-sha256:29b662fce5b8bbf113fa86c161b02ed2e098ce22df4a68668b017c6814b180f4"]
+    },
+    {
+      "name": "governed conversation loop",
+      "description": "Keep transcript admission, action dispatch, response output, and receipts distinct.",
+      "evidenceRefs": ["training/contributors/artifacts/gemini-native-methods.json"]
+    }
+  ],
+  "contributions": [
+    {
+      "contributionId": "gemini-deterministic-first-routing",
+      "kind": "method",
+      "statement": "Prefer deterministic transport, state, validation, and transactional dispatch before semantic fallback.",
+      "nativeArtifactRefs": ["training/contributors/artifacts/gemini-native-methods.json"],
+      "acceptanceTestRefs": ["training/tests/foundation.test.mjs"]
+    },
+    {
+      "contributionId": "gemini-native-device-sequencing",
+      "kind": "method",
+      "statement": "Model native device control as an observable sequence with governed handoff and post-action verification.",
+      "nativeArtifactRefs": ["training/contributors/artifacts/gemini-native-methods.json"]
+    },
+    {
+      "contributionId": "gemini-governed-conversation-loop",
+      "kind": "constraint",
+      "statement": "Keep transcript admission, action dispatch, response output, and receipt evidence as separate boundaries.",
+      "nativeArtifactRefs": ["training/contributors/artifacts/gemini-native-methods.json"],
+      "acceptanceTestRefs": ["training/tests/foundation.test.mjs"]
+    }
+  ],
+  "limits": [
+    "Only two user-supplied Gemini conversation exports are captured; this is not the entirety of Gemini's knowledge or training.",
+    "The exports' unsupported verified-status claims were not promoted without local proof.",
+    "This packet does not extract Gemini weights, hidden training, private reasoning, or provider internals.",
+    "No phone call or native-device action was executed from this capsule."
+  ],
+  "provenance": {
+    "sourceType": "observed-response",
+    "rightsReviewed": false,
+    "notes": "User-supplied conversation exports were hashed and summarized into a bounded capability capsule; provider terms and commercial rights remain unreviewed."
+  },
+  "admission": {
+    "status": "OBSERVED",
+    "deterministicNativeArtifactCreated": true,
+    "reason": "Observed response exports captured and converted to a non-authorizing native capability capsule; evaluation and rights gates remain pending."
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0.0",
+  "artifactType": "LEEWAY_CONTRIBUTOR_CAPABILITY_CAPSULE",
+  "artifactId": "antigravity-architecture-review-20261105",
+  "contributorId": "local-antigravity",
+  "status": "OBSERVED_TRANSFER_CANDIDATE",
+  "authority": "Evidence input only; not Formula, Runtime, Veritas, Device Bridge, or Learning Ledger authority.",
+  "sourceEvidence": [
+    {
+      "kind": "local-antigravity-receipt",
+      "reference": "work/c3-two-worker-collaboration-20261029/standards/skills-university/benchmarks/enterprise-intelligence-target/assistant-body-contribution-map.json",
+      "sha256": "a4698e5877d8f6b2ff5bd5cd563772177700d4b7117b56952f57c4013921247b",
+      "observedAt": "2026-10-28T23:26:10-05:00"
+    },
+    {
+      "kind": "local-antigravity-receipt",
+      "reference": "work/c3-two-worker-collaboration-20261029/standards/skills-university/receipts/leeway-vscode-creator-ui-implementation-receipt.md",
+      "sha256": "424e4a7507904c30b507349c45e99128ada858ba9917ee3aff988648bcfd03f8",
+      "observedAt": "2026-10-28T23:26:10-05:00"
+    },
+    {
+      "kind": "local-antigravity-receipt",
+      "reference": "work/c3-two-worker-collaboration-20261029/standards/skills-university/receipts/leeway-vscode-creator-ui-runtime-map-receipt.md",
+      "sha256": "adca014318d0ec1b3a24e1ff85d1c6a81c4b8af477003d02a4f508cf3ffa60cf",
+      "observedAt": "2026-10-28T23:26:10-05:00"
+    }
+  ],
+  "capabilities": [
+    {
+      "capabilityId": "antigravity-architecture-critique",
+      "kind": "method",
+      "statement": "Use architecture critique and comparison as a bounded assistant-body contribution while preserving LeeWay standards supremacy and requiring proof.",
+      "nativeUse": "Shapes review gates; it cannot replace standards or certify a receipt."
+    },
+    {
+      "capabilityId": "antigravity-runtime-mapping",
+      "kind": "method",
+      "statement": "Map UI/runtime surfaces and report honest mapped-versus-executed boundaries.",
+      "nativeUse": "Supports evidence classification and prevents a mapped surface from being called live execution."
+    },
+    {
+      "capabilityId": "antigravity-proof-oriented-delivery",
+      "kind": "evaluation",
+      "statement": "Pair implementation reports with build, HTTP, screenshot, and truth-status evidence when those artifacts exist.",
+      "nativeUse": "Provides an evaluation checklist; each claim still requires independent LeeWay verification."
+    }
+  ],
+  "evaluation": {
+    "nativeArtifactCreated": true,
+    "localActionExecuted": false,
+    "formulaExecuted": false,
+    "veritas": "NOT_RUN",
+    "learningLedger": "NOT_UPDATED"
+  },
+  "claimBoundary": "This capsule is derived from existing local receipts and registries attributed to Antigravity. It does not prove a currently running Antigravity session, private model weights, hidden training, or independent execution of the Machine-Consciousness repository."
+}

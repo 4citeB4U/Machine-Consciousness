@@ -7,6 +7,7 @@ import test from 'node:test';
 import { auditRoot } from '../scripts/audit-local-foundry.mjs';
 import { summarizeReceipt } from '../scripts/live-capability-probe.mjs';
 import { auditFederateWeb } from '../scripts/audit-federate-web.mjs';
+import { auditContributorDirectory, validateContributorPacket } from '../scripts/intake-contributor-packets.mjs';
 
 const repoRoot = path.resolve(import.meta.dirname, '..', '..');
 
@@ -75,5 +76,62 @@ test('Federate Web is admitted as a transport source, not a duplicate authority'
   assert.equal(result.capabilityState.localBrowserTransport, 'VERIFIED');
   assert.equal(result.capabilityState.livePeerFederation, 'UNVERIFIED');
   assert.equal(result.admission.status, 'LOCAL_BROWSER_TRANSPORT_VERIFIED_RUNTIME_UNVERIFIED');
+});
+
+test('four contributor lanes are registered without falsely claiming four captured teachers', () => {
+  const result = auditContributorDirectory(path.join(repoRoot, 'training', 'contributors'));
+  assert.equal(result.status, 'CAPTURE_STATE_RECORDED');
+  assert.deepEqual(result.expectedContributors, ['local-antigravity', 'local-codex', 'online-chatgpt', 'online-gemini']);
+  const states = Object.fromEntries(result.packets.map(packet => [packet.contributorId, packet.captureStatus]));
+  assert.equal(states['local-codex'], 'OBSERVED');
+  assert.equal(states['local-antigravity'], 'OBSERVED');
+  assert.equal(states['online-chatgpt'], 'PENDING_CAPTURE');
+  assert.equal(states['online-gemini'], 'OBSERVED');
+  assert.equal(result.packets.find(packet => packet.contributorId === 'local-antigravity').contributionCount, 3);
+  assert.equal(result.packets.find(packet => packet.contributorId === 'online-gemini').contributionCount, 3);
+  assert.equal(result.learningLedger, 'NOT_UPDATED');
+});
+
+test('pending contributor placeholders cannot carry knowledge claims', () => {
+  const packet = {
+    schemaVersion: '1.0.0',
+    contributorId: 'online-gemini',
+    identity: { displayName: 'Gemini', channel: 'online', registeredAt: '2026-11-05T03:30:00Z' },
+    capabilities: [{ name: 'unstated', evidenceRefs: ['not-real'] }],
+    contributions: [],
+    limits: ['placeholder'],
+    provenance: { sourceType: 'registry-only', rightsReviewed: false },
+    admission: { status: 'PENDING_CAPTURE', deterministicNativeArtifactCreated: false }
+  };
+  assert.match(validateContributorPacket(packet).join(','), /PENDING_CAPTURE_HAS_CONTRIBUTIONS/);
+});
+
+test('captured contributor packets require native evidence and observation time', () => {
+  const packet = {
+    schemaVersion: '1.0.0',
+    contributorId: 'local-codex',
+    identity: { displayName: 'Codex', channel: 'local', registeredAt: '2026-11-05T03:30:00Z' },
+    capabilities: [],
+    contributions: [],
+    limits: ['bounded'],
+    provenance: { sourceType: 'local-artifact', rightsReviewed: false },
+    admission: { status: 'OBSERVED', deterministicNativeArtifactCreated: true }
+  };
+  const errors = validateContributorPacket(packet);
+  assert.ok(errors.includes('CAPTURED_PACKET_HAS_NO_CONTRIBUTIONS'));
+  assert.ok(errors.includes('CAPTURED_PACKET_OBSERVED_AT_REQUIRED'));
+});
+
+test('Formula advisory evidence proves execution but preserves non-admission', () => {
+  const evidencePath = path.join(repoRoot, 'training', 'evidence', 'formula-advisory-20261105.json');
+  if (!existsSync(evidencePath)) return;
+  const evidence = JSON.parse(readFileSync(evidencePath, 'utf8'));
+  assert.equal(evidence.status, 'EXECUTED_NOT_ADMITTED');
+  assert.equal(evidence.formula.health.status, 'LEEWAY_FORMULA_V1_PASS');
+  assert.match(evidence.formula.inputHash, /^[a-f0-9]{64}$/);
+  assert.match(evidence.formula.resultHash, /^[a-f0-9]{64}$/);
+  assert.equal(evidence.policy.actionPolicyIntervention, false);
+  assert.equal(evidence.verification.veritas, 'NOT_RUN');
+  assert.equal(evidence.verification.learningLedger, 'NOT_UPDATED');
 });
 

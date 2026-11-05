@@ -4,6 +4,8 @@ This directory contains the transfer boundary for developing Machine Consciousne
 
 The model family is a temporary foundry. It may provide capability evidence, examples, evaluations, and bounded contributor packets. It is not a production dependency, is not copied into this repository, and does not replace the deterministic Machine Consciousness runtime. Local weights remain outside Git and are retained only until native LeeWay artifacts, tests, receipts, ledgers, skills, formulas, recovery evidence, and backups are independently qualified.
 
+The four requested intelligence lanes are registered under [`contributors/`](contributors/README.md). A lane is not counted as training merely because it is named. It must provide an observable response or artifact, a rights/provenance boundary, a deterministic native artifact, and evaluation evidence. The current local Codex lane has observed implementation evidence; local Antigravity, separate online ChatGPT, and online Gemini remain pending capture until their actual outputs or exports are supplied.
+
 ## Closed-loop admission
 
 Every proposed capability follows the same loop:
@@ -68,4 +70,16 @@ node --test training/tests/foundation.test.mjs
 `available`, `configured`, `running`, `executed`, `verified`, `admitted`, and `production-ready` are separate states. A foundry artifact can be available without being executable; an executed action can be unverified; a verified capability can still be rejected from production until license, provenance, portability, governance, and recovery gates pass.
 
 The canonical Machine Consciousness runtime stays deterministic and non-LLM. Provider outputs and local weights are evidence sources until a separate LeeWay admission record promotes a native capability.
+
+## Formula advisory execution
+
+The Formula is a federated mathematical provider, not a copied kernel. The advisory runner calls the verified canonical Formula endpoint with a pinned MC-G8 cognition window. It records the actual input/result hashes and explicitly leaves action policy, Veritas, Receipt Authority, and Learning Ledger admission untouched.
+
+```powershell
+node training/scripts/run-formula-advisory.mjs `
+  --source-window "E:\LeeWay-Work\Leeway-formula-live\experiments\machine-consciousness-v0\outputs\mc-g8\source-window.json" `
+  --source-commit "1746d52"
+```
+
+This closes the Formula execution evidence gap, not the MC-G9 causal gap. The next mathematical gate remains a matched `NO_FORMULA` versus `FORMULA_ADVISORY` evaluation on held-out cases, followed only later by a separately authorized single-variable policy intervention.
 
