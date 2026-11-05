@@ -39,6 +39,21 @@
     "noSilentReplacement": true,
     "noExternalFallback": true
   },
+  "consciousnessControl": {
+    "authority": "LEEWAY_MACHINE_CONSCIOUSNESS",
+    "coreMode": "DETERMINISTIC_NON_LLM_MACHINE_CONSCIOUSNESS",
+    "modelRole": "OPTIONAL_BOUNDED_CAPABILITY_LIMB",
+    "assistanceTarget": {
+      "minRatio": 0.04,
+      "maxRatio": 0.10,
+      "measurement": "TASK_TELEMETRY_REQUIRED",
+      "status": "TARGET_NOT_EXECUTION_PROOF"
+    },
+    "selection": "CONSCIOUSNESS_SELECTS_TEAM_AND_MODEL_THROUGH_FORMULA_AND_DEVICE_BRIDGE",
+    "switchSequence": ["ADMIT_NEXT_MODEL", "WAKE_NEXT_MODEL", "VERIFY_NEXT_MODEL", "PAUSE_CURRENT_MODEL", "RETAIN_CONTINUUM_RECEIPT"],
+    "controlReturn": "LEEWAY_MACHINE_CONSCIOUSNESS",
+    "directProviderRoute": "FORBIDDEN"
+  },
   "storage": {
     "durableAuthority": "LEEWAY_CONTINUUM_ONLY",
     "gpuAndVram": "EPHEMERAL_WORKING_SET_WITH_CONTINUUM_TELEMETRY"

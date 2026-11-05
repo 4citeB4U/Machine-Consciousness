@@ -36,6 +36,9 @@ test('universal contract preserves the deterministic twelve-stage loop and autho
   assert.equal(contract.modelPolicy.modelHubOnly, true);
   assert.equal(contract.modelPolicy.neverDirectAction, true);
   assert.equal(contract.storagePolicy.durableAuthority, 'LEEWAY_CONTINUUM_ONLY');
+  assert.equal(contract.modelPolicy.consciousnessControl.authority, 'LEEWAY_MACHINE_CONSCIOUSNESS');
+  assert.deepEqual(contract.modelPolicy.consciousnessControl.assistanceTarget, {minRatio: 0.04, maxRatio: 0.10, measurement: 'TASK_TELEMETRY_REQUIRED', status: 'TARGET_NOT_EXECUTION_PROOF'});
+  assert.equal(contract.modelPolicy.consciousnessControl.controlReturn, 'LEEWAY_MACHINE_CONSCIOUSNESS');
 });
 
 test('manager, research, and phone employees derive the same consciousness substrate', () => {
@@ -80,6 +83,8 @@ test('the internal Model Hub has a resident pool, model teams, and explicit impo
   assert.deepEqual(modelHubContract.modelTeams.VISION_MULTIMODAL, ['qwen3-vl-8b-instruct']);
   assert.equal(modelHubContract.importPolicy.mutation, 'EXPLICIT_EXECUTION_ONLY');
   assert.equal(modelHubContract.swapPolicy.noSilentReplacement, true);
+  assert.equal(modelHubContract.consciousnessControl.directProviderRoute, 'FORBIDDEN');
+  assert.deepEqual(modelHubContract.consciousnessControl.switchSequence, ['ADMIT_NEXT_MODEL', 'WAKE_NEXT_MODEL', 'VERIFY_NEXT_MODEL', 'PAUSE_CURRENT_MODEL', 'RETAIN_CONTINUUM_RECEIPT']);
 });
 
 test('providers are Model Hub intake and internal execution adapters, never the runtime authority', () => {

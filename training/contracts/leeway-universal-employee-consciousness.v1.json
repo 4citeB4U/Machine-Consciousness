@@ -126,7 +126,14 @@
       "LEEWAY_VERITAS_VERIFICATION",
       "LEEWAY_CONTINUUM_RECEIPT",
       "AUTHORIZED_RESPONSE_OR_ACTION"
-    ]
+    ],
+    "consciousnessControl": {
+      "authority": "LEEWAY_MACHINE_CONSCIOUSNESS",
+      "modelRole": "OPTIONAL_BOUNDED_CAPABILITY_LIMB",
+      "assistanceTarget": {"minRatio": 0.04, "maxRatio": 0.10, "measurement": "TASK_TELEMETRY_REQUIRED", "status": "TARGET_NOT_EXECUTION_PROOF"},
+      "modelSelectionAndSwitching": "CONSCIOUSNESS_SELECTS_AND_SHIFTS_MODELS_THROUGH_LEEWAY_MODEL_HUB",
+      "controlReturn": "LEEWAY_MACHINE_CONSCIOUSNESS"
+    }
   },
   "actionPolicy": {
     "allActionsRequire": [
