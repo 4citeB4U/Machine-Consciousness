@@ -6,11 +6,14 @@
   "route": "LEEWAY_DEVICE_BRIDGE::AGENT_TABLET",
   "modelHub": {
     "authority": "LEEWAY_MODEL_HUB_INTERNAL",
-    "assetRule": "ALREADY_ADMITTED_INTERNAL_ASSETS_ONLY",
-    "externalModelDiscovery": "FORBIDDEN_BY_RUNTIME",
-    "download": "FORBIDDEN_BY_RUNTIME",
+    "assetRule": "LEEWAY_MODEL_HUB_OWNS_ADMITTED_ASSETS",
+    "externalModelDiscovery": "PROVIDER_INTAKE_ONLY_WITH_EXPLICIT_OWNER_ADMISSION",
+    "download": "PROVIDER_INTAKE_ONLY_WITH_EXPLICIT_OWNER_ADMISSION",
+    "providerRole": "ADAPTER_ONLY",
+    "providerFabricContract": "leeway-model-hub-provider-fabric.v1.json",
     "allowedBackends": ["vllm", "llama.cpp", "ollama", "transformers"],
     "externalApiFallback": "FORBIDDEN",
+    "providerAfterAdmission": "NOT_REQUIRED",
     "lifecycle": {
       "default": "PAUSED_RESIDENT",
       "wake": "FORMULA_AND_DEVICE_BRIDGE_ADMITTED_TASK_ONLY",

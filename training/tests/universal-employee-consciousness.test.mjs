@@ -8,6 +8,7 @@ const repoRoot = path.resolve(import.meta.dirname, '..', '..');
 const contract = JSON.parse(readFileSync(path.join(repoRoot, 'training', 'contracts', 'leeway-universal-employee-consciousness.v1.json'), 'utf8'));
 const tabletContract = JSON.parse(readFileSync(path.join(repoRoot, 'training', 'contracts', 'leeway-device-bridge-model-hub-logistics.v1.json'), 'utf8'));
 const modelHubContract = JSON.parse(readFileSync(path.join(repoRoot, 'training', 'contracts', 'leeway-model-hub-lifecycle.v1.json'), 'utf8'));
+const providerFabricContract = JSON.parse(readFileSync(path.join(repoRoot, 'training', 'contracts', 'leeway-model-hub-provider-fabric.v1.json'), 'utf8'));
 
 function agent(overrides = {}) {
   return {
@@ -65,7 +66,8 @@ test('the Device Bridge Agent Tablet retains the internal Model Hub and Logistic
   assert.equal(tabletContract.authority, 'LEEWAY_DEVICE_BRIDGE');
   assert.equal(tabletContract.modelHub.authority, 'LEEWAY_MODEL_HUB_INTERNAL');
   assert.equal(tabletContract.modelHub.externalApiFallback, 'FORBIDDEN');
-  assert.equal(tabletContract.modelHub.download, 'FORBIDDEN_BY_RUNTIME');
+  assert.equal(tabletContract.modelHub.download, 'PROVIDER_INTAKE_ONLY_WITH_EXPLICIT_OWNER_ADMISSION');
+  assert.equal(tabletContract.modelHub.providerRole, 'ADAPTER_ONLY');
   assert.equal(tabletContract.logistics.locationSource, 'LEEWAY_DEVICE_BRIDGE');
   assert.equal(tabletContract.logistics.nearbyContext, 'ONLY_FROM_SUPPLIED_AUTHORIZED_MAP_EVIDENCE');
   assert.equal(tabletContract.durableStorage, 'LEEWAY_CONTINUUM_ONLY');
@@ -78,4 +80,12 @@ test('the internal Model Hub has a resident pool, model teams, and explicit impo
   assert.deepEqual(modelHubContract.modelTeams.VISION_MULTIMODAL, ['qwen3-vl-8b-instruct']);
   assert.equal(modelHubContract.importPolicy.mutation, 'EXPLICIT_EXECUTION_ONLY');
   assert.equal(modelHubContract.swapPolicy.noSilentReplacement, true);
+});
+
+test('providers are Model Hub intake and internal execution adapters, never the runtime authority', () => {
+  assert.equal(providerFabricContract.authority, 'LEEWAY_MODEL_HUB');
+  assert.equal(providerFabricContract.providerRole, 'ADAPTER_ONLY');
+  assert.equal(providerFabricContract.execution.directProviderRoute, 'FORBIDDEN');
+  assert.equal(providerFabricContract.intake.providerCallAfterAdmission, 'NOT_REQUIRED');
+  assert.deepEqual(providerFabricContract.providerAdapters.map(adapter => adapter.id), ['OLLAMA', 'HUGGING_FACE', 'LLAMA_CPP', 'VLLM', 'TRANSFORMERS', 'LEEWAY_PROVIDER_FABRIC']);
 });

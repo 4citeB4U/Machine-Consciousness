@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "leeway.model-hub.provider-fabric.v1",
+  "contractId": "LEEWAY_MODEL_HUB_PROVIDER_FABRIC_V1",
+  "authority": "LEEWAY_MODEL_HUB",
+  "route": "LEEWAY_DEVICE_BRIDGE::AGENT_TABLET::MODEL_HUB",
+  "consciousnessAuthority": "LEEWAY_MACHINE_CONSCIOUSNESS",
+  "providerRole": "ADAPTER_ONLY",
+  "providerRule": "Providers may supply or execute an admitted capability through a Hub adapter; they never own the runtime route or durable model state.",
+  "intake": {
+    "allowedSources": [
+      "OWNER_LOCAL_PATH",
+      "OLLAMA_LOCAL_STORE",
+      "HUGGING_FACE_REPOSITORY",
+      "HUGGING_FACE_CACHE",
+      "LLAMA_CPP_GGUF",
+      "VLLM_MODEL_DIRECTORY",
+      "TRANSFORMERS_MODEL_DIRECTORY",
+      "LEEWAY_PROVIDER_FABRIC_EXPORT"
+    ],
+    "ownerApproval": "REQUIRED",
+    "licenseAndProvenance": "REQUIRED",
+    "manifestAndIntegrity": "REQUIRED",
+    "formulaVeritasContinuumAdmission": "REQUIRED",
+    "transferAuthority": "LEEWAY_MODEL_HUB",
+    "providerCallAfterAdmission": "NOT_REQUIRED",
+    "mutation": "EXPLICIT_EXECUTION_ONLY"
+  },
+  "execution": {
+    "authority": "LEEWAY_MODEL_HUB",
+    "route": "LEEWAY_DEVICE_BRIDGE::AGENT_TABLET::MODEL_HUB",
+    "backendAdapters": ["vllm", "llama.cpp", "ollama", "transformers"],
+    "directProviderRoute": "FORBIDDEN",
+    "externalApiFallback": "FORBIDDEN",
+    "wake": "FORMULA_AND_DEVICE_BRIDGE_ADMITTED_TASK_ONLY",
+    "return": "PAUSED_RESIDENT",
+    "shutdown": "SYSTEM_SHUTDOWN_ONLY",
+    "physicalExecution": "REQUIRES_SEPARATE_LEEWAY_EDGE_GPU_AND_VERITAS_PROOF"
+  },
+  "providerAdapters": [
+    {"id": "OLLAMA", "role": "INTAKE_AND_INTERNAL_EXECUTION_ADAPTER", "sourceKinds": ["OLLAMA_LOCAL_STORE"]},
+    {"id": "HUGGING_FACE", "role": "INTAKE_AND_INTERNAL_EXECUTION_ADAPTER", "sourceKinds": ["HUGGING_FACE_REPOSITORY", "HUGGING_FACE_CACHE"]},
+    {"id": "LLAMA_CPP", "role": "INTAKE_AND_INTERNAL_EXECUTION_ADAPTER", "sourceKinds": ["LLAMA_CPP_GGUF"]},
+    {"id": "VLLM", "role": "INTAKE_AND_INTERNAL_EXECUTION_ADAPTER", "sourceKinds": ["VLLM_MODEL_DIRECTORY"]},
+    {"id": "TRANSFORMERS", "role": "INTAKE_AND_INTERNAL_EXECUTION_ADAPTER", "sourceKinds": ["TRANSFORMERS_MODEL_DIRECTORY"]},
+    {"id": "LEEWAY_PROVIDER_FABRIC", "role": "INTAKE_ADAPTER", "sourceKinds": ["LEEWAY_PROVIDER_FABRIC_EXPORT"]}
+  ],
+  "durableStorage": "LEEWAY_CONTINUUM_ONLY"
+}

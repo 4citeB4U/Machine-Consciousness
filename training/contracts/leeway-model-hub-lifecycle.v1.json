@@ -4,8 +4,10 @@
   "authority": "LEEWAY_MODEL_HUB",
   "bodyRoute": "LEEWAY_DEVICE_BRIDGE::AGENT_TABLET::MODEL_HUB",
   "relationshipToConsciousness": "CAPABILITY_PROVIDER_ONLY",
-  "assetRule": "INTERNAL_LOCAL_ASSETS_ONLY",
-  "externalDiscovery": "FORBIDDEN_BY_RUNTIME",
+  "assetRule": "LEEWAY_MODEL_HUB_OWNS_ADMITTED_ASSETS",
+  "externalDiscovery": "PROVIDER_INTAKE_ONLY_WITH_EXPLICIT_OWNER_ADMISSION",
+  "providerRole": "ADAPTER_ONLY",
+  "providerFabricContract": "leeway-model-hub-provider-fabric.v1.json",
   "residentPool": {
     "minimumReadyAssetCount": 2,
     "desiredResidentRuntimeCount": 2,
@@ -22,11 +24,14 @@
     "VIDEO_CREATION": ["wan2.1-t2v-1.3b"]
   },
   "importPolicy": {
-    "source": "OWNER_APPROVED_LOCAL_PATH",
-    "download": "NOT_PERFORMED_BY_RUNTIME",
+    "source": "OWNER_APPROVED_PROVIDER_OR_LOCAL_SOURCE",
+    "allowedSources": ["OWNER_LOCAL_PATH", "OLLAMA_LOCAL_STORE", "HUGGING_FACE_REPOSITORY", "HUGGING_FACE_CACHE", "LLAMA_CPP_GGUF", "VLLM_MODEL_DIRECTORY", "TRANSFORMERS_MODEL_DIRECTORY", "LEEWAY_PROVIDER_FABRIC_EXPORT"],
+    "providerAfterAdmission": "NOT_REQUIRED",
+    "download": "EXPLICIT_OWNER_ADMITTED_PROVIDER_INTAKE_ONLY",
     "licenseReview": "REQUIRED",
     "manifestAndIntegrity": "REQUIRED",
     "formulaVeritasContinuumAdmission": "REQUIRED",
+    "transferAuthority": "LEEWAY_MODEL_HUB",
     "mutation": "EXPLICIT_EXECUTION_ONLY"
   },
   "swapPolicy": {
