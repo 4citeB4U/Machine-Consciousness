@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "leeway.model-hub.execution-supervisor.v1",
+  "contractId": "LEEWAY_MODEL_HUB_EXECUTION_SUPERVISOR_V1",
+  "authority": "LEEWAY_MACHINE_CONSCIOUSNESS",
+  "coreMode": "DETERMINISTIC_NON_LLM_MACHINE_CONSCIOUSNESS",
+  "modelHubRoute": "LEEWAY_DEVICE_BRIDGE::AGENT_TABLET::MODEL_HUB",
+  "modelRole": "OPTIONAL_BOUNDED_CAPABILITY_LIMB",
+  "assistanceTarget": {
+    "minRatio": 0.04,
+    "maxRatio": 0.10,
+    "measurement": "TASK_TELEMETRY_REQUIRED",
+    "status": "TARGET_NOT_EXECUTION_PROOF"
+  },
+  "selection": {
+    "authority": "LEEWAY_MACHINE_CONSCIOUSNESS",
+    "inputs": ["TEAM", "CAPABILITY", "MODEL_HUB_ASSET_PRESENCE", "UNIVERSAL_EMPLOYEE_CONSCIOUSNESS_BINDING"],
+    "providerAfterAdmission": "NOT_REQUIRED",
+    "directProviderRoute": "FORBIDDEN"
+  },
+  "lifecycle": [
+    "MODEL_TASK_RECEIVED",
+    "FORMULA_ADMITTED",
+    "MODEL_SELECTED",
+    "DEVICE_BRIDGE_WAKE_AUTHORIZED",
+    "GPU_EXECUTION",
+    "VERITAS_VERIFIED",
+    "CONTINUUM_RECEIPT",
+    "PAUSED_RESIDENT"
+  ],
+  "switchSequence": [
+    "ADMIT_NEXT_MODEL",
+    "WAKE_NEXT_MODEL",
+    "VERIFY_NEXT_MODEL",
+    "PAUSE_CURRENT_MODEL",
+    "RETAIN_CONTINUUM_RECEIPT"
+  ],
+  "executionGate": {
+    "inferenceAuthority": "LEEWAY_EDGE_GPU_ONLY",
+    "requiredEvidence": ["FORMULA_PASS", "DEVICE_BRIDGE_PASS", "GPU_EXECUTION_PASS", "VERITAS_PASS", "CONTINUUM_RECEIPT_PASS"],
+    "inferenceStartedBeforeAllEvidence": false,
+    "physicalResidencyProof": "REQUIRED_SEPARATELY",
+    "failureMode": "FAIL_CLOSED"
+  },
+  "controlReturn": "LEEWAY_MACHINE_CONSCIOUSNESS",
+  "storage": {
+    "durableAuthority": "LEEWAY_CONTINUUM_ONLY",
+    "vramWorkingSet": "EPHEMERAL_TELEMETRY_ONLY"
+  }
+}
