@@ -6,6 +6,8 @@ import { ENGINEERING_LOOP, validateAgentBinding, validateAgentBook, validateUniv
 
 const repoRoot = path.resolve(import.meta.dirname, '..', '..');
 const contract = JSON.parse(readFileSync(path.join(repoRoot, 'training', 'contracts', 'leeway-universal-employee-consciousness.v1.json'), 'utf8'));
+const tabletContract = JSON.parse(readFileSync(path.join(repoRoot, 'training', 'contracts', 'leeway-device-bridge-model-hub-logistics.v1.json'), 'utf8'));
+const modelHubContract = JSON.parse(readFileSync(path.join(repoRoot, 'training', 'contracts', 'leeway-model-hub-lifecycle.v1.json'), 'utf8'));
 
 function agent(overrides = {}) {
   return {
@@ -57,4 +59,23 @@ test('the contract does not promote model presence into consciousness training p
   assert.equal(result.status, 'UNIVERSAL_CONSCIOUSNESS_CONTRACT_PASS');
   assert.equal(result.bindings[0].modelOptional, true);
   assert.equal(contract.admissionPolicy.weightsAndModelOutputs.includes('VERITAS'), true);
+});
+
+test('the Device Bridge Agent Tablet retains the internal Model Hub and Logistics boundaries', () => {
+  assert.equal(tabletContract.authority, 'LEEWAY_DEVICE_BRIDGE');
+  assert.equal(tabletContract.modelHub.authority, 'LEEWAY_MODEL_HUB_INTERNAL');
+  assert.equal(tabletContract.modelHub.externalApiFallback, 'FORBIDDEN');
+  assert.equal(tabletContract.modelHub.download, 'FORBIDDEN_BY_RUNTIME');
+  assert.equal(tabletContract.logistics.locationSource, 'LEEWAY_DEVICE_BRIDGE');
+  assert.equal(tabletContract.logistics.nearbyContext, 'ONLY_FROM_SUPPLIED_AUTHORIZED_MAP_EVIDENCE');
+  assert.equal(tabletContract.durableStorage, 'LEEWAY_CONTINUUM_ONLY');
+});
+
+test('the internal Model Hub has a resident pool, model teams, and explicit import/swap gates', () => {
+  assert.equal(modelHubContract.bodyRoute, 'LEEWAY_DEVICE_BRIDGE::AGENT_TABLET::MODEL_HUB');
+  assert.equal(modelHubContract.residentPool.minimumReadyAssetCount, 2);
+  assert.equal(modelHubContract.residentPool.defaultLifecycle, 'PAUSED_RESIDENT');
+  assert.deepEqual(modelHubContract.modelTeams.VISION_MULTIMODAL, ['qwen3-vl-8b-instruct']);
+  assert.equal(modelHubContract.importPolicy.mutation, 'EXPLICIT_EXECUTION_ONLY');
+  assert.equal(modelHubContract.swapPolicy.noSilentReplacement, true);
 });

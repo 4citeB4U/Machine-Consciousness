@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "leeway.model-hub.lifecycle.v1",
+  "contractId": "LEEWAY_MODEL_HUB_INTERNAL_LIFECYCLE_V1",
+  "authority": "LEEWAY_MODEL_HUB",
+  "bodyRoute": "LEEWAY_DEVICE_BRIDGE::AGENT_TABLET::MODEL_HUB",
+  "relationshipToConsciousness": "CAPABILITY_PROVIDER_ONLY",
+  "assetRule": "INTERNAL_LOCAL_ASSETS_ONLY",
+  "externalDiscovery": "FORBIDDEN_BY_RUNTIME",
+  "residentPool": {
+    "minimumReadyAssetCount": 2,
+    "desiredResidentRuntimeCount": 2,
+    "defaultLifecycle": "PAUSED_RESIDENT",
+    "wake": "FORMULA_AND_DEVICE_BRIDGE_ADMITTED_TASK_ONLY",
+    "active": "BOUNDED_TASK_EXECUTION",
+    "return": "PAUSED_RESIDENT",
+    "shutdown": "SYSTEM_SHUTDOWN_ONLY",
+    "physicalResidency": "REQUIRES_SEPARATE_GPU_VRAM_EXECUTION_PROOF"
+  },
+  "modelTeams": {
+    "GENERAL_REASONING": ["qwen3-4b"],
+    "VISION_MULTIMODAL": ["qwen3-vl-8b-instruct"],
+    "VIDEO_CREATION": ["wan2.1-t2v-1.3b"]
+  },
+  "importPolicy": {
+    "source": "OWNER_APPROVED_LOCAL_PATH",
+    "download": "NOT_PERFORMED_BY_RUNTIME",
+    "licenseReview": "REQUIRED",
+    "manifestAndIntegrity": "REQUIRED",
+    "formulaVeritasContinuumAdmission": "REQUIRED",
+    "mutation": "EXPLICIT_EXECUTION_ONLY"
+  },
+  "swapPolicy": {
+    "sequence": ["ADMIT_NEXT_MODEL", "WAKE_NEXT_MODEL", "VERIFY_NEXT_MODEL", "PAUSE_CURRENT_MODEL", "RETAIN_CONTINUUM_RECEIPT"],
+    "noSilentReplacement": true,
+    "noExternalFallback": true
+  },
+  "storage": {
+    "durableAuthority": "LEEWAY_CONTINUUM_ONLY",
+    "gpuAndVram": "EPHEMERAL_WORKING_SET_WITH_CONTINUUM_TELEMETRY"
+  },
+  "evidenceStates": ["ASSET_PRESENT", "CONFIGURED", "RUNNING", "PAUSED_RESIDENT_OBSERVED", "EXECUTED", "VERIFIED", "PRODUCTION_READY"]
+}

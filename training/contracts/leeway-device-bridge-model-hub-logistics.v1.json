@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "leeway.device-bridge.model-hub-logistics.v1",
+  "contractId": "LEEWAY_DEVICE_BRIDGE_AGENT_TABLET_V1",
+  "authority": "LEEWAY_DEVICE_BRIDGE",
+  "consciousnessAuthority": "LEEWAY_MACHINE_CONSCIOUSNESS",
+  "route": "LEEWAY_DEVICE_BRIDGE::AGENT_TABLET",
+  "modelHub": {
+    "authority": "LEEWAY_MODEL_HUB_INTERNAL",
+    "assetRule": "ALREADY_ADMITTED_INTERNAL_ASSETS_ONLY",
+    "externalModelDiscovery": "FORBIDDEN_BY_RUNTIME",
+    "download": "FORBIDDEN_BY_RUNTIME",
+    "allowedBackends": ["vllm", "llama.cpp", "ollama", "transformers"],
+    "externalApiFallback": "FORBIDDEN",
+    "lifecycle": {
+      "default": "PAUSED_RESIDENT",
+      "wake": "FORMULA_AND_DEVICE_BRIDGE_ADMITTED_TASK_ONLY",
+      "return": "PAUSED_RESIDENT",
+      "shutdown": "SYSTEM_SHUTDOWN_ONLY",
+      "physicalResidencyProof": "REQUIRED_SEPARATELY"
+    }
+  },
+  "logistics": {
+    "authority": "LEEWAY_LOGISTICS",
+    "route": "LEEWAY_DEVICE_BRIDGE::AGENT_TABLET::LOGISTICS",
+    "locationSource": "LEEWAY_DEVICE_BRIDGE",
+    "locationEvidenceRequired": true,
+    "nearbyContext": "ONLY_FROM_SUPPLIED_AUTHORIZED_MAP_EVIDENCE",
+    "rawExternalLookupByDefault": "FORBIDDEN",
+    "durableStorage": "LEEWAY_CONTINUUM_ONLY"
+  },
+  "durableStorage": "LEEWAY_CONTINUUM_ONLY",
+  "inferenceAuthority": "LEEWAY_EDGE_GPU",
+  "formulaGate": "LEEWAY_FORMULA",
+  "verificationGate": "LEEWAY_VERITAS",
+  "statusModel": ["CONTRACT_PORTABLE", "ADAPTER_IMPLEMENTED", "PLATFORM_TESTED", "VERIFIED"]
+}

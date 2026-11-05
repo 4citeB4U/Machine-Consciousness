@@ -102,7 +102,9 @@ node training/scripts/validate-universal-employee-consciousness.mjs `
   --agent-book "E:\LeeWay-Work\pc-consciousness-live\runtime\standards\registries\leeway-agent-book.json"
 ```
 
-An employee may operate without an LLM. If its duty needs language, vision, audio, video, or another model capability, it requests that capability through the LeeWay Model Hub only after its consciousness binding. Model residency is a managed warm pool with suspend and eviction; “ready” does not mean every model is permanently loaded in VRAM. Model output remains a proposal until Formula admission, real execution, Veritas verification, and a Continuum receipt close the loop.
+An employee may operate without an LLM. If its duty needs language, vision, audio, video, or another model capability, it requests that capability through the internal LeeWay Model Hub on the Device Bridge Agent Tablet only after its consciousness binding. The runtime does not search for, download, or fall back to external models. Model residency follows a paused-resident policy with bounded wake and return-to-pause; “ready” does not mean every model is physically loaded in VRAM. Model output remains a proposal until Formula admission, real execution, Veritas verification, and a Continuum receipt close the loop.
+
+The Device Bridge Agent Tablet is also the common body for LeeWay Logistics. It can expose location, map grounding, nearby business/activity context, inventory, and dispatch to every employee, but only when authorized Device Bridge evidence is present. The deterministic core never invents a location or performs an unadmitted external lookup. Exact location is ephemeral until a governed Continuum receipt admits durable retention.
 
 ## Runtime constitution
 
