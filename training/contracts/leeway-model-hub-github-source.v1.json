@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "leeway.model-hub.github-source.v1",
+  "contractId": "LEEWAY_MODEL_HUB_GITHUB_SOURCE_V1",
+  "authority": "LEEWAY_MODEL_HUB",
+  "canonicalRepository": "4citeB4U/LeeWay-Model-Hub",
+  "canonicalRepositoryUrl": "https://github.com/4citeB4U/LeeWay-Model-Hub",
+  "runtimeManifestPath": "registry/leeway-model-hub-runtime-manifest.v1.json",
+  "runtimeManifestUrl": "https://raw.githubusercontent.com/4citeB4U/LeeWay-Model-Hub/main/registry/leeway-model-hub-runtime-manifest.v1.json",
+  "sourceAuthority": "GITHUB_REPOSITORY",
+  "sourceRefPolicy": {
+    "default": "main",
+    "immutableCommitRequiredBeforePhysicalExecution": true,
+    "manifestReadbackRequired": true
+  },
+  "runtimeMaterialization": {
+    "physicalExecutionRequiresLocalMaterialization": true,
+    "rootBinding": "LEEWAY_MODEL_HUB_ROOT",
+    "rootPolicy": "EXPLICIT_PORTABLE_MATERIALIZATION_ONLY",
+    "defaultRoot": null,
+    "fixedDriveDefaults": false,
+    "githubRemainsSourceAuthorityAfterMaterialization": true,
+    "durableStorage": "LEEWAY_CONTINUUM_ONLY"
+  },
+  "weightTransport": {
+    "metadataState": "PUBLISHED_TO_GITHUB",
+    "weightPayloadState": "NOT_YET_HOSTED_IN_GITHUB",
+    "approvedOptions": ["GITHUB_RELEASE_ASSETS", "GIT_LFS"],
+    "normalGitPayload": "FORBIDDEN_FOR_WEIGHTS",
+    "licenseReview": "REQUIRED",
+    "ownerApproval": "REQUIRED",
+    "quotaAndSizeReview": "REQUIRED",
+    "integrityManifest": "REQUIRED",
+    "inferenceBeforeMaterializationAndVerification": "FORBIDDEN"
+  },
+  "control": {
+    "consciousnessAuthority": "LEEWAY_MACHINE_CONSCIOUSNESS",
+    "deviceBridgeRoute": "LEEWAY_DEVICE_BRIDGE::AGENT_TABLET::MODEL_HUB",
+    "providerAfterAdmission": "NOT_REQUIRED",
+    "directProviderRoute": "FORBIDDEN",
+    "modelOutput": "CAPABILITY_PROVIDER_EVIDENCE_ONLY"
+  }
+}

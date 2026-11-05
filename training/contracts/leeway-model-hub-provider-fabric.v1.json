@@ -3,6 +3,8 @@
   "contractId": "LEEWAY_MODEL_HUB_PROVIDER_FABRIC_V1",
   "authority": "LEEWAY_MODEL_HUB",
   "route": "LEEWAY_DEVICE_BRIDGE::AGENT_TABLET::MODEL_HUB",
+  "canonicalSource": "GITHUB_MODEL_HUB_REPOSITORY",
+  "githubSourceContract": "leeway-model-hub-github-source.v1.json",
   "consciousnessAuthority": "LEEWAY_MACHINE_CONSCIOUSNESS",
   "providerRole": "ADAPTER_ONLY",
   "providerRule": "Providers may supply or execute an admitted capability through a Hub adapter; they never own the runtime route or durable model state.",
@@ -16,6 +18,7 @@
       "VLLM_MODEL_DIRECTORY",
       "TRANSFORMERS_MODEL_DIRECTORY",
       "LEEWAY_PROVIDER_FABRIC_EXPORT"
+      ,"GITHUB_MODEL_HUB_REPOSITORY"
     ],
     "ownerApproval": "REQUIRED",
     "licenseAndProvenance": "REQUIRED",

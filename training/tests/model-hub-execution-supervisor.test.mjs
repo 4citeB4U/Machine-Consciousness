@@ -6,6 +6,17 @@ import {fileURLToPath} from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const contract = JSON.parse(fs.readFileSync(path.join(root, 'contracts', 'leeway-model-hub-execution-supervisor.v1.json'), 'utf8'));
+const githubSource = JSON.parse(fs.readFileSync(path.join(root, 'contracts', 'leeway-model-hub-github-source.v1.json'), 'utf8'));
+
+test('GitHub is the Model Hub source authority and no fixed drive is part of the contract', () => {
+  assert.equal(githubSource.canonicalRepository, '4citeB4U/LeeWay-Model-Hub');
+  assert.equal(githubSource.sourceAuthority, 'GITHUB_REPOSITORY');
+  assert.equal(githubSource.runtimeMaterialization.rootBinding, 'LEEWAY_MODEL_HUB_ROOT');
+  assert.equal(githubSource.runtimeMaterialization.defaultRoot, null);
+  assert.equal(githubSource.runtimeMaterialization.fixedDriveDefaults, false);
+  assert.equal(githubSource.weightTransport.weightPayloadState, 'NOT_YET_HOSTED_IN_GITHUB');
+  assert.doesNotMatch(JSON.stringify(githubSource), /[A-Z]:[\\/]/);
+});
 
 test('Machine Consciousness owns model selection and model shifting', () => {
   assert.equal(contract.authority, 'LEEWAY_MACHINE_CONSCIOUSNESS');

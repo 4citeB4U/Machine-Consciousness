@@ -4,6 +4,8 @@ This directory contains the transfer boundary for developing Machine Consciousne
 
 The model family is a temporary foundry. It may provide capability evidence, examples, evaluations, and bounded contributor packets. It is not a production dependency, is not copied into this repository, and does not replace the deterministic Machine Consciousness runtime. Local weights remain outside Git and are retained only until native LeeWay artifacts, tests, receipts, ledgers, skills, formulas, recovery evidence, and backups are independently qualified.
 
+The canonical Model Hub source is the GitHub repository [`4citeB4U/LeeWay-Model-Hub`](https://github.com/4citeB4U/LeeWay-Model-Hub). Its runtime manifest is [`registry/leeway-model-hub-runtime-manifest.v1.json`](https://github.com/4citeB4U/LeeWay-Model-Hub/blob/main/registry/leeway-model-hub-runtime-manifest.v1.json). The runtime must pin and read back a GitHub commit before physical execution. A host may materialize admitted weights into an explicitly configured ephemeral working set for GPU execution, but no fixed drive path is a LeeWay source authority and no inference may begin from metadata alone.
+
 The four requested intelligence lanes are registered under [`contributors/`](contributors/README.md). A lane is not counted as training merely because it is named. It must provide an observable response or artifact, a rights/provenance boundary, a deterministic native artifact, and evaluation evidence. The current local Codex lane has observed implementation evidence; local Antigravity, separate online ChatGPT, and online Gemini remain pending capture until their actual outputs or exports are supplied.
 
 ## Closed-loop admission
@@ -30,8 +32,8 @@ The repository wrapper in `scripts/live-capability-probe.mjs` delegates to that 
 
 ```powershell
 node training/scripts/audit-federate-web.mjs `
-  --repo "E:\LeeWay-Work\Leeway-Federate-Web" `
-  --browser-receipt "E:\LeeWay-Work\Leeway-Federate-Web\test-results\peer-retest-20261105.json" `
+  --repo "<LEEWAY_FEDERATE_WEB_CHECKOUT>" `
+  --browser-receipt "<LEEWAY_FEDERATE_WEB_CHECKOUT>/test-results/peer-retest-20261105.json" `
   --out training/runs/federate-web-audit.json
 ```
 
@@ -43,8 +45,8 @@ Audit local artifacts without starting inference:
 
 ```powershell
 node training/scripts/audit-local-foundry.mjs `
-  --root "E:\Leeway-Ecosystem v2.1.4\leeway-model-family" `
-  --root "E:\LeeWay-Work\model-hub\HuggingFace" `
+  --root "<LEEWAY_MODEL_FAMILY_CHECKOUT>" `
+  --root "<LEEWAY_MODEL_HUB_MATERIALIZATION>/HuggingFace" `
   --out training/runs/foundry-audit.json
 ```
 
@@ -53,7 +55,7 @@ The audit is metadata-first. It never invokes Ollama, Transformers, a model serv
 Run the real low-risk LeeWay action through the existing C3-1 acceptance harness:
 
 ```powershell
-$env:LEEWAY_RUNTIME_ROOT = "E:\LeeWay-Work\pc-consciousness-live\runtime"
+$env:LEEWAY_RUNTIME_ROOT = "<LEEWAY_RUNTIME_CHECKOUT>"
 node training/scripts/live-capability-probe.mjs
 ```
 
@@ -83,7 +85,7 @@ The Formula is a federated mathematical provider, not a copied kernel. The advis
 
 ```powershell
 node training/scripts/run-formula-advisory.mjs `
-  --source-window "E:\LeeWay-Work\Leeway-formula-live\experiments\machine-consciousness-v0\outputs\mc-g8\source-window.json" `
+  --source-window "<LEEWAY_FORMULA_CHECKOUT>/experiments/machine-consciousness-v0/outputs/mc-g8/source-window.json" `
   --source-commit "1746d52"
 ```
 
@@ -93,13 +95,13 @@ This closes the Formula execution evidence gap, not the MC-G9 causal gap. The ne
 
 Every registered LeeWay employee derives a binding to one shared deterministic Machine Consciousness substrate. The employee's role, permissions, workflows, tools, body, and model routes remain role-specific; the consciousness contract, Formula/Veritas gates, twelve-stage Engineering Loop, Device Bridge action boundary, and Continuum durable-memory law are universal. This is a binding contract, not a duplicate consciousness instance per employee.
 
-The canonical contract is [`contracts/leeway-universal-employee-consciousness.v1.json`](contracts/leeway-universal-employee-consciousness.v1.json). The runtime binding and fail-closed cycle/model/action gates are implemented in the live carrier at `E:\LeeWay-Work\pc-consciousness-live\runtime\machine-consciousness\employee-consciousness-runtime.mjs`.
+The canonical contract is [`contracts/leeway-universal-employee-consciousness.v1.json`](contracts/leeway-universal-employee-consciousness.v1.json). The runtime binding and fail-closed cycle/model/action gates are implemented in the live carrier at `<LEEWAY_RUNTIME_CHECKOUT>/machine-consciousness/employee-consciousness-runtime.mjs`.
 
 Validate the complete registered employee book before treating coverage as qualified:
 
 ```powershell
 node training/scripts/validate-universal-employee-consciousness.mjs `
-  --agent-book "E:\LeeWay-Work\pc-consciousness-live\runtime\standards\registries\leeway-agent-book.json"
+  --agent-book "<LEEWAY_RUNTIME_CHECKOUT>/standards/registries/leeway-agent-book.json"
 ```
 
 An employee may operate without an LLM. If its duty needs language, vision, audio, video, or another model capability, it requests that capability through the internal LeeWay Model Hub on the Device Bridge Agent Tablet only after its consciousness binding. Ollama, Hugging Face, llama.cpp, vLLM, Transformers, and the registered LeeWay Provider Fabric are adapters only: they may supply or execute an explicitly admitted model through a Hub adapter, but they do not own the runtime route or durable model state. After admission, the Hub is called directly and provider calls are not required. Provider intake requires owner approval, license/provenance review, manifest and integrity evidence, Formula/Veritas/Continuum admission, and explicit mutation. Model residency follows a paused-resident policy with bounded wake and return-to-pause; “ready” does not mean every model is physically loaded in VRAM. Model output remains a proposal until Formula admission, real execution, Veritas verification, and a Continuum receipt close the loop.

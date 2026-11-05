@@ -6,6 +6,8 @@
   "route": "LEEWAY_DEVICE_BRIDGE::AGENT_TABLET",
   "modelHub": {
     "authority": "LEEWAY_MODEL_HUB_INTERNAL",
+    "canonicalSource": "GITHUB_MODEL_HUB_REPOSITORY",
+    "githubSourceContract": "leeway-model-hub-github-source.v1.json",
     "assetRule": "LEEWAY_MODEL_HUB_OWNS_ADMITTED_ASSETS",
     "externalModelDiscovery": "PROVIDER_INTAKE_ONLY_WITH_EXPLICIT_OWNER_ADMISSION",
     "download": "PROVIDER_INTAKE_ONLY_WITH_EXPLICIT_OWNER_ADMISSION",
