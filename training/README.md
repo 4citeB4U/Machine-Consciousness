@@ -6,7 +6,15 @@ The model family is a temporary foundry. It may provide capability evidence, exa
 
 The canonical Model Hub source is the GitHub repository [`4citeB4U/LeeWay-Model-Hub`](https://github.com/4citeB4U/LeeWay-Model-Hub). Its runtime manifest is [`registry/leeway-model-hub-runtime-manifest.v1.json`](https://github.com/4citeB4U/LeeWay-Model-Hub/blob/main/registry/leeway-model-hub-runtime-manifest.v1.json). The runtime must pin and read back a GitHub commit before physical execution. A host may materialize admitted weights into an explicitly configured ephemeral working set for GPU execution, but no fixed drive path is a LeeWay source authority and no inference may begin from metadata alone.
 
-The four requested intelligence lanes are registered under [`contributors/`](contributors/README.md). A lane is not counted as training merely because it is named. It must provide an observable response or artifact, a rights/provenance boundary, a deterministic native artifact, and evaluation evidence. The current local Codex lane has observed implementation evidence; local Antigravity, separate online ChatGPT, and online Gemini remain pending capture until their actual outputs or exports are supplied.
+The four requested intelligence lanes are registered under [`contributors/`](contributors/README.md). A lane is not counted as training merely because it is named. It must provide an observable response or artifact, a rights/provenance boundary, a deterministic native artifact, and evaluation evidence. Local Codex, local Antigravity, and online Gemini have bounded observed capsules; the separate online ChatGPT lane remains a registration placeholder until an actual response or export is supplied.
+
+The Agent Lee pedagogical fabric is [`contracts/leeway-agent-lee-pedagogical-fabric.v1.json`](contracts/leeway-agent-lee-pedagogical-fabric.v1.json). `scripts/compile-agent-lee-pedagogy.mjs` compiles the four registered lanes into a bounded persona-and-behavior capsule and probes the LeeWay Device Bridge Agent Tablet route in read-only mode. It does not extract private provider knowledge, modify weights, start inference, or promote a student. A pending lane contributes no claims, and every observed contribution remains `CAPSULE_COMPILED_NOT_TRAINED` until rights, baseline/post-training evaluation, Formula mapping/execution, Veritas, Continuum readback, and a real low-risk LeeWay action retest are complete.
+
+```powershell
+node training/scripts/compile-agent-lee-pedagogy.mjs `
+  --device-bridge-url "http://127.0.0.1:8890" `
+  --out training/evidence/agent-lee-pedagogical-capsule.json
+```
 
 ## Closed-loop admission
 
