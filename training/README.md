@@ -73,6 +73,8 @@ node --test training/tests/foundation.test.mjs
 
 The canonical Machine Consciousness runtime stays deterministic and non-LLM. Provider outputs and local weights are evidence sources until a separate LeeWay admission record promotes a native capability.
 
+Model condensation is governed by [`leeway-model-condensation.v1.json`](contracts/leeway-model-condensation.v1.json). Formula selects and gates the condensation policy; model-specific quantization, pruning, packing, sharding, or distillation performs the actual representation change. Formula state compaction is not a claim that arbitrary neural weights can be losslessly reduced to one or ten megabytes. Lossy transforms require baseline and post-transform capability evaluations, hash readback, Veritas, and Continuum evidence before promotion.
+
 The current Gemini training tranche also contributes a bounded Agent Lee voice policy:
 continuous conversation, concurrent governed work, interruption-versus-backchannel
 handling, and evidence-bound speech. Its physical voice equations live in the Formula

@@ -1,0 +1,85 @@
+{
+  "schemaVersion": "leeway.model-condensation.v1",
+  "contractId": "LEEWAY_MODEL_CONDENSATION_V1",
+  "authority": "LEEWAY_MACHINE_CONSCIOUSNESS",
+  "purpose": "Governed representation reduction for Model Hub artifacts without confusing Formula state compaction with byte-level weight transformation.",
+  "formulaGate": {
+    "formulaId": "LEEWAY-FORMULA-v1.0",
+    "adapterId": "runtime-state-v1",
+    "role": "SELECT_AND_GATE_CONDENSATION_POLICY",
+    "byteTransformRole": "NOT_A_BYTE_LEVEL_COMPRESSOR",
+    "mapping": "LEEWAY_MODEL_CONDENSATION_STATE_V1",
+    "dimensions": {
+      "Q": "measured quality retention against the admitted baseline",
+      "V": "measured artifact volume and runtime budget",
+      "H": "source and transformed artifact hash integrity",
+      "R": "runtime materialization and execution readiness",
+      "S": "security and format safety qualification",
+      "L": "license and provenance qualification"
+    },
+    "qualityMeasurementRequiredBeforeLossyTransform": true,
+    "unmeasuredQualityState": "NO_DESTRUCTIVE_TRANSFORM"
+  },
+  "transformClasses": [
+    {
+      "id": "METADATA_COMPACTION",
+      "preservesWeightBytes": true,
+      "qualityChange": "NONE",
+      "allowedBeforeInference": true,
+      "examples": ["canonical-json-minification", "manifest-deduplication", "receipt-index-compaction"]
+    },
+    {
+      "id": "LOSSLESS_PACK_AND_SHARD",
+      "preservesWeightBytes": true,
+      "qualityChange": "NONE",
+      "allowedBeforeInference": true,
+      "purpose": "Transport and storage packaging; decompression must reproduce the source hash exactly."
+    },
+    {
+      "id": "WEIGHT_QUANTIZATION",
+      "preservesWeightBytes": false,
+      "qualityChange": "MEASURE_REQUIRED",
+      "requires": ["MODEL_SPECIFIC_BACKEND", "BASELINE_EVALUATION", "POST_TRANSFORM_EVALUATION", "VERITAS"]
+    },
+    {
+      "id": "WEIGHT_PRUNING",
+      "preservesWeightBytes": false,
+      "qualityChange": "MEASURE_REQUIRED",
+      "requires": ["MODEL_SPECIFIC_BACKEND", "SPARSITY_RUNTIME_SUPPORT", "BASELINE_EVALUATION", "POST_TRANSFORM_EVALUATION", "VERITAS"]
+    },
+    {
+      "id": "DISTILLATION",
+      "preservesWeightBytes": false,
+      "qualityChange": "NEW_STUDENT_MUST_BE_EVALUATED",
+      "requires": ["LICENSE_REVIEW", "TEACHER_STUDENT_EVALUATION", "BASELINE_EVALUATION", "POST_TRANSFORM_EVALUATION", "VERITAS"]
+    }
+  ],
+  "admissionGates": [
+    "SOURCE_PROVENANCE_AND_LICENSE",
+    "SOURCE_HASH_READBACK",
+    "BASELINE_CAPABILITY_EVALUATION",
+    "FORMULA_CONDENSATION_POLICY_EXECUTION",
+    "TRANSFORMED_ARTIFACT_HASH_READBACK",
+    "POST_TRANSFORM_CAPABILITY_EVALUATION",
+    "LEEWAY_VERITAS_POST_GATE",
+    "LEEWAY_CONTINUUM_RECEIPT"
+  ],
+  "prohibitions": [
+    "ARBITRARY_TARGET_SIZE_WITHOUT_MEASURED_QUALITY_ACCEPTANCE",
+    "CLAIM_LOSSLESS_REDUCTION_OF_INFORMATION_ENTROPY",
+    "DELETE_SOURCE_WEIGHTS_BEFORE_TRANSFORMED_ARTIFACT_AND_READBACK_VERIFIED",
+    "START_INFERENCE_FROM_METADATA_ONLY",
+    "TREAT_FORMULA_STATE_COMPACTION_AS_MODEL_WEIGHT_COMPRESSION"
+  ],
+  "targetPolicy": {
+    "oneMegabyteTarget": "NOT_UNIVERSAL;_ALLOWED_ONLY_FOR_METADATA_OR_A_NEW_SMALL_STUDENT",
+    "tenMegabyteTarget": "NOT_UNIVERSAL;_REQUIRES_DISTILLATION_OR_SPECIALIZED_MODEL_REDESIGN",
+    "weightTarget": "SELECTED_BY_FORMULA_AND_ACCEPTED_BY_QUALITY_EVALUATION",
+    "sourceOfTruth": "CANONICAL_SOURCE_REMAINS_RETAINED_UNTIL_VERIFIED_PROMOTION"
+  },
+  "storage": {
+    "durableAuthority": "LEEWAY_CONTINUUM_ONLY",
+    "githubRole": "SOURCE_AND_TRANSPORT_AUTHORITY_AFTER_ADMISSION",
+    "runtimeWorkingSet": "EPHEMERAL_EXPLICITLY_MATERIALIZED_ARTIFACTS_ONLY"
+  }
+}
