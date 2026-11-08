@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "leeway.machine-consciousness.rapidwebdev-digital-brain-source-evidence.v1",
+  "artifactType": "RAPIDWEBDEV_DIGITAL_BRAIN_SOURCE_EVIDENCE",
+  "sourceRepository": "4citeB4U/RapidWebDev",
+  "sourceRef": "af3b16fc520476aa0a24fffce2525ecd6bb5bb4c",
+  "sourceState": "REMOTE_SOURCE_INSPECTED_NOT_MATERIALIZED",
+  "authorityBoundary": "RapidWebDev is a capability-provider source. It does not replace the LeeWay Machine Consciousness, Voice Fabric, Formula, Device Bridge, Veritas, or Continuum authorities.",
+  "observedFiles": [
+    {
+      "path": "brain/public/public-brain.js",
+      "role": "public digital-brain graph, category model, project/evidence navigation, Agent Lee presentation surface",
+      "contentSha256": "d546d654ff31ba4ed7f1accec7333f0489187742",
+      "observedFacts": [
+        "Defines a LeeWay Digital Brain presentation core and category graph.",
+        "Groups the public project universe into Core LeeWay, Projects/Applications, Business/Client Work, Professional/Lineage, and Other/References.",
+        "Uses Agent Lee as a project guide and keeps presentation separate from governed reasoning."
+      ]
+    },
+    {
+      "path": "brain/receipts/PUBLIC-BRAIN-E2E-20260927.json",
+      "role": "desktop/mobile public brain verification receipt",
+      "contentSha256": "65fec8fe08980a6e60072d6109366d08a8bf9ece",
+      "observedFacts": [
+        "Desktop and mobile public brain verdict PASS.",
+        "Observed 87 projects, 8 evidence records, 95 cards, 161 files, 10 business nodes, and 12 evidence slides.",
+        "Mic control and brainDrift animation are present in the public surface; this is structural UI evidence, not acoustic capture proof."
+      ]
+    },
+    {
+      "path": "brain/receipts/EXACT-DOCKER-3D-BRAIN-VERITAS-20260927.json",
+      "role": "3D digital-brain interaction and geometry verification receipt",
+      "contentSha256": "96f5b29857a0133e3f2620e71fd560818328a5fb",
+      "observedFacts": [
+        "Three.js 0.160.0 and OrbitControls are recorded for the 3D brain surface.",
+        "The surface uses two procedurally deformed hemispheres and 4200 neural particles.",
+        "Rotation, inward travel, six visible universes, and zero browser errors are recorded with verdict PASS."
+      ]
+    },
+    {
+      "path": "brain/agent-lee-voice.json",
+      "role": "Agent Lee Voice One provenance and voice-boundary contract",
+      "contentSha256": "46c4f8dba5641eee335f0b3326564f197df00fd4",
+      "observedFacts": [
+        "Voice authority is LeeWay Voice Fabric and the package identity is agent-lee-voice-one.",
+        "Browser Chatterbox is an optional provider, not the authority.",
+        "Generated audio is explicitly not proof that a human heard it."
+      ]
+    },
+    {
+      "path": "brain/public/THREAD-VOICE-PILOT.md",
+      "role": "threaded bidirectional conversation and interruption design evidence",
+      "contentSha256": "7f1f76d578e2bec68bcbb3378b57249f0d3470a6",
+      "observedFacts": [
+        "The pilot defines one main thread, side threads, eight governed work slots, serialized shared inference, one speech lease, pause/resume, and source-announced transitions.",
+        "The pilot records structural tests but keeps acoustic Voice One quality, microphone barge-in, and physical hearing as open qualification gates.",
+        "The candidate measurement family is onset latency, interruption spill, resume latency, dropped committed words, duplicated spoken words, and wasted synthesis duration."
+      ]
+    }
+  ]
+}

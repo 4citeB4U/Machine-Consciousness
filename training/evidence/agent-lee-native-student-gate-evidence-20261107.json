@@ -1,0 +1,93 @@
+{
+  "schemaVersion": "1.0.0",
+  "artifactType": "LEEWAY_AGENT_LEE_NATIVE_STUDENT_GATE_EVIDENCE",
+  "generatedAt": "2026-11-07T16:14:13.784Z",
+  "studentArtifact": {
+    "path": "Machine-Consciousness/training/evidence/agent-lee-native-policy-student-20261107.json",
+    "sha256": "b426b0e37ed82544e1ea08afbb574ec6c586f18789df8494510d914d9efa3442",
+    "baseline": "FAIL_0_OF_6",
+    "postTraining": "PASS_6_OF_6",
+    "coreType": "DETERMINISTIC_NON_LLM_MACHINE_CONSCIOUSNESS",
+    "weights": "NOT_USED_NATIVE_POLICY_ARTIFACT"
+  },
+  "formula": {
+    "health": "LEEWAY_FORMULA_V1_PASS",
+    "formulaId": "LEEWAY-FORMULA-v1.0",
+    "adapterId": "runtime-state-v1",
+    "executionState": "EXECUTED",
+    "callerVerification": "VERIFIED_BY_RECEIPT_READBACK",
+    "inputHash": "1d0cb1cd0cbe059ad4a7204fe7addea41c40ad9631c17cbbee47696d22f873fa",
+    "resultHash": "0c8276aaf02c73b751510443cfd97a96458b840087d07abddc9f04a604add857",
+    "receiptId": "leeway-formula-run-20261107161411-e55b206f",
+    "receiptPath": "C:/Users/Leona/.codex/leeway/Leeway-formula-live/runtime/canonical/receipts/leeway-formula/leeway-formula-run-20261107161411-e55b206f.json",
+    "hostTraceId": "e55b206f-dbf7-44bf-a8f9-9296114344eb",
+    "decimalState": [69, 14, 17, 26, 65, 60],
+    "base64State": ["BF", "O", "R", "a", "BB", "8"],
+    "resultStatusFromFormulaService": "UNVERIFIED_UNTIL_CALLER_READBACK"
+  },
+  "formulaWindow": {
+    "path": "Machine-Consciousness/training/evidence/agent-lee-native-student-formula-window-20261107.json",
+    "sha256": "288ea2f223f26481b82c4ca2123db45700ba08e9055b560786efa0299082586d",
+    "sourceArtifactSha256": "eeb47e14abfd78f38dccbf7451e4934e879b3761ec9191916e2543dccbc649fb",
+    "rows": 16,
+    "columns": 6
+  },
+  "deviceBridgeAction": {
+    "deviceId": "pc-primary",
+    "capability": "device.health",
+    "outcome": "PASS",
+    "receiptId": "9f2f26bb-d3c1-467b-ac59-b12276a3c67d",
+    "resultHash": "c8270841b5f785887096751548c6fc862db7f57457c4dc56d72f079621d8f0df",
+    "receiptSha256": "7f9e2dc47d927c94b751d6541e68c44e78673b82274c67900a86544a5005b5e8",
+    "result": {
+      "ok": true,
+      "platform": "win32",
+      "adapter": "bounded-workspace",
+      "uiControl": false
+    }
+  },
+  "deviceBridgeTrainingRun": {
+    "capability": "device.session.start_and_read",
+    "sessionId": "0c94f057-58c5-4f6d-9205-2104392cb049",
+    "startReceiptId": "56f72c5f-c416-4d70-89cd-6f567379eb6c",
+    "readReceiptId": "a856b3cc-0ef7-48e0-ad48-1638e5bd18f8",
+    "exitCode": 0,
+    "postTraining": "PASS_6_OF_6"
+  },
+  "liveRuntimeProbe": {
+    "status": "PASS",
+    "receiptPath": "E:/LeeWay-Work/pc-consciousness-live/runtime/receipts/machine-consciousness/MACHINE-CONSCIOUSNESS-AGENT-LEE-NATIVE-STUDENT-LOW-RISK-ACTION-20261107.json",
+    "receiptId": "C3-1-CONSCIOUS-ACTION-20261107-102105",
+    "provider": "LEEWAY_NATIVE_HOST_COMMANDER",
+    "verified": true,
+    "receiptHashPresent": true,
+    "postGate": "PASS",
+    "veritas": "PASS",
+    "llmUsed": false,
+    "processExitCode": 0,
+    "deviceBridgeSessionId": "433a9f20-d47c-401d-9e1e-bda28e445a72",
+    "deviceBridgeReadReceiptId": "2938d0dd-b51d-4bd2-b27c-ac55db26bc2d"
+  },
+  "continuum": {
+    "state": "VERIFIED",
+    "viewId": "knowledge",
+    "recordId": "771a9119-416f-4351-8f00-be36a0e6e46b",
+    "receiptId": "d77c7a24-05b7-43dd-9043-f83b590f1019",
+    "runtimeReceiptId": "b3267e1c-011a-46c6-9e0e-724d37ead485",
+    "contentSha256": "605909ca72d45a7907977e6dfeab4118318171db78d6e5f449074c52bff109af",
+    "runtimeReceiptSha256": "0ad0352d913897d23228a31ce62058537e8351ed1f037e70af511aed7537d83e",
+    "byteLength": 19431,
+    "indexState": "INDEXED_UTF8",
+    "formulaAtStorage": "NOT_EXECUTED",
+    "veritasAtStorage": "NOT_RUN_BY_STORAGE",
+    "callerReadback": "PASS"
+  },
+  "veritasPreconditions": {
+    "sourceArtifactHashReadback": "PASS",
+    "formulaReceiptPathKnown": "PASS",
+    "deviceBridgeReceiptReadback": "PASS",
+    "pendingOnlineChatgptLaneExcluded": "PASS",
+    "modelWeightsUsed": false
+  },
+  "admissionState": "CONTINUUM_RETAINED_PENDING_INDEPENDENT_VERITAS_AND_FINAL_PROMOTION"
+}

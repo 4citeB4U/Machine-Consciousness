@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "1.0.0",
+  "artifactType": "LEEWAY_AGENT_LEE_NATIVE_STUDENT_LOCAL_VERITAS_EVIDENCE",
+  "generatedAt": "2026-11-07T20:23:00.000Z",
+  "authorityBoundary": "LOCAL_INDEPENDENT_READBACK_ADAPTER_NOT_PRODUCTION_VERITAS_AUTHORITY",
+  "checks": {
+    "artifactFileHash": true,
+    "baselineFail": true,
+    "postTrainingPass": true,
+    "deterministicCore": true,
+    "pendingChatgptExcluded": true,
+    "formulaReceiptCompleted": true,
+    "formulaInputMatches": true,
+    "deviceBridgeActionPass": true,
+    "liveRuntimeProbePass": true,
+    "continuumReadbackPass": true,
+    "noProductionInferenceClaim": true
+  },
+  "passed": 11,
+  "total": 11,
+  "status": "PASS",
+  "sourceHashes": {
+    "artifactFileSha256": "b426b0e37ed82544e1ea08afbb574ec6c586f18789df8494510d914d9efa3442",
+    "gateEvidenceSha256": "a50cf28ead78dbb3137c951110e5e9193e10aabb90b1950ce3f077217434a76c",
+    "formulaReceiptSha256": "fabd5e72f6d2849ebff5310bafcbc44898f244f98381edcfa107bb354a8635db"
+  }
+}

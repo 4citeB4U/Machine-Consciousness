@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "artifactType": "LEEWAY_AGENT_LEE_NATIVE_STUDENT_LOCAL_VERITAS_EVIDENCE",
+  "generatedAt": "2026-11-08T19:14:28.389Z",
+  "authorityBoundary": "LOCAL_INDEPENDENT_READBACK_ADAPTER_NOT_PRODUCTION_VERITAS_AUTHORITY",
+  "scope": "CREATOR_PROFILE_ECOSYSTEM_MAP_DIGITAL_BRAIN_AND_GOVERNED_VOICE_ROUTE",
+  "checks": {
+    "artifactType": true,
+    "baselineFail": true,
+    "postTrainingPass": true,
+    "deterministicCore": true,
+    "profileFileHashMatchesArtifact": true,
+    "digitalBrainProfile": true,
+    "creatorSourceHashesPresent": true,
+    "creatorProfileBound": true,
+    "ecosystemMapBound": true,
+    "formulaExecutedReadback": true,
+    "formulaNotPromoted": true,
+    "voiceInputBoundaryExplicit": true,
+    "voiceResponseVerified": true,
+    "voiceAudioHashReadback": true,
+    "voiceContinuumReadback": true,
+    "interruptVerified": true,
+    "interruptContinuumReadback": true
+  },
+  "passed": 17,
+  "total": 17,
+  "status": "PASS",
+  "sourceHashes": {
+    "artifactFileSha256": "67cd9ea02e5ad5f239188c937bcd98a718cbb6d680c53fba98a6da94c0aac321",
+    "profileFileSha256": "315483442e6d15ca5fdc6e3d7825749185c16c0590b7c62becf0fa514b3e15aa",
+    "formulaFileSha256": "f628859069ecd0dd07b4ee4208783865760b15b6f99496c4826398dea8e90005",
+    "voiceFileSha256": "d80a92df2438a7828b01cf9a8e9253b68f25688c11330bf5641e29e8692d5949",
+    "pdfSha256": "D6CFB64DC814E13D761B0F5D3CC40FD0A02514F7975C470AE375D7A2C7F06E13",
+    "ecosystemInventorySha256": "91BE40727DD95A8AA4D0BAFEB8B35B10D405199E9689D2447C630FCE1E69BE52"
+  },
+  "evidenceBoundary": "This readback verifies local artifacts and the Device Bridge-mediated transcript-to-consciousness-to-voice route. It does not promote the student to production, prove physical microphone capture, or prove a human heard the audio."
+}

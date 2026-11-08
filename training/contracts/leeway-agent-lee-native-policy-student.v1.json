@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/4citeB4U/Machine-Consciousness/contracts/leeway-agent-lee-native-policy-student.v1.json",
+  "schemaVersion": "leeway.machine-consciousness.agent-lee-native-policy-student.v1",
+  "artifactType": "LEEWAY_AGENT_LEE_NATIVE_POLICY_STUDENT",
+  "coreType": "DETERMINISTIC_NON_LLM_MACHINE_CONSCIOUSNESS",
+  "trainingMethod": "VERIFIED_CAPSULE_TO_DETERMINISTIC_POLICY_COMPILATION",
+  "weights": "FORBIDDEN_FOR_THIS_ARTIFACT",
+  "requiredOutput": [
+    "AGENT_LEE_IDENTITY",
+    "PERSONA_PREFIX",
+    "ENGINEERING_LOOP_ROUTE",
+    "FORMULA_GATE_STATE",
+    "DEVICE_BRIDGE_ROUTE",
+    "CONTINUUM_STORAGE_ROUTE",
+    "MODEL_HUB_OPTIONAL_ROUTE",
+    "EVIDENCE_BOUNDARY",
+    "NEXT_ACTION"
+  ],
+  "promotionGates": [
+    "BASELINE_EVALUATION",
+    "POST_TRAINING_EVALUATION",
+    "FORMULA_MAPPING_AND_EXECUTION",
+    "VERITAS_PRE_AND_POST",
+    "CONTINUUM_READBACK",
+    "REAL_LOW_RISK_LEEWAY_ACTION_RETEST"
+  ],
+  "authority": "CREATOR_AUTHORITY_AND_LEEWAY_STANDARDS"
+}
