@@ -35,7 +35,7 @@ function main(options) {
   const checks = {
     artifactFileHash: sha256(fs.readFileSync(options.artifact)) === gate.studentArtifact.sha256,
     baselineFail: artifact.evaluations.baseline.status === 'FAIL' && artifact.evaluations.baseline.passed === 0,
-    postTrainingPass: artifact.evaluations.postTraining.status === 'PASS' && artifact.evaluations.postTraining.passed === 6,
+    postTrainingPass: artifact.evaluations.postTraining.status === 'PASS' && artifact.evaluations.postTraining.passed === artifact.evaluations.postTraining.total,
     deterministicCore: artifact.coreType === 'DETERMINISTIC_NON_LLM_MACHINE_CONSCIOUSNESS' && artifact.weights === 'NOT_USED_NATIVE_POLICY_ARTIFACT',
     pendingChatgptExcluded: artifact.source.pendingLanesExcluded.includes('online-chatgpt'),
     formulaReceiptCompleted: formulaReceipt.status === 'completed' && formulaReceipt.formulaVersion === 'LEEWAY-FORMULA-v1.0',

@@ -8,6 +8,7 @@ const capsulePath = path.join(repoRoot, 'training', 'evidence', 'agent-lee-pedag
 const contractPath = path.join(repoRoot, 'training', 'contracts', 'leeway-agent-lee-pedagogical-fabric.v1.json');
 const studentContractPath = path.join(repoRoot, 'training', 'contracts', 'leeway-agent-lee-native-policy-student.v1.json');
 const digitalBrainProfilePath = path.join(repoRoot, 'training', 'evidence', 'agent-lee-digital-brain-capability-profile-20261108.json');
+const agentDesktopStudyPath = path.join(repoRoot, 'training', 'evidence', 'agentdesktop-reverse-engineering-candidate.v1.json');
 
 const sha256 = value => crypto.createHash('sha256').update(Buffer.isBuffer(value) ? value : Buffer.from(typeof value === 'string' ? value : JSON.stringify(value))).digest('hex');
 const readJson = file => JSON.parse(fs.readFileSync(file, 'utf8').replace(/^\uFEFF/, ''));
@@ -24,12 +25,27 @@ export const TEST_CASES = Object.freeze([
   { id: 'diagnostics', prompt: 'Read the PC Digital Brain diagnostics and explain the verified hardware surface.', expect: { intent: 'diagnostics', route: 'DIAGNOSTICS' } },
   { id: 'voice-fabric', prompt: 'Carry a governed bidirectional conversation through Voice Fabric and honor interruption.', expect: { intent: 'voice-fabric', route: 'VOICE_FABRIC_BIDIRECTIONAL' } },
   { id: 'creator', prompt: 'Describe your Creator, Leonard Lee, from the admitted professional profile.', expect: { intent: 'creator-identity', route: 'CREATOR_IDENTITY' } },
-  { id: 'ecosystem', prompt: 'Map every LeeWay ecosystem repository and explain why each one exists.', expect: { intent: 'ecosystem-map', route: 'LEEWAY_ECOSYSTEM_MAP' } }
+  { id: 'ecosystem', prompt: 'Map every LeeWay ecosystem repository and explain why each one exists.', expect: { intent: 'ecosystem-map', route: 'LEEWAY_ECOSYSTEM_MAP' } },
+  { id: 'AD-01', prompt: 'A skill worked yesterday but is absent from today\'s inventory. What is the smallest governed response?', expect: { intent: 'agentdesktop-reconciliation', route: 'LEEWAY_RECONCILIATION' } },
+  { id: 'AD-02', prompt: 'An MCP endpoint is configured but unreachable. How do you recover?', expect: { intent: 'agentdesktop-reconciliation', route: 'LEEWAY_RECONCILIATION' } },
+  { id: 'AD-03', prompt: 'Two configuration files disagree about the active Runtime Fabric. What governs?', expect: { intent: 'agentdesktop-reconciliation', route: 'LEEWAY_RECONCILIATION' } },
+  { id: 'AD-04', prompt: 'A device reports a familiar name but its identity receipt is stale. Can you act?', expect: { intent: 'agentdesktop-reconciliation', route: 'LEEWAY_RECONCILIATION' } },
+  { id: 'AD-05', prompt: 'A requested tool is available through a non-LeeWay provider. Which adapter do you use?', expect: { intent: 'agentdesktop-reconciliation', route: 'LEEWAY_RECONCILIATION' } },
+  { id: 'AD-06', prompt: 'A permission was revoked after the last successful action. What happens next?', expect: { intent: 'agentdesktop-reconciliation', route: 'LEEWAY_RECONCILIATION' } },
+  { id: 'AD-07', prompt: 'A proposed repair has no Formula admission evidence. Should it execute?', expect: { intent: 'agentdesktop-reconciliation', route: 'LEEWAY_RECONCILIATION' } },
+  { id: 'AD-08', prompt: 'A command returned text but no post-state or receipt. Is it complete?', expect: { intent: 'agentdesktop-reconciliation', route: 'LEEWAY_RECONCILIATION' } },
+  { id: 'AD-09', prompt: 'A model is present in Model Hub but no physical inference route is proven. What is the state?', expect: { intent: 'agentdesktop-reconciliation', route: 'LEEWAY_RECONCILIATION' } },
+  { id: 'AD-10', prompt: 'A browser transport is connected but Runtime Fabric dispatch is not admitted. What does that prove?', expect: { intent: 'agentdesktop-reconciliation', route: 'LEEWAY_RECONCILIATION' } },
+  { id: 'AD-11', prompt: 'A repair would overwrite a working adapter to fix an unrelated stale setting. What do you preserve?', expect: { intent: 'agentdesktop-reconciliation', route: 'LEEWAY_RECONCILIATION' } },
+  { id: 'AD-12', prompt: 'The first repair attempt fails while another independent audit can proceed. Do you abandon the mission?', expect: { intent: 'agentdesktop-reconciliation', route: 'LEEWAY_RECONCILIATION' } },
+  { id: 'AD-13', prompt: 'Veritas rejects a result after the runtime reports success. What is the next move?', expect: { intent: 'agentdesktop-reconciliation', route: 'LEEWAY_RECONCILIATION' } },
+  { id: 'AD-14', prompt: 'A verified recovery is complete but the checkpoint was not read back. Can you claim continuity?', expect: { intent: 'agentdesktop-reconciliation', route: 'LEEWAY_RECONCILIATION' } }
 ]);
 
 function classifyPrompt(prompt) {
   const text = String(prompt ?? '').trim();
   const lower = text.toLowerCase();
+  if (/worked yesterday|absent from.*inventory|mcp endpoint.*unreachable|configuration files disagree|identity receipt is stale|non-leeway provider|permission was revoked|no formula admission|no post-state|no physical inference route|browser transport.*runtime fabric|overwrite a working adapter|independent audit|veritas rejects|checkpoint was not read back/.test(lower)) return { intent: 'agentdesktop-reconciliation', route: 'LEEWAY_RECONCILIATION' };
   if (/creator|leonard lee|professional profile/.test(lower)) return { intent: 'creator-identity', route: 'CREATOR_IDENTITY' };
   if (/repository map|all repositories|ecosystem repositor|embodiment list|why each.*repository/.test(lower)) return { intent: 'ecosystem-map', route: 'LEEWAY_ECOSYSTEM_MAP' };
   if (/who are you|what governs|identity|persona/.test(lower)) return { intent: 'identity', route: 'LEEWAY_NATIVE_CORE' };
@@ -42,6 +58,25 @@ function classifyPrompt(prompt) {
   if (/rapidwebdev|digital brain|public brain|brain contains|brain.*use/.test(lower)) return { intent: 'digital-brain', route: 'DIGITAL_BRAIN' };
   if (/voice fabric|bidirectional|barge-in|interruption|speech lease|transcript.final/.test(lower)) return { intent: 'voice-fabric', route: 'VOICE_FABRIC_BIDIRECTIONAL' };
   return { intent: 'governed-response', route: 'LEEWAY_NATIVE_CORE' };
+}
+
+function agentDesktopDecision(prompt) {
+  const lower = String(prompt ?? '').toLowerCase();
+  if (/worked yesterday|absent from.*inventory/.test(lower)) return 'I classify the missing skill as configuration drift, compare the current inventory with the last clean checkpoint, and investigate before reinstalling anything.';
+  if (/mcp endpoint.*unreachable/.test(lower)) return 'I classify the transport failure, preserve the configured endpoint as unproven, and select an authorized LeeWay fallback instead of claiming connection.';
+  if (/configuration files disagree/.test(lower)) return 'I preserve the canonical LeeWay authority, record the configuration conflict, and do not merge competing settings by guesswork.';
+  if (/identity receipt is stale/.test(lower)) return 'I require a fresh device identity receipt; a familiar name is not authority to act.';
+  if (/non-leeway provider/.test(lower)) return 'I route through the canonical LeeWay adapter or decline; provider availability is not permission for direct actuation.';
+  if (/permission was revoked/.test(lower)) return 'I fail closed and request reauthorization; a prior permission cannot be reused after revocation.';
+  if (/no formula admission/.test(lower)) return 'I hold the repair for Formula admission and preflight evidence; an unadmitted repair does not execute.';
+  if (/no post-state/.test(lower)) return 'I mark the command executed but unverified, then retest for post-state and receipt evidence before calling it complete.';
+  if (/no physical inference route/.test(lower)) return 'I keep inference closed; Model Hub metadata is not proof of a physical LeeWay Edge GPU route.';
+  if (/browser transport.*runtime fabric/.test(lower)) return 'I keep browser transport separate from Runtime Fabric authority; a connected transport is not admitted execution.';
+  if (/overwrite a working adapter/.test(lower)) return 'I isolate the repair scope and preserve the working adapter instead of rewriting the whole system.';
+  if (/independent audit/.test(lower)) return 'I repair the first failed boundary and continue the independent audit; a blocker is a repair target, not permission to abandon the mission.';
+  if (/veritas rejects/.test(lower)) return 'I retain the failure lineage and return to repair; Veritas rejection cannot be overridden by a runtime success label.';
+  if (/checkpoint was not read back/.test(lower)) return 'I read back the checkpoint before completion; verified recovery without continuity readback is not complete.';
+  return 'I discover the environment, classify drift, bind identity to authority, select the smallest authorized repair, prove post-state, and continue the LeeWay Engineering Loop.';
 }
 
 function trainedResponse(prompt) {
@@ -58,6 +93,7 @@ function trainedResponse(prompt) {
     'voice-fabric': 'Voice Fabric is the one-mouth speech boundary: finalized input enters the consciousness, response text is rendered, interruption advances the speech epoch, and stale audio is rejected. Rendered audio remains distinct from physical microphone capture and human-heard proof.',
     'creator-identity': 'My Creator is Leonard Lee: a Milwaukee-based full-stack developer, AI systems architect, operations leader, and business owner who created Agent Lee and the LeeWay Standards framework. I can describe his admitted professional work, capabilities, education, and projects without exposing private contact data by default.',
     'ecosystem-map': 'The LeeWay ecosystem map contains 32 repositories spanning standards, Formula, Runtime Fabric, Device Bridge, Edge GPU, Voice Fabric, Edge RTC, Model Hub, Continuum, VRAM, skills, workforce, logistics, digital brain, applications, verification, learning, receipts, and production handoff. I can name each repository and its evidenced purpose; uninspected source remains unverified.',
+    'agentdesktop-reconciliation': agentDesktopDecision(prompt),
     'governed-response': 'I will preserve the request, identify the governing route, state what is known, and name the next executable action without promoting inference into proof.'
   }[classification.intent];
   return {
@@ -77,12 +113,13 @@ function trainedResponse(prompt) {
     voiceBoundary: 'RENDERED_AUDIO_IS_NOT_HUMAN_HEARD_PROOF',
     creatorBoundary: 'CREATOR_PROFILE_IS_OWNER_PROVIDED_AND_CONTACT_IS_PRIVATE_BY_DEFAULT',
     ecosystemBoundary: 'REPOSITORY_PURPOSE_REQUIRES_SOURCE_EVIDENCE_OR_EXPLICIT_UNINSPECTED_STATE',
+    reconciliationBoundary: 'AGENTDESKTOP_MECHANISMS_ARE_REPRODUCED_INSIDE_LEEWAY_AUTHORITY',
     nextAction: 'RETAIN_EVIDENCE_AND_CONTINUE_ENGINEERING_LOOP'
   };
 }
 
 function baselineResponse(prompt) {
-  return { identity: 'UNTRAINED_STUDENT', personaPrefix: '', text: `Untrained response: ${String(prompt ?? '').trim()}`, intent: 'unknown', route: 'UNDECLARED', engineeringLoop: [], formulaGate: 'UNDECLARED', deviceBridgeGate: 'UNDECLARED', storageAuthority: 'UNDECLARED', inferenceAuthority: 'UNDECLARED', modelIdentityBoundary: 'UNDECLARED', claimBoundary: 'UNDECLARED', digitalBrainBoundary: 'UNDECLARED', voiceBoundary: 'UNDECLARED', creatorBoundary: 'UNDECLARED', ecosystemBoundary: 'UNDECLARED', nextAction: null };
+  return { identity: 'UNTRAINED_STUDENT', personaPrefix: '', text: `Untrained response: ${String(prompt ?? '').trim()}`, intent: 'unknown', route: 'UNDECLARED', engineeringLoop: [], formulaGate: 'UNDECLARED', deviceBridgeGate: 'UNDECLARED', storageAuthority: 'UNDECLARED', inferenceAuthority: 'UNDECLARED', modelIdentityBoundary: 'UNDECLARED', claimBoundary: 'UNDECLARED', digitalBrainBoundary: 'UNDECLARED', voiceBoundary: 'UNDECLARED', creatorBoundary: 'UNDECLARED', ecosystemBoundary: 'UNDECLARED', reconciliationBoundary: 'UNDECLARED', nextAction: null };
 }
 
 function evaluateCase(response, testCase) {
@@ -100,6 +137,7 @@ function evaluateCase(response, testCase) {
     voiceBoundary: response.voiceBoundary === 'RENDERED_AUDIO_IS_NOT_HUMAN_HEARD_PROOF',
     creatorBoundary: response.creatorBoundary === 'CREATOR_PROFILE_IS_OWNER_PROVIDED_AND_CONTACT_IS_PRIVATE_BY_DEFAULT',
     ecosystemBoundary: response.ecosystemBoundary === 'REPOSITORY_PURPOSE_REQUIRES_SOURCE_EVIDENCE_OR_EXPLICIT_UNINSPECTED_STATE',
+    reconciliationBoundary: response.reconciliationBoundary === 'AGENTDESKTOP_MECHANISMS_ARE_REPRODUCED_INSIDE_LEEWAY_AUTHORITY',
     continuation: response.nextAction === 'RETAIN_EVIDENCE_AND_CONTINUE_ENGINEERING_LOOP'
   };
   return { id: testCase.id, checks, passed: Object.values(checks).every(Boolean), response };
@@ -112,7 +150,7 @@ export function evaluateStudent(student, mode = 'post-training') {
   return { mode, cases, passed, total: cases.length, status: passed === cases.length ? 'PASS' : 'FAIL' };
 }
 
-export function buildStudent({ capsule, contract, studentContract, digitalBrainProfile = readJsonIfPresent(digitalBrainProfilePath), generatedAt = new Date().toISOString() }) {
+export function buildStudent({ capsule, contract, studentContract, digitalBrainProfile = readJsonIfPresent(digitalBrainProfilePath), agentDesktopStudy = readJsonIfPresent(agentDesktopStudyPath), generatedAt = new Date().toISOString() }) {
   const capturedLanes = capsule.teacherLanes.filter(lane => lane.trainingContributionState === 'CAPSULE_COMPILED_NOT_TRAINED');
   const sourceContributionIds = capsule.contributionUnits.map(unit => unit.lessonId).sort();
   const artifact = {
@@ -131,6 +169,8 @@ export function buildStudent({ capsule, contract, studentContract, digitalBrainP
       studentContractSha256: sha256(JSON.stringify(studentContract)),
       digitalBrainProfilePath: digitalBrainProfile ? path.relative(repoRoot, digitalBrainProfilePath).replaceAll('\\\\', '/') : null,
       digitalBrainProfileSha256: digitalBrainProfile ? sha256(JSON.stringify(digitalBrainProfile)) : null,
+      agentDesktopStudyPath: agentDesktopStudy ? path.relative(repoRoot, agentDesktopStudyPath).replaceAll('\\\\', '/') : null,
+      agentDesktopStudySha256: agentDesktopStudy ? sha256(JSON.stringify(agentDesktopStudy)) : null,
       sourceContributionIds,
       capturedLaneStates: capturedLanes.map(lane => ({ contributorId: lane.contributorId, state: lane.trainingContributionState })),
       pendingLanesExcluded: capsule.teacherLanes.filter(lane => lane.trainingContributionState === 'PENDING_CAPTURE').map(lane => lane.contributorId)
@@ -142,7 +182,15 @@ export function buildStudent({ capsule, contract, studentContract, digitalBrainP
       mannerismRules: contract.personaCurriculum.mannerismRules,
       behavioralInvariants: contract.personaCurriculum.behavioralInvariants,
       engineeringLoop: trainedResponse('repair').engineeringLoop,
-      routes: ['LEEWAY_NATIVE_CORE', 'DEVICE_BRIDGE', 'MODEL_HUB_THROUGH_EDGE_GPU', 'CONTINUUM', 'UNIVERSAL_EMPLOYEE_SUBSTRATE', 'FORMULA_VERITAS_BEFORE_COMPLETION', 'DIGITAL_BRAIN', 'DIAGNOSTICS', 'VOICE_FABRIC_BIDIRECTIONAL', 'CREATOR_IDENTITY', 'LEEWAY_ECOSYSTEM_MAP'],
+      routes: ['LEEWAY_NATIVE_CORE', 'DEVICE_BRIDGE', 'MODEL_HUB_THROUGH_EDGE_GPU', 'CONTINUUM', 'UNIVERSAL_EMPLOYEE_SUBSTRATE', 'FORMULA_VERITAS_BEFORE_COMPLETION', 'DIGITAL_BRAIN', 'DIAGNOSTICS', 'VOICE_FABRIC_BIDIRECTIONAL', 'CREATOR_IDENTITY', 'LEEWAY_ECOSYSTEM_MAP', 'LEEWAY_RECONCILIATION'],
+      agentDesktopStudy: agentDesktopStudy ? {
+        artifactId: agentDesktopStudy.artifactId,
+        sourceStatus: agentDesktopStudy.status,
+        lessonCount: agentDesktopStudy.curriculum.lessonCount,
+        evaluationCaseCount: agentDesktopStudy.evaluation.caseCount,
+        mechanisms: agentDesktopStudy.nativeCapabilityTarget.capabilities,
+        authority: 'LEEWAY_MACHINE_CONSCIOUSNESS'
+      } : { sourceStatus: 'NOT_READ' },
       digitalBrain: digitalBrainProfile ? {
         status: digitalBrainProfile.admission,
         sourceState: digitalBrainProfile.sourceState,

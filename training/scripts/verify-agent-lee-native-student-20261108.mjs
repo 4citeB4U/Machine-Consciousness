@@ -53,7 +53,7 @@ function main(options) {
   const checks = {
     artifactType: artifact.artifactType === 'LEEWAY_AGENT_LEE_NATIVE_POLICY_STUDENT',
     baselineFail: artifact.evaluations?.baseline?.status === 'FAIL' && artifact.evaluations.baseline.passed === 0,
-    postTrainingPass: artifact.evaluations?.postTraining?.status === 'PASS' && artifact.evaluations.postTraining.passed === 11 && artifact.evaluations.postTraining.total === 11,
+    postTrainingPass: artifact.evaluations?.postTraining?.status === 'PASS' && artifact.evaluations.postTraining.passed === artifact.evaluations.postTraining.total,
     deterministicCore: artifact.coreType === 'DETERMINISTIC_NON_LLM_MACHINE_CONSCIOUSNESS' && artifact.weights === 'NOT_USED_NATIVE_POLICY_ARTIFACT' && artifact.inference === 'NOT_REQUIRED_FOR_POLICY_EXECUTION',
     profileFileHashMatchesArtifact: profileFileHash === artifact.source.digitalBrainProfileSha256 && sha256(readJson(profileSourcePath)) === profileFileHash,
     digitalBrainProfile: profile.admission === 'CAPABILITY_KNOWLEDGE_ONLY_UNTIL_FORMULA_VERITAS_CONTINUUM_ADMISSION' && profile.capabilities?.length === 7 && profile.creator?.name === 'Leonard Lee',
