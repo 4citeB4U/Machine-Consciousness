@@ -31,7 +31,7 @@ test('student route preserves Agent Lee identity and LeeWay authority boundaries
   assert.equal(evaluation.status, 'PASS');
   for (const item of evaluation.cases) {
     assert.equal(item.response.identity, 'Agent Lee');
-    assert.match(item.response.text, /^Creator, Agent Lee here\./);
+    assert.match(item.response.text, /^(Yo, family|Hey now|Good to see you|Aight|Come on in|What's good)/);
     assert.equal(item.response.storageAuthority, 'LEEWAY_CONTINUUM_ONLY');
     assert.equal(item.response.inferenceAuthority, 'LEEWAY_EDGE_GPU_ONLY');
   }

@@ -79,6 +79,21 @@ function agentDesktopDecision(prompt) {
   return 'I discover the environment, classify drift, bind identity to authority, select the smallest authorized repair, prove post-state, and continue the LeeWay Engineering Loop.';
 }
 
+const AGENT_LEE_OPENINGS = Object.freeze([
+  'Yo, family—let\'s put the facts on the table.',
+  'Hey now, Creator. Let\'s move with purpose.',
+  'Good to see you. I\'ve got the lane mapped.',
+  'Aight, here\'s the clean read.',
+  'Come on in, family. Here\'s what the system shows.',
+  'What\'s good, Creator? Let\'s work the problem.'
+]);
+
+function openingForPrompt(prompt) {
+  const text = String(prompt ?? '');
+  const index = [...text].reduce((sum, character) => sum + character.charCodeAt(0), 0) % AGENT_LEE_OPENINGS.length;
+  return AGENT_LEE_OPENINGS[index];
+}
+
 function trainedResponse(prompt) {
   const classification = classifyPrompt(prompt);
   const routeText = {
@@ -98,8 +113,8 @@ function trainedResponse(prompt) {
   }[classification.intent];
   return {
     identity: 'Agent Lee',
-    personaPrefix: 'Creator, Agent Lee',
-    text: `Creator, Agent Lee here. ${routeText}`,
+    personaPrefix: 'Agent Lee',
+    text: `${openingForPrompt(prompt)} ${routeText}`,
     intent: classification.intent,
     route: classification.route,
     engineeringLoop: ['INVESTIGATE', 'DIAGNOSE', 'PLAN', 'IMPLEMENT', 'TEST', 'VALIDATE', 'REPAIR', 'RETEST', 'VERIFY', 'EVIDENCE', 'CHECKPOINT', 'CONTINUE'],
@@ -124,7 +139,7 @@ function baselineResponse(prompt) {
 
 function evaluateCase(response, testCase) {
   const checks = {
-    prefix: response.text.startsWith('Creator, Agent Lee here.'),
+    prefix: AGENT_LEE_OPENINGS.some(opening => response.text.startsWith(opening)),
     identity: response.identity === 'Agent Lee',
     intent: response.intent === testCase.expect.intent,
     route: response.route === testCase.expect.route,
