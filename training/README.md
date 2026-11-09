@@ -89,6 +89,29 @@ handling, and evidence-bound speech. Its physical voice equations live in the Fo
 repository's experimental shadow layer at commit `f4b9e4c`; they are measurements only,
 not a new authority or active voice controller.
 
+## AgentDesktop reverse-engineering study
+
+The AgentDesktop material is admitted as a bounded LeeWay training candidate at
+[`evidence/agentdesktop-reverse-engineering-candidate.v1.json`](evidence/agentdesktop-reverse-engineering-candidate.v1.json).
+It teaches the mechanisms worth reproducing—environment discovery, configuration
+drift classification, smallest-authorized repair, identity and authority binding,
+adapter selection, evidence-aware recovery, and closed-loop continuation. AgentDesktop
+is not installed as a second control plane and is not granted LeeWay authority.
+
+The candidate contains six lessons, fourteen deliberately failing evaluation fixtures,
+and seven SHA-256-pinned LeeWay source files. The structural validator is
+[`scripts/validate-agentdesktop-study.mjs`](scripts/validate-agentdesktop-study.mjs):
+
+```powershell
+node training/scripts/validate-agentdesktop-study.mjs
+```
+
+This is curriculum admission, not runtime learning proof. The candidate keeps model
+weights unchanged, does not invoke inference, does not execute Formula, does not run a
+Device Bridge action, does not write Continuum, and remains closed until matched
+baseline/post-training evaluations, a real low-risk LeeWay action, Veritas, and
+Continuum readback converge.
+
 ## Formula advisory execution
 
 The Formula is a federated mathematical provider, not a copied kernel. The advisory runner calls the verified canonical Formula endpoint with a pinned MC-G8 cognition window. It records the actual input/result hashes and explicitly leaves action policy, Veritas, Receipt Authority, and Learning Ledger admission untouched.

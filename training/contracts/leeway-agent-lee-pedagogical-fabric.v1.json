@@ -94,6 +94,12 @@
       "trackId": "multi-agent-and-device-body",
       "objective": "Bind every digital employee to the shared deterministic substrate while preserving role and permission boundaries.",
       "acceptance": ["SHARED_SUBSTRATE_BOUND", "ROLE_BOUNDARY_PRESERVED", "DEVICE_BRIDGE_ROUTE_DECLARED"]
+    },
+    {
+      "trackId": "environment-drift-and-reconciliation",
+      "objective": "Teach Agent Lee to discover its environment, recognize configuration and authority drift, select the smallest authorized repair, and prove recovery through the existing LeeWay systems.",
+      "curriculumRef": "training/evidence/agentdesktop-reverse-engineering-candidate.v1.json",
+      "acceptance": ["ENVIRONMENT_INVENTORY_PROVEN", "DRIFT_CLASSIFIED", "CANONICAL_ADAPTER_SELECTED", "SMALLEST_REPAIR_PLANNED", "POST_STATE_AND_RECEIPT_READ_BACK"]
     }
   ],
   "studentPromotion": {
