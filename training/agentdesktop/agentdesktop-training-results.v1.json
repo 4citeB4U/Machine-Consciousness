@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "leeway.mc.agentdesktop.eval.v1",
+  "training": {
+    "count": 14,
+    "correct": 14,
+    "errors": []
+  },
+  "heldout": {
+    "total": 28,
+    "passed": 28,
+    "failed": []
+  },
+  "modelSha256": "ccd762a6dc6b4f67f8c8457d8a479183e4da386083e74bf04d7b23a9bc328757",
+  "sourceCommit": "bd5e7642de3fe638828ea8b431f4670affa56d56",
+  "modelWeightsUpdated": false,
+  "leeWayRuntimeTrained": false,
+  "independentVeritas": "NOT_RUN",
+  "receipt": "NOT_CREATED",
+  "learningLedger": "NOT_UPDATED",
+  "promotion": "HOLD",
+  "evidenceOrigin": "EXTERNAL_ASSISTANT_LOCAL_NODE_TESTS_NOT_INDEPENDENT_CI",
+  "revisionNote": "Initial CLI variable-name ReferenceError repaired and retested; no live LeeWay action performed."
+}
