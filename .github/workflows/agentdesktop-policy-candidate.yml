@@ -1,0 +1,37 @@
+# LEEWAY HEADER — DO NOT REMOVE
+# REGION: LEEWAY.MACHINE_CONSCIOUSNESS.TRAINING.AGENTDESKTOP
+# TAG: LEEWAY.MC.AGENTDESKTOP.CI
+# 5WH:
+# WHAT = Run source-only AgentDesktop deterministic policy curriculum tests.
+# WHY = Independently reproduce branch-source behavior before review of any live training.
+# WHO = LeeWay Machine Consciousness CI under Creator/LeeWay Standards.
+# WHERE = .github/workflows/agentdesktop-policy-candidate.yml
+# WHEN = 2026-11-08
+# HOW = Read-only checkout, native Node training, fixtures and negative tests.
+# LICENSE = LeeWay-authored workflow; repository license governance applies.
+name: AgentDesktop policy candidate (source-only)
+on:
+  pull_request:
+    paths:
+      - 'training/agentdesktop/**'
+      - '.github/workflows/agentdesktop-policy-candidate.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  candidate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Compile and evaluate source-derived candidate
+        run: node training/agentdesktop/train-agentdesktop-native-policy.mjs
+      - name: Run authorization and regression tests
+        run: node --test training/agentdesktop/agentdesktop-native-policy.test.mjs
+      - name: Assert no runtime authority granted
+        run: |
+          node -e "const a=require('./training/agentdesktop/agentdesktop-training-results.v1.json');if(a.modelWeightsUpdated||a.leeWayRuntimeTrained||a.promotion!=='HOLD')process.exit(1)"
