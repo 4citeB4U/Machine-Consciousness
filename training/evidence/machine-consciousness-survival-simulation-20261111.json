@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0.0",
+  "artifactType": "LEEWAY_MACHINE_CONSCIOUSNESS_SURVIVAL_SIMULATION_EVIDENCE",
+  "generatedAt": "2026-11-11T22:19:48.0151792-06:00",
+  "repository": "4citeB4U/Machine-Consciousness",
+  "sourceCommit": "b39ab18",
+  "testFile": "training/tests/machine-consciousness-omniverse-survival.test.mjs",
+  "suite": {
+    "isolated": "6/6 PASS",
+    "repositoryTrainingGlob": "56/56 PASS",
+    "syntax": "PASS",
+    "diffCheck": "PASS"
+  },
+  "scenarios": [
+    "product_pivot_reuses_verified_skill_atoms",
+    "hash_verified_state_capsule_recovery",
+    "lost_device_offline_escrow_and_lease_revocation",
+    "heterogeneous_1000_record_routing_with_thermal_skip",
+    "constitutional_drift_rejection",
+    "creator_authorized_hibernation_and_wake"
+  ],
+  "executionState": "SIMULATION_ONLY_NOT_LIVE_CONTINUUM_DEVICE_OR_RELAY_EXECUTION",
+  "weights": "NOT_USED",
+  "inference": "NOT_INVOKED",
+  "liveDeviceBridge": "NOT_EXECUTED",
+  "continuum": "NOT_WRITTEN",
+  "encryption": "NOT_PROVIDED_HASH_INTEGRITY_ONLY",
+  "veritas": "LOCAL_TEST_SCOPE_ONLY_NOT_INDEPENDENT_PRODUCTION_VERIFICATION",
+  "receipt": "RECEIPT_NOT_CREATED",
+  "learningLedger": "NOT_UPDATED",
+  "productionPromotion": "NOT_CLAIMED"
+}
