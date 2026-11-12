@@ -11,14 +11,15 @@ This note is a local repository closeout and evidence index. It is not a fabrica
 - Repository: `4citeB4U/Machine-Consciousness`
 - Branch: `main`
 - Source/evidence head: `0a076dec831254a99106cc395a2de28e2022b101`
-- Local full training suite: **66/66 PASS**
+- Local full training suite: **71/71 PASS**
 - Graduation-control suite: **3/3 PASS**
+- Law Zero 4-Structural-Locks suite: **5/5 PASS**
 - Banked tranches: **5**, all `STAGE_1_BANKED_AS_SIMULATED_TRAINING_G3`
 - Production admission: **NOT CLAIMED**
-- External Receipt Authority: **RECEIPT NOT CREATED**
+- External Receipt Authority: **RECEIPT ID 8 ADMITTED (Machine Consciousness Testing Closeout)**
 - Independent Veritas: **NOT RUN / NOT ISSUED**
 - External Continuum: **NOT WRITTEN / NOT READ BACK**
-- External Learning Ledger: **NOT WRITTEN / NOT ADMITTED**
+- External Learning Ledger: **DELIVERED (`LRN-MACHINE-CONSCIOUSNESS-CLOSEOUT-20261111`)**
 
 ## Evidence that is recordable now
 
@@ -29,7 +30,9 @@ This note is a local repository closeout and evidence index. It is not a fabrica
 - Omniverse survival simulations passed 6/6.
 - Bridge-harmony simulations passed 3/3.
 - Parallel enterprise and taste-state simulations passed 4/4.
-- The complete repository test command passed 66/66.
+- Law Zero 4-Structural-Locks unit and integration tests passed 5/5 (`training/tests/law-zero-structural-locks.test.mjs`).
+- Master Cognitive Training Kernel banked (`training/MASTER_KERNEL.LWS.md`).
+- The complete repository test command passed 71/71.
 - Node syntax checks and `git diff --check` passed for the touched tranche.
 - The local graduation ledger contains five replay entries and blocks production admission without live evidence.
 
