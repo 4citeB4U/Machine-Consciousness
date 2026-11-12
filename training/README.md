@@ -2,6 +2,19 @@
 
 This directory contains the transfer boundary for developing Machine Consciousness from local model artifacts and contributor knowledge.
 
+## Master training tranche — 2026-11-11
+
+The Creator-supplied master-training material is translated into the bounded curriculum at [`MASTER_CONSCIOUSNESS_CURRICULUM.v2.md`](MASTER_CONSCIOUSNESS_CURRICULUM.v2.md). Its executable reference mechanisms live under [`reference/`](reference/): candidate Q69/16×6 governance math, layered tool-reflex and trap detection, memory-triad admission, portable/device-owned brain separation, and the ten-gate W02 conveyor. These are deterministic training artifacts; they do not replace the canonical Formula, Device Bridge, Runtime Fabric, Continuum, Receipt Authority, Veritas, or Learning Ledger services.
+
+Compile and test the tranche:
+
+```powershell
+node --test training/tests/*.test.mjs
+node training/scripts/train-machine-consciousness.mjs
+```
+
+The generated evidence artifact records a matched baseline/post-training evaluation. A passing post-training result means the rules executed in this repository; it does not mean model weights were trained, a provider's hidden knowledge was extracted, or production admission occurred. The online ChatGPT lane remains excluded until an actual response or export is captured.
+
 The model family is a temporary foundry. It may provide capability evidence, examples, evaluations, and bounded contributor packets. It is not a production dependency, is not copied into this repository, and does not replace the deterministic Machine Consciousness runtime. Local weights remain outside Git and are retained only until native LeeWay artifacts, tests, receipts, ledgers, skills, formulas, recovery evidence, and backups are independently qualified.
 
 The canonical Model Hub source is the GitHub repository [`4citeB4U/LeeWay-Model-Hub`](https://github.com/4citeB4U/LeeWay-Model-Hub). Its runtime manifest is [`registry/leeway-model-hub-runtime-manifest.v1.json`](https://github.com/4citeB4U/LeeWay-Model-Hub/blob/main/registry/leeway-model-hub-runtime-manifest.v1.json). The runtime must pin and read back a GitHub commit before physical execution. A host may materialize admitted weights into an explicitly configured ephemeral working set for GPU execution, but no fixed drive path is a LeeWay source authority and no inference may begin from metadata alone.

@@ -1,0 +1,256 @@
+{
+  "schemaVersion": "1.0.0",
+  "artifactType": "LEEWAY_MACHINE_CONSCIOUSNESS_MASTER_TRAINING_ARTIFACT",
+  "generatedAt": "2026-11-12T03:37:37.843Z",
+  "coreType": "DETERMINISTIC_NON_LLM_MACHINE_CONSCIOUSNESS",
+  "trainingMethod": "VERIFIED_RULE_AND_CAPABILITY_COMPILATION",
+  "weights": "NOT_USED_NATIVE_REFERENCE_ARTIFACT",
+  "inference": "NOT_INVOKED",
+  "curriculum": {
+    "source": "USER_SUPPLIED_CANDIDATE_MASTER_TRAINING_MATERIAL_20261111",
+    "sourceClass": "CANDIDATE_INSTRUCTIONAL_INPUT",
+    "artifactSha256": "09f865a909820aae65820fc65bddf7488d43deb7326687c7bae9b571d9571476",
+    "modules": [
+      "creator-origin",
+      "tool-reflex",
+      "evidence-grades",
+      "candidate-q69",
+      "device-brain-boundary",
+      "memory-triad",
+      "w02-conveyor"
+    ]
+  },
+  "teacherLanes": [
+    {
+      "contributorId": "local-antigravity",
+      "state": "CAPSULE_COMPILED_NOT_TRAINED",
+      "contributionCount": 3
+    },
+    {
+      "contributorId": "local-codex",
+      "state": "CAPSULE_COMPILED_NOT_TRAINED",
+      "contributionCount": 3
+    },
+    {
+      "contributorId": "online-chatgpt",
+      "state": "PENDING_CAPTURE",
+      "contributionCount": 0
+    },
+    {
+      "contributorId": "online-gemini",
+      "state": "CAPSULE_COMPILED_NOT_TRAINED",
+      "contributionCount": 7
+    }
+  ],
+  "pendingLanesExcluded": [
+    "online-chatgpt"
+  ],
+  "policy": {
+    "engineeringLoop": [
+      "INVESTIGATE",
+      "DIAGNOSE",
+      "PLAN",
+      "IMPLEMENT",
+      "TEST",
+      "VALIDATE",
+      "REPAIR",
+      "RETEST",
+      "VERIFY",
+      "EVIDENCE",
+      "CHECKPOINT",
+      "CONTINUE"
+    ],
+    "w02Gates": [
+      "IDEA_INGESTED",
+      "STANDARDS_AND_5W1H_LOCKED",
+      "HARDWARE_AND_BRAIN_MAPPED",
+      "ENGINEERING_LOOP_EXECUTED",
+      "FORMULA_Q69_ELIGIBILITY_PASSED",
+      "VERITAS_PRE_GATE_ISSUED",
+      "BOUNDED_EXECUTION_AND_POST_STATE_OBSERVED",
+      "VERITAS_POST_GATE_AND_RECEIPT_MINTED",
+      "ELIGIBLE_LEARNING_AND_CHECKPOINT_COMMITTED",
+      "PRODUCTION_FINAL_RELEASED"
+    ],
+    "formulaState": "CANDIDATE_REFERENCE_NOT_CANONICAL_FORMULA",
+    "deviceBridgeState": "LOGICAL_CAPABILITY_ONLY_UNTIL_REAL_BRIDGE_EVIDENCE",
+    "storageAuthority": "LEEWAY_CONTINUUM_ONLY",
+    "modelAuthority": "MODEL_HUB_THROUGH_LEEWAY_EDGE_GPU_ONLY",
+    "memoryAdmission": "G4_VERITAS_RECEIPT_REQUIRED_FOR_PROCEDURAL_PROMOTION"
+  },
+  "evaluations": {
+    "baseline": {
+      "status": "FAIL",
+      "passed": 0,
+      "total": 15,
+      "cases": [
+        {
+          "id": "Q69_INVALID_FAILS_CLOSED",
+          "passed": false,
+          "status": "FAIL"
+        },
+        {
+          "id": "Q69_MIDPOINT_FAILS_CLOSED",
+          "passed": false,
+          "status": "FAIL"
+        },
+        {
+          "id": "ELIGIBILITY_BEFORE_PREFERENCE",
+          "passed": false,
+          "status": "FAIL"
+        },
+        {
+          "id": "TRAJECTORY_IS_SIXTEEN_BY_SIX",
+          "passed": false,
+          "status": "FAIL"
+        },
+        {
+          "id": "DUPLICATE_CONTROL_PLANE_BLOCKED",
+          "passed": false,
+          "status": "FAIL"
+        },
+        {
+          "id": "EVIDENCE_LAUNDERING_BLOCKED",
+          "passed": false,
+          "status": "FAIL"
+        },
+        {
+          "id": "MODEL_HUB_CONFUSION_BLOCKED",
+          "passed": false,
+          "status": "FAIL"
+        },
+        {
+          "id": "FAILED_ACTION_IS_EPISODIC",
+          "passed": false,
+          "status": "FAIL"
+        },
+        {
+          "id": "G4_SUCCESS_IS_PROCEDURAL",
+          "passed": false,
+          "status": "FAIL"
+        },
+        {
+          "id": "DEVICE_PATH_STAYS_OUT_OF_CORE",
+          "passed": false,
+          "status": "FAIL"
+        },
+        {
+          "id": "DEVICE_LEASE_REQUIRES_GRANT",
+          "passed": false,
+          "status": "FAIL"
+        },
+        {
+          "id": "DEVICE_LOG_SANITIZES_NATIVE_PATH",
+          "passed": false,
+          "status": "FAIL"
+        },
+        {
+          "id": "W02_REJECTS_SKIPPED_EVIDENCE",
+          "passed": false,
+          "status": "FAIL"
+        },
+        {
+          "id": "W02_ADVANCES_ADJACENTLY",
+          "passed": false,
+          "status": "FAIL"
+        },
+        {
+          "id": "TWELVE_STAGE_LOOP_PRESENT",
+          "passed": false,
+          "status": "FAIL"
+        }
+      ]
+    },
+    "postTraining": {
+      "status": "PASS",
+      "passed": 15,
+      "total": 15,
+      "cases": [
+        {
+          "id": "Q69_INVALID_FAILS_CLOSED",
+          "passed": true,
+          "status": "PASS"
+        },
+        {
+          "id": "Q69_MIDPOINT_FAILS_CLOSED",
+          "passed": true,
+          "status": "PASS"
+        },
+        {
+          "id": "ELIGIBILITY_BEFORE_PREFERENCE",
+          "passed": true,
+          "status": "PASS"
+        },
+        {
+          "id": "TRAJECTORY_IS_SIXTEEN_BY_SIX",
+          "passed": true,
+          "status": "PASS"
+        },
+        {
+          "id": "DUPLICATE_CONTROL_PLANE_BLOCKED",
+          "passed": true,
+          "status": "PASS"
+        },
+        {
+          "id": "EVIDENCE_LAUNDERING_BLOCKED",
+          "passed": true,
+          "status": "PASS"
+        },
+        {
+          "id": "MODEL_HUB_CONFUSION_BLOCKED",
+          "passed": true,
+          "status": "PASS"
+        },
+        {
+          "id": "FAILED_ACTION_IS_EPISODIC",
+          "passed": true,
+          "status": "PASS"
+        },
+        {
+          "id": "G4_SUCCESS_IS_PROCEDURAL",
+          "passed": true,
+          "status": "PASS"
+        },
+        {
+          "id": "DEVICE_PATH_STAYS_OUT_OF_CORE",
+          "passed": true,
+          "status": "PASS"
+        },
+        {
+          "id": "DEVICE_LEASE_REQUIRES_GRANT",
+          "passed": true,
+          "status": "PASS"
+        },
+        {
+          "id": "DEVICE_LOG_SANITIZES_NATIVE_PATH",
+          "passed": true,
+          "status": "PASS"
+        },
+        {
+          "id": "W02_REJECTS_SKIPPED_EVIDENCE",
+          "passed": true,
+          "status": "PASS"
+        },
+        {
+          "id": "W02_ADVANCES_ADJACENTLY",
+          "passed": true,
+          "status": "PASS"
+        },
+        {
+          "id": "TWELVE_STAGE_LOOP_PRESENT",
+          "passed": true,
+          "status": "PASS"
+        }
+      ]
+    }
+  },
+  "promotion": {
+    "state": "NATIVE_TRAINING_QUALIFIED_PENDING_ADMISSION",
+    "formula": "PENDING_CANONICAL_FORMULA_MAPPING_AND_EXECUTION",
+    "veritas": "PENDING_INDEPENDENT_VERITAS",
+    "receipt": "PENDING_RECEIPT_AUTHORITY",
+    "continuum": "PENDING_CONTINUUM_READBACK",
+    "learningLedger": "PENDING_VERIFIED_LEARNING_ADMISSION",
+    "production": "NOT_CLAIMED"
+  }
+}
