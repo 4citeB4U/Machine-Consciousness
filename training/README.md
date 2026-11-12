@@ -26,6 +26,10 @@ The parallel-enterprise suite is simulation-only. Receipt thresholds, healthcare
 
 The graduation suite is a local replay manifest, not the external LeeWay Learning Ledger. It banks five tranches as G3, blocks missing live adapters, and evaluates G4 eligibility only when replay, Formula-grade input, independent Veritas, Receipt Authority, and Continuum readback fields are supplied. It never self-admits production.
 
+## Testing closeout
+
+The visible end-of-testing record is [`TESTING_CLOSEOUT_20261111.md`](TESTING_CLOSEOUT_20261111.md). Its machine-readable index is [`machine-consciousness-testing-closeout-20261111.json`](evidence/machine-consciousness-testing-closeout-20261111.json). Read these before starting a future replay; they distinguish local test evidence, hosted observation, simulation, unverified claims, blocked gates, and external-admission work still required.
+
 The generated evidence artifact records a matched baseline/post-training evaluation. A passing post-training result means the rules executed in this repository; it does not mean model weights were trained, a provider's hidden knowledge was extracted, or production admission occurred. The online ChatGPT lane remains excluded until an actual response or export is captured.
 
 The adversarial crucible is a separate negative/recovery suite. It tests whether the trained mechanisms hold under compound pressure; it does not replace the canonical Formula, Device Bridge, Veritas, Receipt Authority, Continuum, or Learning Ledger gates.

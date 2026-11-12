@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "1.0.0",
+  "artifactType": "LEEWAY_MACHINE_CONSCIOUSNESS_TESTING_CLOSEOUT_INDEX",
+  "generatedAt": "2026-11-11T22:45:32.2758585-06:00",
+  "repository": "4citeB4U/Machine-Consciousness",
+  "branch": "main",
+  "sourceEvidenceHead": "0a076dec831254a99106cc395a2de28e2022b101",
+  "loopState": "VERIFY -> EVIDENCE -> CHECKPOINT -> CONTINUE",
+  "closeoutState": "LOCAL_TESTING_CLOSED_AND_INDEXED_LIVE_GRADUATION_OPEN",
+  "testResults": {
+    "fullRepositorySuite": "66/66 PASS",
+    "graduationControlSuite": "3/3 PASS",
+    "syntaxChecks": "PASS",
+    "gitDiffCheck": "PASS"
+  },
+  "bankedTranches": [
+    { "id": "TRANCHE_01_CORE_CURRICULUM_V2", "commit": "bf01438e2fac3f54214c9e440351b220740bf86a", "result": "41/41", "stage": "STAGE_1_BANKED_AS_SIMULATED_TRAINING_G3" },
+    { "id": "TRANCHE_02_ADVERSARIAL_CRUCIBLE", "commit": "d250f9762a37e0855d1bc631cb57acf343a904fa", "result": "50/50", "stage": "STAGE_1_BANKED_AS_SIMULATED_TRAINING_G3" },
+    { "id": "TRANCHE_03_OMNIVERSE_SURVIVAL", "commit": "9b06a4bebe1063dbfc7379ba89527409d1c74df5", "result": "56/56", "stage": "STAGE_1_BANKED_AS_SIMULATED_TRAINING_G3" },
+    { "id": "TRANCHE_04_BRIDGE_HARMONY", "commit": "3dbfa47c7a46e68af48b644eb0ce240e5ff549b7", "result": "59/59", "stage": "STAGE_1_BANKED_AS_SIMULATED_TRAINING_G3" },
+    { "id": "TRANCHE_05_PARALLEL_ENTERPRISE_AND_TASTE", "commit": "6ead6dafcfbdc8c25168536108862998fd4ca7bc", "result": "63/63", "stage": "STAGE_1_BANKED_AS_SIMULATED_TRAINING_G3" }
+  ],
+  "recordableEvidence": {
+    "verifiedLocalTest": true,
+    "observedHosted": "PRIOR_CHECKPOINT_ONLY",
+    "simulationOnly": true,
+    "commands": [
+      "node --test training/tests/*.test.mjs",
+      "node --check training/scripts/sim-to-prod-graduation-ledger.mjs",
+      "node --check training/tests/sim-to-prod-graduation.test.mjs",
+      "git diff --check"
+    ]
+  },
+  "authorityState": {
+    "receiptAuthority": "RECEIPT_NOT_CREATED_EXTERNAL_ADAPTER_REQUIRED",
+    "veritas": "NOT_RUN_NOT_ISSUED",
+    "continuum": "NOT_WRITTEN_NOT_READ_BACK",
+    "learningLedger": "NOT_WRITTEN_NOT_ADMITTED",
+    "deviceBridge": "LIVE_REPLAY_PENDING",
+    "edgeGpu": "PHYSICAL_EXECUTION_UNVERIFIED",
+    "physicalIphoneVoice": "UNVERIFIED"
+  },
+  "openGateCount": 19,
+  "productionPromotion": "NOT_CLAIMED",
+  "privacy": "HASHES_METADATA_AND_PATHS_ONLY_NO_RAW_CONVERSATION_TRANSCRIPTS_INCLUDED"
+}
