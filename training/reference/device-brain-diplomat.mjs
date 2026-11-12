@@ -12,7 +12,7 @@ HOW = Reject hard-coded host paths in agnostic payloads and grant bounded leases
 LICENSE = Repository terms unchanged; candidate reference only.
 */
 
-const HARDCODED_OS_PATH = /(?:[A-Za-z]:\\|\/Users\/|\/home\/|\/data\/data\/|\/var\/mobile\/)/;
+const HARDCODED_OS_PATH = /(?:[A-Za-z]:[\\\\/]|\/Users\/|\/home\/|\/data\/data\/|\/var\/mobile\/)/;
 
 export function assertAgnosticPurity(payload) {
   const match = String(payload ?? '').match(HARDCODED_OS_PATH);

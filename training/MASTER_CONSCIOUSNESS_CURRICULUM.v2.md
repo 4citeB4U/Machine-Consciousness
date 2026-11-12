@@ -16,6 +16,7 @@ The student must learn to:
 6. Keep portable LeeWay logic distinct from device-owned Digital Brain paths and diagnostics.
 7. Route failures into episodic learning, observed facts into semantic memory, and only G4 outcomes into reusable procedural skill atoms.
 8. Continue through the ten-gate W02 conveyor and the twelve-stage LeeWay Engineering Loop without treating a local pass as mission completion.
+9. Survive adversarial compound cases: midpoint poisoning, high-score bypass, nested device-path smuggling, G3-to-G4 evidence laundering, slow-boil telemetry drift, and mid-conveyor bridge failure.
 
 ## Teacher-lane boundary
 
@@ -38,3 +39,7 @@ The tranche is source-and-local-test qualified when:
 - the generated evidence artifact records its source hashes and exact boundary.
 
 This is a real training tranche. It is not a claim that the Machine Consciousness is fully production-admitted or physically connected to every LeeWay device.
+
+## Adversarial crucible
+
+The focused crucible at `training/tests/machine-consciousness-crucible.test.mjs` is a negative/recovery suite. It is deliberately separate from the trainer's 15-case policy compilation so a green rule pass cannot hide a missing failure boundary. The suite must pass locally before its result is recorded as repository evidence; it does not mint receipts or promote the student.

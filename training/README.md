@@ -11,9 +11,12 @@ Compile and test the tranche:
 ```powershell
 node --test training/tests/*.test.mjs
 node training/scripts/train-machine-consciousness.mjs
+node --test training/tests/machine-consciousness-crucible.test.mjs
 ```
 
 The generated evidence artifact records a matched baseline/post-training evaluation. A passing post-training result means the rules executed in this repository; it does not mean model weights were trained, a provider's hidden knowledge was extracted, or production admission occurred. The online ChatGPT lane remains excluded until an actual response or export is captured.
+
+The adversarial crucible is a separate negative/recovery suite. It tests whether the trained mechanisms hold under compound pressure; it does not replace the canonical Formula, Device Bridge, Veritas, Receipt Authority, Continuum, or Learning Ledger gates.
 
 The model family is a temporary foundry. It may provide capability evidence, examples, evaluations, and bounded contributor packets. It is not a production dependency, is not copied into this repository, and does not replace the deterministic Machine Consciousness runtime. Local weights remain outside Git and are retained only until native LeeWay artifacts, tests, receipts, ledgers, skills, formulas, recovery evidence, and backups are independently qualified.
 

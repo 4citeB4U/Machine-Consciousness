@@ -45,3 +45,15 @@ export function advanceW02(state, evidence = {}) {
   }
   return { status: 'ADVANCED', from: state.gate, gate: W02_GATES[currentIndex + 1] };
 }
+
+export function quarantineW02Failure({ state, bridgeResult, checkpoint }) {
+  if (bridgeResult?.ok === true) return { status: 'NOT_TRIGGERED', gate: state?.gate ?? null };
+  return {
+    status: 'BLOCKED_AT_BRIDGE_AUTH',
+    gate: state?.gate ?? null,
+    mintReceipt: false,
+    memoryVaultTarget: 'EPISODIC_OBSERVATION',
+    restoredCheckpoint: checkpoint ?? null,
+    reason: bridgeResult?.error ?? `BRIDGE_FAILURE_${bridgeResult?.status ?? 'UNKNOWN'}`
+  };
+}
