@@ -19,6 +19,7 @@ The student must learn to:
 9. Survive adversarial compound cases: midpoint poisoning, high-score bypass, nested device-path smuggling, G3-to-G4 evidence laundering, slow-boil telemetry drift, and mid-conveyor bridge failure.
 10. Model product pivots, hash-verified state recovery, lost-device protection, heterogeneous routing, constitutional drift rejection, and Creator-authorized hibernation as explicit simulations before any live adapter admission.
 11. Preflight host-policy harmony, negotiate future hardware by capability vector, and keep Model Hub skill atoms paused until Formula, Device Bridge, GPU, Veritas, and Continuum gates are all present.
+12. Coordinate parallel enterprise lanes, gate threshold cascades on verified receipts, preserve privacy-bounded care telemetry, and condense structured preference signals into Q69/QB64 candidate state without retaining raw conversation.
 
 ## Teacher-lane boundary
 
@@ -53,3 +54,7 @@ The focused crucible at `training/tests/machine-consciousness-crucible.test.mjs`
 ## Bridge harmony and skill-atom simulations
 
 `training/tests/machine-consciousness-bridge-harmony-and-distillation.test.mjs` translates the latest candidate brief into three bounded cases: host-policy preflight before delivery, capability-vector adaptation without device-name hardcoding, and a paused Model Hub skill-atom route. A preflight pass is not a promise that Windows, Android, or Apple will show no warning; the real package signature, platform review, and delivery result still require the target host. The skill-atom router does not invoke an LLM or GPU here. It remains a candidate until the real Formula, Device Bridge, GPU execution, independent Veritas, and Continuum receipt gates pass.
+
+## Parallel enterprise and taste simulations
+
+`training/tests/machine-consciousness-parallel-enterprise-and-taste-digits.test.mjs` adds four `SIMULATION_ONLY` cases: receipt-gated media cascades, redacted longitudinal care telemetry with clinician review, Q69/QB64 preference-state condensation, and a bounded non-blocking multi-lane tick. These tests do not publish media, dispatch care, settle billing, contact a clinician, execute a GPU render, perform quantum computation, or prove that raw conversation is deleted by a production storage system. They teach the deterministic boundary; live adapters still require their own authorization and evidence.
