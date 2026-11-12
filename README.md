@@ -43,3 +43,7 @@ The temporary model-foundry transfer boundary and the closed-loop action qualifi
 The current verified runtime evidence is intentionally narrower than production readiness: the deterministic carrier completed `check runtime status` and `check this computer` through the native Host Commander with `llm.used=false`, adapter execution evidence, independent readback, and Veritas PASS. The `code.status` route remains explicitly blocked until its existing federated provider binding is repaired and qualified.
 
 The selected federation transport source is [4citeB4U/Leeway-Federate-Web](https://github.com/4citeB4U/Leeway-Federate-Web). Its pinned source audit and real browser proof qualify local signed WebRTC transport; they do not yet qualify independent-node federation, canonical Runtime dispatch, Veritas, or production execution.
+
+## Cross-repository architecture contract
+
+The ownership map and shared event envelope for Machine Consciousness, Formula, Runtime Fabric, Device Bridge, host Digital Brain, Model Hub, Edge GPU, Veritas, Receipt Authority, Continuum, Learning Ledger, and Production Final Execution are documented in [`docs/architecture/leeway-cross-repository-integration-v1.md`](docs/architecture/leeway-cross-repository-integration-v1.md). The testing closeout and replay manifest remain the current handoff records.
