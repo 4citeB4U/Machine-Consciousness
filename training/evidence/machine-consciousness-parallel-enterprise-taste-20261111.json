@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0.0",
+  "artifactType": "LEEWAY_MACHINE_CONSCIOUSNESS_PARALLEL_ENTERPRISE_TASTE_SIMULATION_EVIDENCE",
+  "generatedAt": "2026-11-11T22:42:53.9231962-06:00",
+  "repository": "4citeB4U/Machine-Consciousness",
+  "sourceCommit": "6ead6dafcfbdc8c25168536108862998fd4ca7bc",
+  "testFile": "training/tests/machine-consciousness-parallel-enterprise-and-taste-digits.test.mjs",
+  "suite": {
+    "isolated": "4/4 PASS",
+    "repositoryTrainingGlob": "63/63 PASS",
+    "syntax": "PASS",
+    "diffCheck": "PASS"
+  },
+  "scenarios": [
+    "receipt_gated_media_threshold_cascade",
+    "redacted_longitudinal_care_telemetry_and_clinician_gate",
+    "q69_qb64_candidate_preference_state_without_raw_transcript_retention",
+    "bounded_parallel_multi_lane_tick"
+  ],
+  "executionState": "SIMULATION_ONLY_NOT_LIVE_ENTERPRISE_HEALTHCARE_OR_GPU_EXECUTION",
+  "weights": "NOT_USED",
+  "inference": "NOT_INVOKED",
+  "externalMedia": "NOT_EXECUTED",
+  "medicalProvider": "NOT_CONTACTED",
+  "billing": "NOT_EXECUTED",
+  "gpuExecution": "NOT_EXECUTED",
+  "quantumExecution": "NOT_EXECUTED",
+  "formula": "REFERENCE_Q69_QB64_ONLY_NOT_CANONICAL_EXECUTION",
+  "deviceBridge": "NOT_EXECUTED",
+  "veritas": "NOT_RUN",
+  "receipt": "NOT_CREATED",
+  "continuum": "NOT_WRITTEN",
+  "learningLedger": "NOT_UPDATED",
+  "productionPromotion": "NOT_CLAIMED"
+}
