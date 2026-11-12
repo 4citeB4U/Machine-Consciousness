@@ -18,6 +18,7 @@ The student must learn to:
 8. Continue through the ten-gate W02 conveyor and the twelve-stage LeeWay Engineering Loop without treating a local pass as mission completion.
 9. Survive adversarial compound cases: midpoint poisoning, high-score bypass, nested device-path smuggling, G3-to-G4 evidence laundering, slow-boil telemetry drift, and mid-conveyor bridge failure.
 10. Model product pivots, hash-verified state recovery, lost-device protection, heterogeneous routing, constitutional drift rejection, and Creator-authorized hibernation as explicit simulations before any live adapter admission.
+11. Preflight host-policy harmony, negotiate future hardware by capability vector, and keep Model Hub skill atoms paused until Formula, Device Bridge, GPU, Veritas, and Continuum gates are all present.
 
 ## Teacher-lane boundary
 
@@ -48,3 +49,7 @@ The focused crucible at `training/tests/machine-consciousness-crucible.test.mjs`
 ## Survival simulations
 
 `training/tests/machine-consciousness-omniverse-survival.test.mjs` exercises six additional failure-shaped cases: product pivot reuse, state-capsule integrity, lost-device protection, heterogeneous-node routing, constitutional-drift rejection, and Creator-authorized hibernation. These are `SIMULATION_ONLY` reference tests. Hash integrity is not encryption, generated nodes are not live Device Bridge devices, and hibernation does not deploy a relay, satellite, or Continuum recovery service.
+
+## Bridge harmony and skill-atom simulations
+
+`training/tests/machine-consciousness-bridge-harmony-and-distillation.test.mjs` translates the latest candidate brief into three bounded cases: host-policy preflight before delivery, capability-vector adaptation without device-name hardcoding, and a paused Model Hub skill-atom route. A preflight pass is not a promise that Windows, Android, or Apple will show no warning; the real package signature, platform review, and delivery result still require the target host. The skill-atom router does not invoke an LLM or GPU here. It remains a candidate until the real Formula, Device Bridge, GPU execution, independent Veritas, and Continuum receipt gates pass.

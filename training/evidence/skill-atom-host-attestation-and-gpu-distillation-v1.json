@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "artifactType": "LEEWAY_SKILL_ATOM_CANDIDATE",
+  "skillAtomId": "SKILL_ATOM_HOST_ATTESTATION_AND_GPU_DISTILLATION_V1",
+  "authoredByHelper": "Gemini-F3-Master-Trainer (owner-supplied candidate brief)",
+  "targetVault": "LeeWay-Learning-Ledger -> PROCEDURAL_SKILL_ATOM",
+  "targetComputeEngine": "LeeWay-Edge-GPU + LeeWay-Device-Bridge",
+  "status": "CANDIDATE_NOT_ADMITTED",
+  "skillsExercisedByTrainer": [
+    {
+      "skillName": "Host_OS_Safety_Pre_Attestation",
+      "deterministicReplacement": "Preflight signature continuity, SBOM/provenance presence, least-privilege permissions, and private-API declarations before delivery."
+    },
+    {
+      "skillName": "Future_Hardware_Modality_Mapping",
+      "deterministicReplacement": "Select adapters from device-owned capability and modality vectors rather than hardcoded device model names."
+    },
+    {
+      "skillName": "LLM_to_Edge_GPU_Skill_Atom_Routing",
+      "deterministicReplacement": "Keep a candidate skill dormant until Formula, Device Bridge, GPU execution, Veritas, and Continuum gates are all present; then route a verified kernel candidate without making the Model Hub the authority."
+    }
+  ],
+  "claimsNotMeasured": [
+    "zero operating-system warnings",
+    "token savings",
+    "GPU thermal reduction",
+    "physical GPU execution",
+    "LLM distillation quality"
+  ],
+  "executionState": "SIMULATION_ONLY_NOT_LIVE_OS_DEVICE_BRIDGE_GPU_OR_MODEL_HUB_EXECUTION",
+  "formula": "NOT_EXECUTED",
+  "deviceBridge": "NOT_EXECUTED",
+  "veritas": "NOT_RUN",
+  "receipt": "NOT_CREATED",
+  "continuum": "NOT_WRITTEN",
+  "learningLedger": "NOT_UPDATED",
+  "productionPromotion": "NOT_CLAIMED"
+}
