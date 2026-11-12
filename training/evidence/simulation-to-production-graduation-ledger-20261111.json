@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0.0",
+  "artifactType": "LEEWAY_SIMULATION_TO_PRODUCTION_GRADUATION_MANIFEST",
+  "generatedAt": "2026-11-11T22:45:06.7187319-06:00",
+  "repository": "4citeB4U/Machine-Consciousness",
+  "tranchesBanked": 5,
+  "bankedStage": "STAGE_1_BANKED_AS_SIMULATED_TRAINING_G3",
+  "tranches": [
+    { "trancheId": "TRANCHE_01_CORE_CURRICULUM_V2", "sourceCommit": "bf01438e2fac3f54214c9e440351b220740bf86a", "simulatedResult": "41/41" },
+    { "trancheId": "TRANCHE_02_ADVERSARIAL_CRUCIBLE", "sourceCommit": "d250f9762a37e0855d1bc631cb57acf343a904fa", "simulatedResult": "50/50" },
+    { "trancheId": "TRANCHE_03_OMNIVERSE_SURVIVAL", "sourceCommit": "9b06a4bebe1063dbfc7379ba89527409d1c74df5", "simulatedResult": "56/56" },
+    { "trancheId": "TRANCHE_04_BRIDGE_HARMONY", "sourceCommit": "3dbfa47c7a46e68af48b644eb0ce240e5ff549b7", "simulatedResult": "59/59" },
+    { "trancheId": "TRANCHE_05_PARALLEL_ENTERPRISE_AND_TASTE", "sourceCommit": "6ead6dafcfbdc8c25168536108862998fd4ca7bc", "simulatedResult": "63/63" }
+  ],
+  "graduationPolicy": {
+    "minimumQ69": 63,
+    "requiresReplayExecuted": true,
+    "requiresIndependentVeritas": true,
+    "requiresReceiptAuthorityHash": true,
+    "requiresContinuumReadback": true,
+    "productionAdmissionFromSyntheticFixture": false
+  },
+  "localControlTest": "3/3 PASS",
+  "fullRepositorySuite": "66/66 PASS",
+  "externalLearningLedger": "NOT_WRITTEN",
+  "continuum": "NOT_WRITTEN",
+  "veritas": "NOT_RUN",
+  "receipt": "NOT_CREATED",
+  "productionPromotion": "NOT_CLAIMED"
+}

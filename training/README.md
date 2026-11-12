@@ -15,6 +15,7 @@ node --test training/tests/machine-consciousness-crucible.test.mjs
 node --test training/tests/machine-consciousness-omniverse-survival.test.mjs
 node --test training/tests/machine-consciousness-bridge-harmony-and-distillation.test.mjs
 node --test training/tests/machine-consciousness-parallel-enterprise-and-taste-digits.test.mjs
+node --test training/tests/sim-to-prod-graduation.test.mjs
 ```
 
 The omniverse survival suite is simulation-only. Its state capsule uses hash integrity rather than encryption; its 1,000-node case generates test records rather than executing a live swarm; and its offline/hibernation cases do not prove live Continuum, Device Bridge, relay, satellite, or physical recovery capability.
@@ -22,6 +23,8 @@ The omniverse survival suite is simulation-only. Its state capsule uses hash int
 The bridge-harmony suite is also simulation-only. It blocks obvious signature, provenance, permission, and private-API risks before delivery; it does not guarantee that a target operating system will never display a warning. Its future-device cases use abstract capability vectors, and its skill-atom case keeps the Model Hub at a paused-resident policy without invoking a live LLM, GPU, Device Bridge, Formula, Veritas, or Continuum service.
 
 The parallel-enterprise suite is simulation-only. Receipt thresholds, healthcare telemetry, care dispatch, privacy, taste-state condensation, and lane scheduling are deterministic training boundaries; no external channel, medical provider, billing system, GPU, quantum processor, or production storage service is invoked.
+
+The graduation suite is a local replay manifest, not the external LeeWay Learning Ledger. It banks five tranches as G3, blocks missing live adapters, and evaluates G4 eligibility only when replay, Formula-grade input, independent Veritas, Receipt Authority, and Continuum readback fields are supplied. It never self-admits production.
 
 The generated evidence artifact records a matched baseline/post-training evaluation. A passing post-training result means the rules executed in this repository; it does not mean model weights were trained, a provider's hidden knowledge was extracted, or production admission occurred. The online ChatGPT lane remains excluded until an actual response or export is captured.
 

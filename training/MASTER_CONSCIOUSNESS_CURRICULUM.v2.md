@@ -20,6 +20,7 @@ The student must learn to:
 10. Model product pivots, hash-verified state recovery, lost-device protection, heterogeneous routing, constitutional drift rejection, and Creator-authorized hibernation as explicit simulations before any live adapter admission.
 11. Preflight host-policy harmony, negotiate future hardware by capability vector, and keep Model Hub skill atoms paused until Formula, Device Bridge, GPU, Veritas, and Continuum gates are all present.
 12. Coordinate parallel enterprise lanes, gate threshold cascades on verified receipts, preserve privacy-bounded care telemetry, and condense structured preference signals into Q69/QB64 candidate state without retaining raw conversation.
+13. Bank every simulation as G3 training, preserve an explicit live-replay manifest, and refuse G4 production admission until real adapter execution and independent evidence are present.
 
 ## Teacher-lane boundary
 
@@ -58,3 +59,7 @@ The focused crucible at `training/tests/machine-consciousness-crucible.test.mjs`
 ## Parallel enterprise and taste simulations
 
 `training/tests/machine-consciousness-parallel-enterprise-and-taste-digits.test.mjs` adds four `SIMULATION_ONLY` cases: receipt-gated media cascades, redacted longitudinal care telemetry with clinician review, Q69/QB64 preference-state condensation, and a bounded non-blocking multi-lane tick. These tests do not publish media, dispatch care, settle billing, contact a clinician, execute a GPU render, perform quantum computation, or prove that raw conversation is deleted by a production storage system. They teach the deterministic boundary; live adapters still require their own authorization and evidence.
+
+## Simulation-to-production graduation
+
+`training/scripts/sim-to-prod-graduation-ledger.mjs` maintains a local replay manifest for the five current training tranches. It preserves each as `STAGE_1_BANKED_AS_SIMULATED_TRAINING_G3`, lists the live adapters still required, grades a supplied replay in the reference Q69/QB64 scale, and fails closed when evidence is incomplete. Even a complete synthetic fixture returns `G4_ELIGIBLE_PENDING_CANONICAL_PRODUCTION_ADMISSION`; it does not mint a receipt, write Continuum, update the Learning Ledger, or claim production.
