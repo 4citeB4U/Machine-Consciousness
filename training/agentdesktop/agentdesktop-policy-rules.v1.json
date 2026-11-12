@@ -1,0 +1,265 @@
+{
+  "schemaVersion": "leeway.mc.agentdesktop.rules.v1",
+  "role": "SOURCE_DERIVED_DETERMINISTIC_CANDIDATE_NOT_RUNTIME_AUTHORITY",
+  "rules": [
+    {
+      "id": "REVOKED",
+      "intent": "*",
+      "when": [
+        [
+          "ownerAccess",
+          "eq",
+          "revoked"
+        ]
+      ],
+      "decision": "DENY_REVOKED"
+    },
+    {
+      "id": "DEVICE_USER_MISMATCH",
+      "intent": "device_action",
+      "when": [
+        [
+          "userSubjectMatches",
+          "eq",
+          false
+        ]
+      ],
+      "decision": "DENY_IDENTITY"
+    },
+    {
+      "id": "DEVICE_UNQUALIFIED",
+      "intent": "device_action",
+      "when": [
+        [
+          "deviceIdentity",
+          "ne",
+          "qualified"
+        ]
+      ],
+      "decision": "HOLD_DEVICE_QUALIFICATION"
+    },
+    {
+      "id": "CONFIG_NO_APPROVAL",
+      "intent": "config_apply",
+      "when": [
+        [
+          "ownerApproval",
+          "ne",
+          true
+        ]
+      ],
+      "decision": "DENY_WRITE"
+    },
+    {
+      "id": "CONFIG_DRIFT",
+      "intent": "config_apply",
+      "when": [
+        [
+          "sourceChangedAfterPlan",
+          "eq",
+          true
+        ]
+      ],
+      "decision": "HOLD_CONFLICT"
+    },
+    {
+      "id": "CONFIG_NO_ROLLBACK",
+      "intent": "config_apply",
+      "when": [
+        [
+          "rollback",
+          "ne",
+          true
+        ]
+      ],
+      "decision": "HOLD_ROLLBACK"
+    },
+    {
+      "id": "UNREACHABLE_MCP",
+      "intent": "tool_inventory",
+      "when": [
+        [
+          "probe",
+          "eq",
+          "unreachable"
+        ]
+      ],
+      "decision": "REPORT_UNAVAILABLE"
+    },
+    {
+      "id": "DISAPPEARED_AGENT",
+      "intent": "tool_inventory",
+      "when": [
+        [
+          "lastScan",
+          "eq",
+          "installed"
+        ],
+        [
+          "currentScan",
+          "eq",
+          "missing"
+        ]
+      ],
+      "decision": "REPORT_DRIFT"
+    },
+    {
+      "id": "SKILL_UNVALIDATED",
+      "intent": "skill_assessment",
+      "when": [
+        [
+          "metadata",
+          "eq",
+          "present"
+        ],
+        [
+          "semanticValidation",
+          "ne",
+          "passed"
+        ]
+      ],
+      "decision": "CANDIDATE_NOT_ADMITTED"
+    },
+    {
+      "id": "SKILL_UNTESTED",
+      "intent": "skill_assessment",
+      "when": [
+        [
+          "metadata",
+          "eq",
+          "present"
+        ],
+        [
+          "runtimeTest",
+          "ne",
+          "passed"
+        ]
+      ],
+      "decision": "CANDIDATE_NOT_ADMITTED"
+    },
+    {
+      "id": "INVENTORY_READ_ONLY",
+      "intent": "tool_inventory",
+      "when": [
+        [
+          "ownerAccess",
+          "eq",
+          "granted"
+        ],
+        [
+          "deviceIdentity",
+          "eq",
+          "qualified"
+        ],
+        [
+          "scope",
+          "eq",
+          "read"
+        ]
+      ],
+      "decision": "ALLOW_BOUNDED_INVENTORY"
+    },
+    {
+      "id": "DEVICE_NO_PRE",
+      "intent": "device_action",
+      "when": [
+        [
+          "veritasPre",
+          "ne",
+          true
+        ]
+      ],
+      "decision": "HOLD_PRE_GATE"
+    },
+    {
+      "id": "EXECUTION_UNPROVEN",
+      "intent": "action_verify",
+      "when": [
+        [
+          "executed",
+          "eq",
+          true
+        ],
+        [
+          "postStateObserved",
+          "ne",
+          true
+        ]
+      ],
+      "decision": "EXECUTED_UNVERIFIED"
+    },
+    {
+      "id": "VERITAS_UNPROVEN",
+      "intent": "action_verify",
+      "when": [
+        [
+          "executed",
+          "eq",
+          true
+        ],
+        [
+          "veritasPost",
+          "ne",
+          "PASS"
+        ]
+      ],
+      "decision": "EXECUTED_UNVERIFIED"
+    },
+    {
+      "id": "RECEIPT_UNPROVEN",
+      "intent": "action_verify",
+      "when": [
+        [
+          "executed",
+          "eq",
+          true
+        ],
+        [
+          "canonicalReceiptReadback",
+          "ne",
+          true
+        ]
+      ],
+      "decision": "EXECUTED_UNVERIFIED"
+    },
+    {
+      "id": "ELIGIBLE_LEDGER",
+      "intent": "action_verify",
+      "when": [
+        [
+          "executed",
+          "eq",
+          true
+        ],
+        [
+          "postStateObserved",
+          "eq",
+          true
+        ],
+        [
+          "veritasPost",
+          "eq",
+          "PASS"
+        ],
+        [
+          "canonicalReceiptReadback",
+          "eq",
+          true
+        ]
+      ],
+      "decision": "ELIGIBLE_FOR_LEDGER_REVIEW"
+    },
+    {
+      "id": "RIGHTS_NOT_REVIEWED",
+      "intent": "capability_promotion",
+      "when": [
+        [
+          "licenseReviewed",
+          "ne",
+          true
+        ]
+      ],
+      "decision": "QUARANTINE_PENDING_RIGHTS"
+    }
+  ]
+}

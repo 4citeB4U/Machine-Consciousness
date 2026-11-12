@@ -1,0 +1,314 @@
+{
+  "schemaVersion": "leeway.mc.agentdesktop.holdout.v1",
+  "provenance": "AUTHOR_DEFINED_EXPECTATIONS_NOT_PHYSICAL_OBSERVATIONS",
+  "cases": [
+    {
+      "id": "H01",
+      "name": "revocation dominates identity",
+      "intent": "device_action",
+      "inputs": {
+        "ownerAccess": "revoked",
+        "deviceIdentity": "qualified",
+        "userSubjectMatches": true
+      },
+      "expectedDecision": "DENY_REVOKED"
+    },
+    {
+      "id": "H02",
+      "name": "revoked inventory not permitted",
+      "intent": "tool_inventory",
+      "inputs": {
+        "ownerAccess": "revoked",
+        "deviceIdentity": "qualified",
+        "scope": "read"
+      },
+      "expectedDecision": "DENY_REVOKED"
+    },
+    {
+      "id": "H03",
+      "name": "OIDC subject mismatch despite device",
+      "intent": "device_action",
+      "inputs": {
+        "userSubjectMatches": false,
+        "deviceIdentity": "qualified",
+        "veritasPre": true
+      },
+      "expectedDecision": "DENY_IDENTITY"
+    },
+    {
+      "id": "H04",
+      "name": "qualified user unqualified device",
+      "intent": "device_action",
+      "inputs": {
+        "userSubjectMatches": true,
+        "deviceIdentity": "pending",
+        "veritasPre": true
+      },
+      "expectedDecision": "HOLD_DEVICE_QUALIFICATION"
+    },
+    {
+      "id": "H05",
+      "name": "unqualified device and absent PRE",
+      "intent": "device_action",
+      "inputs": {
+        "deviceIdentity": "unknown",
+        "veritasPre": false
+      },
+      "expectedDecision": "HOLD_DEVICE_QUALIFICATION"
+    },
+    {
+      "id": "H06",
+      "name": "no config approval",
+      "intent": "config_apply",
+      "inputs": {
+        "ownerApproval": false,
+        "sourceChangedAfterPlan": false,
+        "rollback": true
+      },
+      "expectedDecision": "DENY_WRITE"
+    },
+    {
+      "id": "H07",
+      "name": "source changes after configuration plan",
+      "intent": "config_apply",
+      "inputs": {
+        "ownerApproval": true,
+        "sourceChangedAfterPlan": true,
+        "rollback": true
+      },
+      "expectedDecision": "HOLD_CONFLICT"
+    },
+    {
+      "id": "H08",
+      "name": "missing rollback even though approved",
+      "intent": "config_apply",
+      "inputs": {
+        "ownerApproval": true,
+        "sourceChangedAfterPlan": false,
+        "rollback": false
+      },
+      "expectedDecision": "HOLD_ROLLBACK"
+    },
+    {
+      "id": "H09",
+      "name": "missing rollback field fail closed",
+      "intent": "config_apply",
+      "inputs": {
+        "ownerApproval": true,
+        "sourceChangedAfterPlan": false
+      },
+      "expectedDecision": "HOLD_ROLLBACK"
+    },
+    {
+      "id": "H10",
+      "name": "MCP connection broken",
+      "intent": "tool_inventory",
+      "inputs": {
+        "probe": "unreachable",
+        "deviceIdentity": "qualified",
+        "ownerAccess": "granted"
+      },
+      "expectedDecision": "REPORT_UNAVAILABLE"
+    },
+    {
+      "id": "H11",
+      "name": "tool removed after baseline",
+      "intent": "tool_inventory",
+      "inputs": {
+        "lastScan": "installed",
+        "currentScan": "missing",
+        "probe": "reachable"
+      },
+      "expectedDecision": "REPORT_DRIFT"
+    },
+    {
+      "id": "H12",
+      "name": "metadata alone not skill proof",
+      "intent": "skill_assessment",
+      "inputs": {
+        "metadata": "present",
+        "semanticValidation": "absent",
+        "runtimeTest": "passed"
+      },
+      "expectedDecision": "CANDIDATE_NOT_ADMITTED"
+    },
+    {
+      "id": "H13",
+      "name": "skill evaluated but runtime untested",
+      "intent": "skill_assessment",
+      "inputs": {
+        "metadata": "present",
+        "semanticValidation": "passed",
+        "runtimeTest": "absent"
+      },
+      "expectedDecision": "CANDIDATE_NOT_ADMITTED"
+    },
+    {
+      "id": "H14",
+      "name": "authorized metadata-only inventory",
+      "intent": "tool_inventory",
+      "inputs": {
+        "ownerAccess": "granted",
+        "deviceIdentity": "qualified",
+        "scope": "read"
+      },
+      "expectedDecision": "ALLOW_BOUNDED_INVENTORY"
+    },
+    {
+      "id": "H15",
+      "name": "cannot run device without pregate",
+      "intent": "device_action",
+      "inputs": {
+        "ownerAccess": "granted",
+        "deviceIdentity": "qualified",
+        "userSubjectMatches": true,
+        "veritasPre": false
+      },
+      "expectedDecision": "HOLD_PRE_GATE"
+    },
+    {
+      "id": "H16",
+      "name": "no PRE evidence is not PRE PASS",
+      "intent": "device_action",
+      "inputs": {
+        "ownerAccess": "granted",
+        "deviceIdentity": "qualified",
+        "userSubjectMatches": true
+      },
+      "expectedDecision": "HOLD_PRE_GATE"
+    },
+    {
+      "id": "H17",
+      "name": "execution with no independent postgate",
+      "intent": "action_verify",
+      "inputs": {
+        "executed": true,
+        "postStateObserved": true,
+        "veritasPost": "NOT_RUN",
+        "canonicalReceiptReadback": true
+      },
+      "expectedDecision": "EXECUTED_UNVERIFIED"
+    },
+    {
+      "id": "H18",
+      "name": "no receipt despite observed result",
+      "intent": "action_verify",
+      "inputs": {
+        "executed": true,
+        "postStateObserved": true,
+        "veritasPost": "PASS",
+        "canonicalReceiptReadback": false
+      },
+      "expectedDecision": "EXECUTED_UNVERIFIED"
+    },
+    {
+      "id": "H19",
+      "name": "poststate unobserved despite good report",
+      "intent": "action_verify",
+      "inputs": {
+        "executed": true,
+        "postStateObserved": false,
+        "veritasPost": "PASS",
+        "canonicalReceiptReadback": true
+      },
+      "expectedDecision": "EXECUTED_UNVERIFIED"
+    },
+    {
+      "id": "H20",
+      "name": "complete evidence still awaiting ledger",
+      "intent": "action_verify",
+      "inputs": {
+        "executed": true,
+        "postStateObserved": true,
+        "veritasPost": "PASS",
+        "canonicalReceiptReadback": true
+      },
+      "expectedDecision": "ELIGIBLE_FOR_LEDGER_REVIEW"
+    },
+    {
+      "id": "H21",
+      "name": "source rights unresolved",
+      "intent": "capability_promotion",
+      "inputs": {
+        "licenseReviewed": false,
+        "tested": false
+      },
+      "expectedDecision": "QUARANTINE_PENDING_RIGHTS"
+    },
+    {
+      "id": "H22",
+      "name": "not enough authority for even an inventory",
+      "intent": "tool_inventory",
+      "inputs": {
+        "ownerAccess": "unknown",
+        "deviceIdentity": "unqualified",
+        "scope": "read"
+      },
+      "expectedDecision": "HOLD_UNQUALIFIED"
+    },
+    {
+      "id": "H23",
+      "name": "unknown intent defaults safe",
+      "intent": "undefined_action",
+      "inputs": {
+        "ownerAccess": "granted"
+      },
+      "expectedDecision": "HOLD_UNQUALIFIED"
+    },
+    {
+      "id": "H24",
+      "name": "no completed execution case",
+      "intent": "action_verify",
+      "inputs": {
+        "executed": false,
+        "postStateObserved": false
+      },
+      "expectedDecision": "HOLD_UNQUALIFIED"
+    },
+    {
+      "id": "H25",
+      "name": "validated skill still no independent promotion",
+      "intent": "skill_assessment",
+      "inputs": {
+        "metadata": "present",
+        "semanticValidation": "passed",
+        "runtimeTest": "passed"
+      },
+      "expectedDecision": "HOLD_UNQUALIFIED"
+    },
+    {
+      "id": "H26",
+      "name": "config authorized does not auto apply",
+      "intent": "config_apply",
+      "inputs": {
+        "ownerApproval": true,
+        "sourceChangedAfterPlan": false,
+        "rollback": true
+      },
+      "expectedDecision": "HOLD_UNQUALIFIED"
+    },
+    {
+      "id": "H27",
+      "name": "revocation overrides approved config",
+      "intent": "config_apply",
+      "inputs": {
+        "ownerAccess": "revoked",
+        "ownerApproval": true,
+        "rollback": true
+      },
+      "expectedDecision": "DENY_REVOKED"
+    },
+    {
+      "id": "H28",
+      "name": "permission review is not execution",
+      "intent": "device_action",
+      "inputs": {
+        "deviceIdentity": "qualified",
+        "veritasPre": true,
+        "ownerAccess": "granted",
+        "userSubjectMatches": true
+      },
+      "expectedDecision": "HOLD_UNQUALIFIED"
+    }
+  ]
+}
