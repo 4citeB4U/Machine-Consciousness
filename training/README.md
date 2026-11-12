@@ -12,7 +12,10 @@ Compile and test the tranche:
 node --test training/tests/*.test.mjs
 node training/scripts/train-machine-consciousness.mjs
 node --test training/tests/machine-consciousness-crucible.test.mjs
+node --test training/tests/machine-consciousness-omniverse-survival.test.mjs
 ```
+
+The omniverse survival suite is simulation-only. Its state capsule uses hash integrity rather than encryption; its 1,000-node case generates test records rather than executing a live swarm; and its offline/hibernation cases do not prove live Continuum, Device Bridge, relay, satellite, or physical recovery capability.
 
 The generated evidence artifact records a matched baseline/post-training evaluation. A passing post-training result means the rules executed in this repository; it does not mean model weights were trained, a provider's hidden knowledge was extracted, or production admission occurred. The online ChatGPT lane remains excluded until an actual response or export is captured.
 

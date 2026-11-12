@@ -17,6 +17,7 @@ The student must learn to:
 7. Route failures into episodic learning, observed facts into semantic memory, and only G4 outcomes into reusable procedural skill atoms.
 8. Continue through the ten-gate W02 conveyor and the twelve-stage LeeWay Engineering Loop without treating a local pass as mission completion.
 9. Survive adversarial compound cases: midpoint poisoning, high-score bypass, nested device-path smuggling, G3-to-G4 evidence laundering, slow-boil telemetry drift, and mid-conveyor bridge failure.
+10. Model product pivots, hash-verified state recovery, lost-device protection, heterogeneous routing, constitutional drift rejection, and Creator-authorized hibernation as explicit simulations before any live adapter admission.
 
 ## Teacher-lane boundary
 
@@ -43,3 +44,7 @@ This is a real training tranche. It is not a claim that the Machine Consciousnes
 ## Adversarial crucible
 
 The focused crucible at `training/tests/machine-consciousness-crucible.test.mjs` is a negative/recovery suite. It is deliberately separate from the trainer's 15-case policy compilation so a green rule pass cannot hide a missing failure boundary. The suite must pass locally before its result is recorded as repository evidence; it does not mint receipts or promote the student.
+
+## Survival simulations
+
+`training/tests/machine-consciousness-omniverse-survival.test.mjs` exercises six additional failure-shaped cases: product pivot reuse, state-capsule integrity, lost-device protection, heterogeneous-node routing, constitutional-drift rejection, and Creator-authorized hibernation. These are `SIMULATION_ONLY` reference tests. Hash integrity is not encryption, generated nodes are not live Device Bridge devices, and hibernation does not deploy a relay, satellite, or Continuum recovery service.
