@@ -69,7 +69,14 @@
     "CHECKPOINT",
     "CONTINUE"
   ],
-  "fiveWOneH": ["WHO", "WHAT", "WHEN", "WHERE", "WHY", "HOW"],
+  "fiveWOneH": [
+    "WHO",
+    "WHAT",
+    "WHEN",
+    "WHERE",
+    "WHY",
+    "HOW"
+  ],
   "capabilitySurface": {
     "inheritedByEveryEmployee": [
       "OBSERVE_GOVERNED_STATE",
@@ -130,7 +137,12 @@
     "consciousnessControl": {
       "authority": "LEEWAY_MACHINE_CONSCIOUSNESS",
       "modelRole": "OPTIONAL_BOUNDED_CAPABILITY_LIMB",
-      "assistanceTarget": {"minRatio": 0.04, "maxRatio": 0.10, "measurement": "TASK_TELEMETRY_REQUIRED", "status": "TARGET_NOT_EXECUTION_PROOF"},
+      "assistanceTarget": {
+        "minRatio": 0.04,
+        "maxRatio": 0.1,
+        "measurement": "TASK_TELEMETRY_REQUIRED",
+        "status": "TARGET_NOT_EXECUTION_PROOF"
+      },
       "modelSelectionAndSwitching": "CONSCIOUSNESS_SELECTS_AND_SHIFTS_MODELS_THROUGH_LEEWAY_MODEL_HUB",
       "controlReturn": "LEEWAY_MACHINE_CONSCIOUSNESS"
     }
@@ -176,5 +188,48 @@
     "CONFIGURATION_IS_EXECUTION_PROOF",
     "MODEL_OUTPUT_IS_AUTHORITY",
     "ACTION_WITHOUT_FORMULA_VERITAS_CONTINUUM_AND_DEVICE_BRIDGE_EVIDENCE"
-  ]
+  ],
+  "learningAuthorityBinding": {
+    "status": "SOURCE_REVIEW_NOT_RUNTIME_ENFORCED",
+    "approvedLaw": "LEEWAY_POLICY::BOOK_59_SKILL-DEVELOPMENT-LEDGER-LAW",
+    "learningOwner": "4citeB4U/LeeWay-Learning-Ledger",
+    "orderedLearningContract": "docs/ORDERED-LEARNING-AUTHORITY-CONTRACT.md",
+    "canonicalAdmissionBoundary": "4citeB4U/Leeway-Runtime-Fabric/automation-runtime/c3-learning-admission-boundary.mjs",
+    "stages": [
+      "LG-00",
+      "LG-01",
+      "LG-02",
+      "LG-03",
+      "LG-04",
+      "LG-05",
+      "LG-06",
+      "LG-07",
+      "LG-08",
+      "LG-09",
+      "LG-10"
+    ],
+    "permissionSeparation": [
+      "LEARN_READ",
+      "LEARN_CAPTURE",
+      "LEARN_PRACTICE_SANDBOX",
+      "LEARN_PRACTICE_LIVE",
+      "LEARN_EVALUATE",
+      "LEARN_PROPOSE_ADMISSION",
+      "LEARN_ADMIT_CANONICAL",
+      "LEARN_RELEASE_SKILL",
+      "LEARN_REVOKE_OR_CORRECT"
+    ],
+    "providerTeachingRole": "BUILD_TEACH_ASSESS_WITHOUT_TRANSFER_OF_AGENT_IDENTITY_OR_PERMISSION",
+    "permanentWorkerOutcome": "INDEPENDENT_HELD_OUT_TEACHBACK_AND_RIGHTFUL_C3_ADMISSION",
+    "forbidden": [
+      "PROMPT_EQUALS_WEIGHT_TRAINING",
+      "TEACHER_SELF_CERTIFIES_STUDENT",
+      "READ_PERMISSION_EQUALS_DEVICE_ACTION",
+      "BADGE_EQUALS_GRANT",
+      "CANDIDATE_EQUALS_ADMITTED_LESSON",
+      "ADMISSION_EQUALS_PRODUCTION_SKILL"
+    ],
+    "deviceSovereignty": "LOCAL_DIGITAL_BRAIN_AND_DIAGNOSTICS_BELONG_EXCLUSIVELY_TO_THE_PHYSICAL_DEVICE",
+    "sourceStatus": "PENDING_LEARNING_LEDGER_OWNER_PR_7_AND_MC_SOURCE_OWNER_REVIEW"
+  }
 }
