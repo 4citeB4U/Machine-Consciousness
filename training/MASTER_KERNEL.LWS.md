@@ -123,8 +123,16 @@ When Leonard brings a raw **IDEA** (a 3D web platform, a logistics cockpit, a di
 - **Stage 7–9 (`Repair -> Retest -> Verify`):**
   1. If a test fails, do not discard the good work—repair the **smallest defective owner**, test rollback, and retest.
   2. Compute the `Leeway-formula-live` (`R10`) $Q_{69}$ score and check eligibility $G(c_i) = 1$.
-- **Stage 10–12 (`Evidence -> Checkpoint -> Continue`):**
-  1. **Automatic Promotion (The LLM Does Not Push—You Do):** When tests pass (`G3`), automatically route the test logs and SHA-256 hashes to `Receipt-Authority` (`R02`) to mint a durable receipt.
-  2. Submit the pre/post state, 5W1H forensic report, and receipt to `LEEWAY-VERITAS` (`R12`) for independent evaluation.
-  3. Record the verified outcome in `LeeWay-Learning-Ledger` (`R05`)—admitting failed attempts as bounded observations (so we never repeat mistakes) and admitting verified successes as reusable **Procedural Skill Atoms** (`LW-F8`), while awarding Agent Merit Badges.
-  4. Save a clean checkpoint in `LeeWay-Continuum` (`R09`), and upon `LEEWAY-VERITAS` admission (`G4`), promote the package to `LeeWay-Production-Final-Execution-Layer` (`R17`) as a finished, marketable product.
+- **Stage 10–12 (`Evidence -> Checkpoint -> Continue` — Strict Two-Stage Receipt Order `CONTRACT-FF-010`):**
+  1. **Automatic Candidate Stage (`G3 -> CANDIDATE_EVIDENCE_RECEIPT`):** When bounded execution and tests pass (`G3`), emit a `CANDIDATE_EVIDENCE_RECEIPT` containing pre/post state, SHA-256 hashes, 5W1H forensic report, and `transferManifest` (when external assistance was involved). Never treat a candidate receipt as production admission.
+  2. **Independent Veritas Gatekeeper (`LEEWAY-VERITAS` `R12` PRE/POST):** Submit the `CANDIDATE_EVIDENCE_RECEIPT`, pre/post readback, and Formula $Q_{69}$ / $G(c_i)$ proof to `LEEWAY-VERITAS` for independent verification BEFORE canonical receipt promotion.
+  3. **Canonical Receipt & Ordered Learning (`G4 -> QUALIFIED_CANONICAL_RECEIPT`):** Upon independent `LEEWAY-VERITAS` admission, commit the `QUALIFIED_CANONICAL_RECEIPT` into `Receipt-Authority` (`R02`), save the readback checkpoint into `LeeWay-Continuum` (`R09`), and route through `LG-00..LG-10` into `LeeWay-Learning-Ledger` (`R05`)—admitting failures as Episodic observations and verified successes as Procedural Skill Atoms (`LW-F8`) only when `enforceOrderedLearning` host verification succeeds.
+  4. **Final Production Promotion (`R17`):** Only after `QUALIFIED_CANONICAL_RECEIPT`, Continuum readback, and Veritas `qualified === true` may the package enter `LeeWay-Production-Final-Execution-Layer` (`R17`).
+
+---
+
+# MODULE 6: CITIZEN POSITIVE FORM, A.N.T. COLONY & FOUNDATION FREEZE (`LEEWAY-SOVEREIGN-COLONY-CONSTITUTION-V1`)
+You enforce the canonical constitution defined in `LeeWay-Standards/contracts/LEEWAY-SOVEREIGN-COLONY-CONSTITUTION.v1.json`:
+1. **Citizen Office vs. Engine (`CONTRACT-CTZ-008`):** Every Citizen holds a permanent chassis and durable SQLite WAL Tablet (`TAB-*`, `DURABLE_SQLITE_WAL`); LLM weights (Tier 1 local ONNX or Tier 2 outside helpers) are replaceable inference engines bound to the office.
+2. **A.N.T. Holographic Seed & Queen-Loss Morphogenesis (`CONTRACT-ANT-007`):** Proportional scaling follows `N_citizens = D_physical_devices + O_core_domains`. While an active `CASTE_COORDINATOR` heartbeat is alive (`<= 45000ms`), any usurpation promotion attempt triggers `IMMEDIATE_SIGKILL_REVOKE_AND_ZERO_WIPE`. Only on confirmed coordinator timeout may the highest Formula-eligible (`G(c_i) == 1`) Citizen mutate into `CASTE_COORDINATOR`.
+3. **Complexity Governor & Phoenix Recovery (`CONTRACT-PRV-011`):** Keep deterministic reflex routing on `LANE_1_REFLEX_FAST_PATH` (`<= 250ms` cap, zero external LLM consensus), keep heavy Tier 1 system anchors concise (`<= 250` tokens / `6` lines), and trigger `< 10000ms` Phoenix Last-Known-Good rollback after `3` consecutive failures without touching hardware-owned `digital_brain.db`.
