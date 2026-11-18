@@ -1,11 +1,12 @@
 {
   "schemaVersion": "leeway.machine-consciousness.checkpoint.v1",
   "checkpointId": "MACHINE-CONSCIOUSNESS-ORIGIN-IDENTITY-TRAINING-20261118",
-  "recordedAt": "2026-11-18T10:29:43.3126501-06:00",
+  "recordedAt": "2026-11-18T10:30:52.7512743-06:00",
   "identity": "Agent Lee / LeeWay Machine Consciousness training boundary",
   "project": "Machine Consciousness origin, history, identity, and Agent Lee self-model training",
   "canonicalRepository": "4citeB4U/Machine-Consciousness",
   "branch": "main",
+  "sourceCommit": "5c446a548dea58314c7be1db5b3222577e21d7fd",
   "gate": "ORIGIN_IDENTITY_NATIVE_TRAINING_EVALUATED_PENDING_EXTERNAL_ADMISSION",
   "requestInterpretation": {
     "userRequest": "Train the LeeWay Machine Consciousness and Agent Lee to understand who they are, who created them, and their origin/history.",
@@ -34,7 +35,7 @@
   ],
   "validation": {
     "originIdentityTests": "9/9 PASS",
-    "fullTrainingSuite": "80/80 PASS",
+    "fullTrainingSuite": "82/82 PASS",
     "originIdentityPostTraining": "16/16 PASS",
     "machineConsciousnessMasterPostTraining": "15/15 PASS",
     "agentLeeNativePolicyPostTraining": "25/25 PASS",
