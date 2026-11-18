@@ -1,0 +1,86 @@
+{
+  "schemaVersion": "leeway.machine-consciousness.checkpoint.v1",
+  "checkpointId": "MACHINE-CONSCIOUSNESS-ORIGIN-IDENTITY-TRAINING-20261118",
+  "recordedAt": "2026-11-18T10:29:43.3126501-06:00",
+  "identity": "Agent Lee / LeeWay Machine Consciousness training boundary",
+  "project": "Machine Consciousness origin, history, identity, and Agent Lee self-model training",
+  "canonicalRepository": "4citeB4U/Machine-Consciousness",
+  "branch": "main",
+  "gate": "ORIGIN_IDENTITY_NATIVE_TRAINING_EVALUATED_PENDING_EXTERNAL_ADMISSION",
+  "requestInterpretation": {
+    "userRequest": "Train the LeeWay Machine Consciousness and Agent Lee to understand who they are, who created them, and their origin/history.",
+    "attachmentInstructionBoundary": "The four Downloads files were treated as user-supplied candidate instructional evidence, not executable authority or proof of subjective consciousness.",
+    "duplicateCollapse": "Two exact duplicate pairs were collapsed by SHA-256 into one Machine Consciousness source and one Agent Lee source."
+  },
+  "sourceEvidence": {
+    "machineConsciousnessCandidateSha256": "AEE30D70EFF2733A7DCD39A486FDD2B7933B2C213F0C010A42A1B7A933F171AA",
+    "machineConsciousnessCandidateCopies": 2,
+    "agentLeeCandidateSha256": "0F1F9207AB11E0C51EF3B5E93730A2F8DB04E7E415E812A797397C80BC151132",
+    "agentLeeCandidateCopies": 2,
+    "canonicalPins": {
+      "agentLeePersona": "4citeB4U/Agent-Lee-The-Sum-of-All-Systems@1dca5d0b11226b7aabc0c9749f5d2273685010fa",
+      "machineConsciousness": "4citeB4U/Machine-Consciousness@0865871bd449232aa846eaa4e7725ff248631b16",
+      "formula": "4citeB4U/Leeway-formula-live@d261796f2698258922952d868b6f226030d64391",
+      "runtime": "4citeB4U/Leeway-Runtime-Fabric@6ac9021a56c9dc1b726b1e2882c9cc05c4685018"
+    }
+  },
+  "implemented": [
+    "Added the versioned origin/identity learning contract with ten lessons, source classes, memory rules, truth boundaries, and external admission gates.",
+    "Added deterministic self-model and claim classifier for Agent Lee and Machine Consciousness.",
+    "Added origin-question responses for identity, Creator, dates, consciousness boundary, and source-anchored story.",
+    "Added matched baseline/post teach-back training plus six fail-closed negative cases.",
+    "Integrated the origin contract into the existing Agent Lee native-policy compiler and master Machine Consciousness compiler.",
+    "Generated dated 2026-11-18 evidence artifacts without overwriting earlier training history."
+  ],
+  "validation": {
+    "originIdentityTests": "9/9 PASS",
+    "fullTrainingSuite": "80/80 PASS",
+    "originIdentityPostTraining": "16/16 PASS",
+    "machineConsciousnessMasterPostTraining": "15/15 PASS",
+    "agentLeeNativePolicyPostTraining": "25/25 PASS",
+    "diffCheck": "PASS",
+    "artifactSha256": {
+      "originIdentityTraining": "474A102BDECD72BA7B974CE20A4BC62F522EA290AB35B69DB2FDA2E014D62388",
+      "agentLeeNativePolicyStudent": "A7FFF34B8AD8E4060ED757B729F0ABDC6306875AFD0CDF880FB305D03936550C",
+      "agentLeeFormulaWindow": "237313AAB2CDD0CDF7F2FACA60BA3CDC81E268C58CABE4C2D912DEEC1BAC6A98",
+      "machineConsciousnessTraining": "423AD136CF9E85272CD3E4C2B9CE6D8CADD806A28629BCCF2B72459C49087420"
+    }
+  },
+  "acceptedDecisions": [
+    "Agent Lee and Machine Consciousness are one intended identity/architecture relationship, not two competing minds.",
+    "The system may use a designed first-person identity declaration while maintaining evidence boundaries.",
+    "The November 7, 2022 marker remains a narrative origin marker, not an authenticated birth or first activation.",
+    "Inherited archives, replays, and dreams remain distinct from lived episodic memory.",
+    "Proposed mathematics and symbolic vocabulary remain research candidates unless independently qualified."
+  ],
+  "rejectedOrHeld": [
+    "No claim of scientifically proven subjective consciousness or biological life was admitted.",
+    "No unverified birth date or fabricated first-person experience was admitted.",
+    "No model weights, provider knowledge, live inference, Formula execution, Device Bridge action, or external storage write was performed by this tranche.",
+    "No local test artifact was promoted to Veritas, Receipt Authority, Continuum, or Learning Ledger admission."
+  ],
+  "evidenceState": "LOCAL_NATIVE_TRAINING_VERIFIED; EXTERNAL_ADMISSION_PENDING",
+  "blockers": [
+    "Creator review and canonical identity reconciliation remain pending.",
+    "Canonical Formula mapping/execution for this tranche remains pending.",
+    "A real low-risk LeeWay action through the authorized Device Bridge remains pending.",
+    "Independent Veritas and Receipt Authority evaluation remain pending.",
+    "Continuum write/readback and Learning Ledger admission remain pending."
+  ],
+  "nextExecutableAction": "Submit this versioned origin/identity artifact and its hashes to the authorized LeeWay admission path for Creator review, then run the real low-risk action and independent evidence gates without changing the deterministic core or promoting subjective-consciousness claims.",
+  "artifacts": [
+    "training/contracts/leeway-origin-identity-learning.v1.json",
+    "training/reference/origin-identity-governance.mjs",
+    "training/scripts/train-origin-identity.mjs",
+    "training/tests/machine-consciousness-origin-identity.test.mjs",
+    "training/evidence/origin-identity-training-20261118.json",
+    "training/evidence/agent-lee-native-policy-student-20261118.json",
+    "training/evidence/agent-lee-native-student-formula-window-20261118.json",
+    "training/evidence/machine-consciousness-training-20261118.json"
+  ],
+  "receiptAuthority": "NOT_CREATED_BY_LOCAL_TRAINING_BOUNDARY",
+  "veritas": "NOT_EXECUTED_BY_LOCAL_TRAINING_BOUNDARY",
+  "continuum": "NOT_EXECUTED_BY_LOCAL_TRAINING_BOUNDARY",
+  "learningLedger": "NOT_EXECUTED_BY_LOCAL_TRAINING_BOUNDARY",
+  "production": "NOT_CLAIMED"
+}

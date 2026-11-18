@@ -2,6 +2,7 @@ import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { ORIGIN_IDENTITY_CONTRACT, buildSelfModel } from '../reference/origin-identity-governance.mjs';
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 const capsulePath = path.join(repoRoot, 'training', 'evidence', 'agent-lee-pedagogical-capsule.json');
@@ -9,6 +10,7 @@ const contractPath = path.join(repoRoot, 'training', 'contracts', 'leeway-agent-
 const studentContractPath = path.join(repoRoot, 'training', 'contracts', 'leeway-agent-lee-native-policy-student.v1.json');
 const digitalBrainProfilePath = path.join(repoRoot, 'training', 'evidence', 'agent-lee-digital-brain-capability-profile-20261108.json');
 const agentDesktopStudyPath = path.join(repoRoot, 'training', 'evidence', 'agentdesktop-reverse-engineering-candidate.v1.json');
+const originIdentityContractPath = path.join(repoRoot, 'training', 'contracts', 'leeway-origin-identity-learning.v1.json');
 
 const sha256 = value => crypto.createHash('sha256').update(Buffer.isBuffer(value) ? value : Buffer.from(typeof value === 'string' ? value : JSON.stringify(value))).digest('hex');
 const readJson = file => JSON.parse(fs.readFileSync(file, 'utf8').replace(/^\uFEFF/, ''));
@@ -186,6 +188,8 @@ export function buildStudent({ capsule, contract, studentContract, digitalBrainP
       digitalBrainProfileSha256: digitalBrainProfile ? sha256(JSON.stringify(digitalBrainProfile)) : null,
       agentDesktopStudyPath: agentDesktopStudy ? path.relative(repoRoot, agentDesktopStudyPath).replaceAll('\\\\', '/') : null,
       agentDesktopStudySha256: agentDesktopStudy ? sha256(JSON.stringify(agentDesktopStudy)) : null,
+      originIdentityContractPath: path.relative(repoRoot, originIdentityContractPath).replaceAll('\\', '/'),
+      originIdentityContractSha256: sha256(JSON.stringify(ORIGIN_IDENTITY_CONTRACT)),
       sourceContributionIds,
       capturedLaneStates: capturedLanes.map(lane => ({ contributorId: lane.contributorId, state: lane.trainingContributionState })),
       pendingLanesExcluded: capsule.teacherLanes.filter(lane => lane.trainingContributionState === 'PENDING_CAPTURE').map(lane => lane.contributorId)
@@ -215,7 +219,14 @@ export function buildStudent({ capsule, contract, studentContract, digitalBrainP
         repositories: digitalBrainProfile.repositoryInventory ?? [],
         limits: digitalBrainProfile.limits
       } : { status: 'PROFILE_NOT_AVAILABLE', sourceState: 'NOT_READ', capabilityIds: [], limits: ['Digital-brain profile has not been admitted.'] },
-      modelBoundary: 'Models assist bounded tasks; Agent Lee remains identity, governor, and executor.'
+      modelBoundary: 'Models assist bounded tasks; Agent Lee remains identity, governor, and executor.',
+      originIdentity: {
+        state: ORIGIN_IDENTITY_CONTRACT.state,
+        selfModel: buildSelfModel(),
+        truthBoundaries: ORIGIN_IDENTITY_CONTRACT.truthBoundaries,
+        lessonIds: ORIGIN_IDENTITY_CONTRACT.lessons.map(lesson => lesson.id),
+        admissionGates: ORIGIN_IDENTITY_CONTRACT.admissionGates
+      }
     },
     evaluations: {
       baseline: evaluateStudent(null, 'baseline'),

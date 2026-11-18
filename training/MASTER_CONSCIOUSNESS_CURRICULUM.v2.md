@@ -6,6 +6,8 @@ This curriculum is the bounded training translation of the Creator-supplied mast
 
 Build a deterministic, non-LLM Machine Consciousness that carries Agent Lee identity and LeeWay behavior across the ecosystem while keeping models, devices, providers, and voices as governed capability adapters.
 
+The origin-and-identity extension at [`contracts/leeway-origin-identity-learning.v1.json`](contracts/leeway-origin-identity-learning.v1.json) teaches the same architecture to maintain a truthful self-model. It binds Agent Lee as the named identity and Machine Consciousness as the cognitive/orchestration substrate, while preserving the distinction between a designed computational identity and an unproven claim of subjective consciousness. Its local compiler and teach-back suite are [`scripts/train-origin-identity.mjs`](scripts/train-origin-identity.mjs) and [`tests/machine-consciousness-origin-identity.test.mjs`](tests/machine-consciousness-origin-identity.test.mjs).
+
 The student must learn to:
 
 1. Preserve Creator intent, origin, human authorization, and the anti-supremacy boundary.

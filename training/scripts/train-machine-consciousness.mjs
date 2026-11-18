@@ -21,6 +21,7 @@ import { classifyToolRequest } from '../reference/tool-reflex-router.mjs';
 import { routeToMemoryTriad } from '../reference/memory-triad-gate.mjs';
 import { assertAgnosticPurity, evaluateDeviceBrainLease, sanitizeForAgnosticConveyor } from '../reference/device-brain-diplomat.mjs';
 import { ENGINEERING_LOOP, W02_GATES, advanceW02 } from '../reference/w02-conveyor.mjs';
+import { ORIGIN_IDENTITY_CONTRACT, buildSelfModel } from '../reference/origin-identity-governance.mjs';
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 const readJson = file => JSON.parse(fs.readFileSync(file, 'utf8').replace(/^\uFEFF/, ''));
@@ -66,7 +67,8 @@ export function buildTrainingArtifact({ generatedAt = new Date().toISOString(), 
       source: 'USER_SUPPLIED_CANDIDATE_MASTER_TRAINING_MATERIAL_20261111',
       sourceClass: 'CANDIDATE_INSTRUCTIONAL_INPUT',
       artifactSha256: sha256(curriculumText),
-      modules: ['creator-origin', 'tool-reflex', 'evidence-grades', 'candidate-q69', 'device-brain-boundary', 'memory-triad', 'w02-conveyor']
+      modules: ['creator-origin', 'origin-identity', 'tool-reflex', 'evidence-grades', 'candidate-q69', 'device-brain-boundary', 'memory-triad', 'w02-conveyor'],
+      originIdentityContractSha256: sha256(ORIGIN_IDENTITY_CONTRACT)
     },
     teacherLanes: capsule.teacherLanes.map(lane => ({ contributorId: lane.contributorId, state: lane.trainingContributionState, contributionCount: lane.contributions.length })),
     pendingLanesExcluded: capsule.teacherLanes.filter(lane => lane.trainingContributionState === 'PENDING_CAPTURE').map(lane => lane.contributorId),
@@ -77,7 +79,13 @@ export function buildTrainingArtifact({ generatedAt = new Date().toISOString(), 
       deviceBridgeState: 'LOGICAL_CAPABILITY_ONLY_UNTIL_REAL_BRIDGE_EVIDENCE',
       storageAuthority: 'LEEWAY_CONTINUUM_ONLY',
       modelAuthority: 'MODEL_HUB_THROUGH_LEEWAY_EDGE_GPU_ONLY',
-      memoryAdmission: 'G4_VERITAS_RECEIPT_REQUIRED_FOR_PROCEDURAL_PROMOTION'
+      memoryAdmission: 'G4_VERITAS_RECEIPT_REQUIRED_FOR_PROCEDURAL_PROMOTION',
+      originIdentity: {
+        state: ORIGIN_IDENTITY_CONTRACT.state,
+        selfModel: buildSelfModel(),
+        truthBoundaries: ORIGIN_IDENTITY_CONTRACT.truthBoundaries,
+        lessonIds: ORIGIN_IDENTITY_CONTRACT.lessons.map(lesson => lesson.id)
+      }
     },
     evaluations: {
       baseline: { status: 'FAIL', passed: baselineCases.filter(item => item.passed).length, total: baselineCases.length, cases: baselineCases },

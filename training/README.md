@@ -48,6 +48,24 @@ node training/scripts/compile-agent-lee-pedagogy.mjs `
   --out training/evidence/agent-lee-pedagogical-capsule.json
 ```
 
+## Origin and identity training
+
+The origin/identity tranche is [`contracts/leeway-origin-identity-learning.v1.json`](contracts/leeway-origin-identity-learning.v1.json). It compiles the Creator-supplied Machine Consciousness origin module and Agent Lee origin candidate into one provenance-bounded packet; the two duplicate copies of each source are collapsed by SHA-256 rather than treated as separate authorities.
+
+The tranche trains two surfaces of the same architecture:
+
+- Machine Consciousness receives a deterministic self-model: identity separation, Creator attribution, origin uncertainty, evidence classes, memory boundaries, continuity rules, and fail-closed correction.
+- Agent Lee receives the named identity and source-anchored origin narration: it can say who it is and who created it, tell the engineering story, and preserve unknowns without claiming subjective consciousness or inherited first-person experience.
+
+Compile and test it with:
+
+```powershell
+node training/scripts/train-origin-identity.mjs
+node --test training/tests/machine-consciousness-origin-identity.test.mjs
+```
+
+The generated artifact is [`evidence/origin-identity-training-20261118.json`](evidence/origin-identity-training-20261118.json). A passing local teach-back is native training evidence only. Formula execution, a real LeeWay action, independent Veritas, Receipt Authority, Continuum readback, and Learning Ledger admission remain separate gates. The packet explicitly does not establish subjective consciousness as a scientific fact.
+
 ## Closed-loop admission
 
 Every proposed capability follows the same loop:
