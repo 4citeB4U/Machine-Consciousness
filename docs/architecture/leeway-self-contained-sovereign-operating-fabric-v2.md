@@ -33,7 +33,7 @@ A user device may be lost, destroyed, disconnected or replaced while a previousl
 ## 2. One logical instance, many projections
 
 - A LeeWay instance has a stable opaque instanceId, an owner scope derived from a verified identity provider issuer and subject, and one durable canonical work/event history.
-- There may be 1 or 1,000 Device Bridge installations, browser surfaces, or compute agents. They are distinct enrolled **device bodies** under one logical instance, not a thousand independently authoritative Agent Lees.
+- There may be 1 or 1,000 thin Device Bridge connections and any number of browser views. They are distinct enrolled **device bodies** or read-only projections under one logical instance, not copies of Agent Lee; each named worker holds at most one active authoritative execution lease at a time.
 - Every installation has its own signed device passport, short-lived session credentials, deviceKeyId, capability grant, lease/revocation state, local diagnostics and OS-specific adapter.
 - Machines may carry encrypted caches of the same content IDs. None may mint the instance identity, overwrite shared history or expand rights by syncing.
 - The Runtime workplane serializes authoritative work transitions with operationId, checkpoint version, monotonically fenced leadership epoch and idempotency key. Multiple active agents take separately leased work; there is no split-brain task owner.
@@ -48,7 +48,7 @@ A user device may be lost, destroyed, disconnected or replaced while a previousl
 2. Runtime Fabric authoritative workplane, lease renewal, scheduled worker supervision, retries, incident and quarantine control.
 3. Continuum durable checkpoints, owner-scoped encrypted object lineage, experience graph and reconstruction metadata.
 4. Model Hub catalog, accepted model routes and residency policy, with at least one verified viable inference path for model-dependent work.
-5. LeeWay GPU **logical compute service** with workload admission, accelerator scheduler and provider health, deployed on replaceable computing infrastructure.
+5. LeeWay GPU **unified operating-world product identity** continuously composed from original Machine Consciousness, Runtime, Formula, Model Hub, Continuum and qualified compute adapters; physical accelerator dispatch remains a subordinate GPU-compute function.
 6. Voice/Live connection services, event and media routing, and offline outgoing message queues when no audience device is connected.
 7. Authenticated identity, Formula, independent Veritas and Receipt Authority integrations with explicit unavailable/hold states.
 8. Durable monitoring, supervisor, renewal and recovery that do not depend on a browser tab remaining open.
@@ -71,7 +71,8 @@ A user device may be lost, destroyed, disconnected or replaced while a previousl
 | Runtime Fabric | Persistent workplane, workers, queue semantics, retries, leases, scheduling | Admitted proposals and grants | Exact operation envelopes and execution coordination; not self-certified Veritas |
 | Formula | Canonical evaluation + math mappings and representation/codec policy | Measured window, typed data, workload and authority context | Task-bound decision and specific reversible representation proof when applicable |
 | Model Hub | Model identity, provider adapter, weight lifecycle, resident model set | Inference request authorized by Machine Consciousness + Runtime | Bounded model proposal; no tool authority |
-| LeeWay GPU | Compute admission and logical accelerator API, host backend dispatch | Authorized workload, model/codec instructions, memory lease | Measured physical or CPU fallback execution result, not governance |
+| LeeWay GPU operating world | One persistent *composed* product environment; not an additional controller | Existing Machine Consciousness / Runtime / Formula / Continuum / compute components | Continuous agent world identity and access surfaces; original owners retain each underlying authority |
+| LeeWay GPU compute service | Compute admission and logical accelerator API, host backend dispatch | Authorized workload, model/codec instructions, memory lease | Measured physical or CPU backend execution result, not governance |
 | LDWMD | Actual working-set/VRAM lease and physical buffer accounting | Workload resource requirements | Allocation and release evidence; not durable Continuum |
 | PCIe/Interconnect adapter | Approved host↔device transfer representation, packing, locality and scheduling | Exact typed buffers and transfer limits | Integrity-checked physical transfer/readback; no invented lanes |
 | Digital Brain | Source documents, private record catalog, local body knowledge and diagnostics | Approved host files and Continuum authorized object IDs | Owner-scope file views/index and measured host status |
@@ -103,22 +104,95 @@ Candidate measurable benefit: useful-work-per-transferred-physical-byte, verifie
 
 **Never compress away required audit data, model source provenance, owner consent, private-key protections or independently verified findings.**
 
-## 6. One logical LeeWay GPU; real backend qualification
+## 6. LeeWay GPU — one operating world, not a downloadable device accelerator
 
-LeeWay GPU is the persistent logical compute provider that Machine Consciousness employs for eligible inferences, encoding, vision, audio, content transforms and useful matrix operations. A single service identity can survive individual physical accelerator replacement. Its control plane maintains model load state, scheduling, work budgets, thermal measurements, backpressure and device memory leases.
+**Creator correction, 2026-11-21:** "LeeWay GPU" is the name of the continuously operating **LeeWay software-defined world**: the composed, persistent operating environment within which Agent Lee, Machine Consciousness, Runtime Fabric, Formula, Model Hub, the workforce, Digital Brain, Continuum, Content Vault, Voice, Vision, Live, RTC and physical-compute adapters cooperate. Its logical home is **not** a user's OS, browser extension, smartphone or graphics card. Device Bridge is the authorized interface by which that world becomes observable and can act upon a particular physical device.
 
-The physical backend is selected from actually qualified host adapters (for example D3D12 on Windows, Vulkan on supported Android/Linux, CUDA where explicitly implemented, Metal on eligible Apple environments, or authorized CPU-only fallback when the workload contract permits it). A web page, GPU repository, physical NVIDIA discovery, VRAM estimate or service name is not an executable GPU proof.
+This **does not reassign** canonical authority: Machine Consciousness still owns goal/identity policy; Runtime still owns scheduling, jobs, leases and supervised execution; Formula its math; Continuum durable truth; Veritas independent judgments; Receipt Authority custody; Model Hub model lifecycle; and the existing \`leeway.gpu.service\` owns bounded compute execution. "Operating world" is the **composed product/availability boundary**, not a second GPU implementation, central verifier or competing Runtime Fabric.
 
-**Per-workload processing:**
-1. Machine Consciousness proposes the work; Runtime binds owner, task, input digest, target and budget.
-2. Formula evaluates the current request and representation.
-3. GPU resource scheduler selects the physically available backend and obtains a real LDWMD allocation/lease, not a self-claimed one.
-4. Model Hub provides a pinned admissible model and tokenizer/adapters when the job actually uses an LLM.
-5. GPU/CPU device execution produces measured counters, output digest and physical readback.
-6. Veritas checks authority, measured evidence and required result properties.
-7. Receipt Authority appends actual events; Continuum persists referenced artifacts and checkpoints.
+### 6.1 Planet and surface model
 
-**Every task participates in the same GPU/compute-resource *accounting and eligibility fabric*.** Not every operation can or should execute on GPU silicon: identity checks, host wake, disk durability, network I/O and many small control operations need CPU/network/storage resources. If the GPU is unavailable, report degraded or queued state; an authorized CPU fallback remains an explicitly measured fallback, not GPU execution.
+\`\`\`text
+                     LEEWAY GPU OPERATING WORLD
+           one owner-scoped logical instance; persistent home
+   ┌──────────────────────────────────────────────────────────┐
+   │ Machine Consciousness / Agent Lee                        │
+   │ Runtime Fabric jobs, single-presence workers and leases │
+   │ Standards + Formula                                      │
+   │ Model Hub + GPU compute + LDWMD + PCIe / CPU backends    │
+   │ Digital Brain + Continuum + Content Vault               │
+   │ Voice + Vision + Live + Edge RTC + Federate Web          │
+   │ Veritas + Receipt Authority + Learning boundaries       │
+   └──────────────────────────────────────────────────────────┘
+             authenticated session / content views
+                      ↓             ↓
+        browser / tablet UI     thin Device Bridge
+        no full download        native device privileges
+                                ↓
+                     Digital Brain local binding
+                     Continuum scoped sync/cache
+                     Diagnostics hardware facts
+                     Content Vault hot projections
+                                ↓
+                   existing Windows / Linux / Apple /
+                   Android OS and approved native APIs
+\`\`\`
+
+The "planet" does not materialize when a person launches a browser; it is already operating on actual always-powered, independently durable compute/storage infrastructure. Losing every user device does not cancel already admitted digital tasks. Without surviving compute and storage anywhere, live execution is impossible: retain state as BLOCKED/QUEUED_RECOVERY rather than reporting completion. Always available logical service does not require one graphics card to remain at 100% utilization.
+
+### 6.2 No full ecosystem download; thin connection contracts
+
+**Normative invariant: no device must download the complete LeeWay GPU, Agent Lee weights, canonical Runtime, central worker fleet or canonical Continuum object archive in order to access LeeWay.**
+
+- **Zero-install web mode:** sign in at the LeeWay site, receive an authenticated, scoped UI/session, use Agent Virtual Tablet as the remote sandbox and inspect permitted files/products over authenticated streams. No native OS privileges and no silently installed browser background executor. The browser may cache normal UI assets; that is not full LeeWay installation.
+- **Optional extension mode:** the approved signed browser extension can initiate login, download/enrollment handoff and reconnect. It is not a privileged command operator and cannot replace recovery credentials.
+- **Thin device binding:** for physical computer/device inspection and native actions, enroll only the minimum signed Device Bridge adapter and three local surfaces—Digital Brain (device-local file authority/interface), Continuum (authorized device-scoped sync/recovery), Diagnostics (device hardware/OS capabilities)—plus Content Vault hot projections as needed. They are local interfaces/providers, **not duplicates of the global Agent Lee runtime**. The user retains the original OS, apps and hardware workflow.
+- **No universal installation assumption:** where browser/platform isolation prevents native access, return CAPABILITY_UNAVAILABLE or request an explicitly authorized, platform-supported native adapter. A purely remote web session can preview results but cannot silently obtain Windows, Linux, Android or iOS OS control.
+- **Data location:** work products, source files and sandbox previews default to approved owner-scoped remote Continuum storage; they need not occupy client permanent storage. An explicit "save to this device" action writes through the approved OS provider, with permissions and readback. Local diagnostics and approved cache data may reside on device; never promise zero physical storage consumption for app code, RAM/cache or OS runtime.
+
+### 6.3 One solitary worker — one active authoritative presence
+
+Every Agent Lee and every separately named LeeWay employee is a **unique agent identity** within its owner/organization scope, not a new copy per installed Bridge. Each identity can have multiple observers (screens, dashboards, logs), but **at most one current authoritative active execution location/lease** and one serialized conversation/action head. Multitasking is permitted **within that one owner**, through bounded internal sub-tasks; it must not instantiate a second independent identity or conflicting write lease.
+
+**Transfer example:** an enterprise employee serving Wisconsin moves to an authorized Texas assignment. Runtime commits the original checkpoint to Continuum; the source host relinquishes its active lease; a fencing generation invalidates stale requests; the destination receives the same agentId, qualified permissions, state version and a new exclusive lease. Original Veritas/Receipt evidence tracks the custody transition. The employee is not simultaneously active in both places. Propagation can be optimized for low delay but **zero elapsed time is not asserted**; if the source cannot release, the destination must wait for expiry/fencing and independent reconciliation rather than split the employee in two.
+
+Enterprise agents require organization and tenant-scoped data authorization. A school's assistant and an enterprise workforce use the **same LeeWay system components** with different quotas, skills, governance, access and assigned tasks; company access does not automatically expose every store or database. A user's named workers belong to their authenticated owner/organization scope.
+
+### 6.4 The device's four access lanes
+
+| Request | Device-connected authority | Data flow |
+| --- | --- | --- |
+| What hardware / OS capabilities are present? | Diagnostics, through authorized Device Bridge observations | Current device-scoped telemetry → Machine Consciousness; no remote fabrication |
+| Find an experience, recent task or related documents | Continuum | Owner-scoped indexed experiences, honeycomb and original object references |
+| Inspect a deeper device-local file or known system record | Digital Brain scoped native provider | Explicit permission → native OS file API → catalog/readback; no arbitrary shell requirement |
+| Retrieve thumbnails, previews, videos, PDFs quickly | Content Vault hot carrier | Authorized objectId → valid cached projection or Continuum canonical readback |
+| Copy/move a user-approved object between devices | Continuum synchronization/transfer | Canonical object hash, owner/target grants, scoped replication and integrity readback |
+| Control a real local device | Device Bridge platform adapter | Approved native capability call, OS permission, real observed post-state |
+
+The host operating system remains the actual authority for local file access, privileged functions, camera, speaker and hardware. LeeWay generally uses **typed native capability APIs** rather than emitting general PowerShell/Bash scripts, but it cannot bypass Windows/Linux/Apple/Android permission and platform constraints. Digital Brain, Continuum, Diagnostics and Content Vault provide the *data plane*; Device Bridge provides the *native actuation plane*.
+
+### 6.5 Virtual Tablet = remote workstation and product sandbox
+
+The Tablet belongs to the user's sole Agent Lee. It provides desktop-like windows, resize, workflow view, code/product preview and sandboxed run/inspection for work hosted inside the LeeWay operating world. App previews run in isolated, measured worker containers or approved sandbox environments; the preview is not an unsolicited installation on the client's PC. Tablet and floating widget use **one live authoritative session state**, not duplicated application state. Outputs are retained in Continuum and represented in the Digital Brain index. Owner may later approve export/download/deploy to a physical device or enterprise repository; no device-local installation is a prerequisite to making or reviewing the product.
+
+### 6.6 LeeWay GPU is always part of operation, without hardware myths
+
+Every agent action, request, file movement, inference, voice/vision turn or worker assignment traverses the **LeeWay GPU operating world** for scheduling/representation/resource accounting and the applicable original authority gates. When numerical, tensor, visual, audio, model or transform work benefits from it, the bounded GPU compute service can dispatch to a qualified physical GPU through LDWMD and backend adapters. When the work is native file I/O, network, persistence, cryptographic policy or OS operations, the operating environment uses the actual CPU, network, storage and OS services, while still remaining inside the **same named LeeWay operating world**.
+
+This is not an occasional external model-call helper. It is the continuously available software service identity and coordinated operating environment. The physical GPU compute engine remains a replaceable subsystem with explicit hardware evidence; the computing home must remain alive independently of client devices. Its actual service startup uses the original \`leeway.gpu.service\`, Runtime Fabric and existing Device Bridge GPU API—not a new central orchestrator. Hardware or host failure triggers supervised replacement/queuing/recovery, not cloning Agent Lee.
+
+### 6.7 Acceptance for this specific correction
+
+- **G-O1:** With only a browser on an unprepared Windows/Linux/macOS/Android device, authenticate and open Tablet, inspect a remote project, and confirm no full GPU/LLM/workforce distribution was installed; native actions remain denied.
+- **G-O2:** Enroll a genuinely minimal signed Device Bridge on an approved device. Confirm Digital Brain/Continuum/Diagnostics/Content Vault scoped views work without installing the whole LeeWay environment; verify one native action only with correct OS and owner consent.
+- **G-O3:** Open 20 authenticated screens for one Agent Lee. Verify all display the same session head, with only one authoritative agentId and one active execution lease; conflicting state writes fail.
+- **G-O4:** Move one named worker between authorized Wisconsin/Texas service locations with same agentId; verify source lease revocation/fencing, destination lease acquisition, exact checkpoint/context restoration, failure/replay cases and no simultaneous action.
+- **G-O5:** Lose the only user device while an admitted product job runs. Independently hosted work completes; replacement device recovers the same result from Continuum. Never require a full environment download.
+- **G-O6:** Create a website and preview it on the Tablet. Inspect through Digital Brain/Continuum without permanent device-local project storage, then explicitly export and verify output to the physical device.
+- **G-O7:** Document an exact non-model task crossing the unified operating environment and actual CPU/OS execution without falsely claiming physical GPU silicon dispatched. Separately demonstrate real GPU-bound model/voice/vision execution with physical leases and receipts.
+- **G-O8:** Fail all external compute nodes while users retain only a browser. Correct result is SERVICE_UNAVAILABLE/RECOVERY_QUEUED, not a fabricated self-running GPU.
+
+**Evidence boundary:** Previous component/integration tests supplied by the Creator are important engineering evidence and must be preserved. This new single-presence, no-full-download, always-on-service design requires its *own* G-O1–G-O8 live verification before claiming these exact product behaviors are deployed.
 
 ## 7. PCIe packing — the 'one truck carries many' requirement
 
@@ -171,7 +245,7 @@ When external LLMs join through Device Bridge, their voice and vision privileges
 ## 11. Device Bridge and extension recovery after full device loss
 
 ### First enrollment
-1. Install the signed native Device Bridge from the approved LeeWay distribution channel.
+1. Start with a browser-only LeeWay account/session; no download of the whole ecosystem is required. To access native hardware capabilities, optionally enroll only a minimum signed Device Bridge adapter from the approved distribution channel.
 2. Authenticate the stable account issuer + subject and enroll a fresh device-held key/passport.
 3. Establish the instanceId and separately authorized Continuum backup/recovery profile.
 4. Approve actual device capabilities, storage replication scope, microphone/camera permissions and trusted services.
@@ -179,8 +253,8 @@ When external LLMs join through Device Bridge, their voice and vision privileges
 
 ### Additional device through browser extension
 1. Open the verified LeeWay website or already-installed signed Chrome/Edge extension.
-2. Authenticate into the existing logical instance, then download the signed device-specific Bridge package when needed.
-3. The new device proves a **new** key, receives only its own scope/grants, and is joined under the same instanceId.
+2. Authenticate into the existing logical instance. Continue entirely through the web/Tablet if native device access is not needed; otherwise obtain only the minimal signed device-specific Bridge adapter.
+3. If enrolled for native access, the new device proves a **new** key, receives only its own scope/grants, and joins the same instanceId. A browser-only view uses a scoped session, never a native device passport.
 4. Runtime and Continuum negotiate owner-approved replicas and sync history using immutable content hashes and accepted revision/epoch.
 5. Tablet, widget and extension display the same authoritative task/session state; no duplicated independent Agent Lee control plane.
 
@@ -218,7 +292,7 @@ A1. Start on one phone; queue a digital task; commit a durable remote work check
 
 A2. Recover the same logical instance from a **fresh** device with all previous devices absent; prove encrypted state authenticity, authorized key recovery, lost-device revocation, no duplicate worker or cross-owner leakage.
 
-A3. Enroll two and then 1,000 *simulated* Device Bridge bodies under one instance; verify single authoritative work history, per-device keys/grants, fencing and revocation. Simulation is not 1,000 real live devices.
+A3. Enroll two and then 1,000 *simulated* thin Device Bridge bodies under one instance; verify single authoritative work history, per-device keys/grants, fencing and revocation. Open multiple simultaneous UI projections for the same named worker but allow only one authoritative execution lease. Simulation is not 1,000 real live devices.
 
 A4. Demonstrate host failover with stateful checkpoints and worker leases while no user session is active. Distinguish device-only offline mode from real remote continuous execution.
 
@@ -228,7 +302,7 @@ A6. Golden Formula demonstrates byte-identical file roundtrip and original hash 
 
 A7. PCIe packed-batch A/B benchmark on identical physical hardware: measured raw/encoded bytes, x-link generation/width, throughput, copies, decoder overhead, sync, end-to-end latency, reconstructed hashes, VRAM pressure, Formula receipts and net benefit. No claimed lane multiplication.
 
-A8. Qualified LeeWay GPU service handles actual eligible voice, visual and model workloads; records independent physical execution and LDWMD leases. Ineligible control work runs via correct non-GPU provider without fabricating GPU use.
+A8. The unified LeeWay GPU operating world routes every task through the same existing service/authority composition, while its subordinate qualified GPU compute service handles eligible voice, visual and model workloads and records physical execution and LDWMD leases. CPU/OS work remains inside the operating environment without fabricating GPU silicon use; verify G-O1–G-O8.
 
 A9. Digital Brain, Content Vault and Continuum show one file/content ID across fast thumbnail, original document, experience/honeycomb and newly enrolled device; correct expiry, permissions and missing-cache fallback.
 
