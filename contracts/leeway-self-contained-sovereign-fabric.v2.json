@@ -29,7 +29,13 @@
     "newPermissionWithoutOwnerAuthority": false,
     "physicalHardwareRequiredSomewhere": true,
     "independentlyDurableComputeRequiredForZeroClientDevices": true,
-    "noExternalComputeOutcome": "BLOCKED_OR_DURABLY_QUEUED_NOT_COMPLETED"
+    "noExternalComputeOutcome": "BLOCKED_OR_DURABLY_QUEUED_NOT_COMPLETED",
+    "fullyInstalledOnUserDeviceRequired": false,
+    "oneAuthoritativeAgentLeePerOwnerScope": true,
+    "oneActiveExecutionLocationPerNamedWorker": true,
+    "multiWindowViewsAreNotNewWorkers": true,
+    "enterpriseAndStudentSameCoreDifferentAuthorizedScopes": true,
+    "noUserDeviceState": "CONTINUE_ON_INDEPENDENT_RUNTIME_OR_QUEUED_RECOVERY"
   },
   "requiredAlwaysOnLogicalServices": [
     "MACHINE_CONSCIOUSNESS",
@@ -268,7 +274,24 @@
       "LEEWAY_LIVE"
     ],
     "publicDistribution": "SIGNED_INSTALLER_PLUS_INTEGRITY_AND_VERSION",
-    "recovery": "INDEPENDENT_SURVIVABLE_AUTH_AND_ENCRYPTED_CONTINUUM_READBACK"
+    "recovery": "INDEPENDENT_SURVIVABLE_AUTH_AND_ENCRYPTED_CONTINUUM_READBACK",
+    "fullEcosystemDownloadRequired": false,
+    "browserOnlyRemoteWorkspaceSupported": true,
+    "nativeAdapterOptionalForPhysicalAccess": true,
+    "browserOnlyNativeDevicePrivileges": false,
+    "thinLocalInterfaces": [
+      "DEVICE_BRIDGE_NATIVE_WHEN_AUTHORIZED",
+      "DIGITAL_BRAIN_SCOPED_DEVICE_INTERFACE",
+      "CONTINUUM_SCOPED_SYNC_INTERFACE",
+      "DIAGNOSTICS_NATIVE_FACTS",
+      "CONTENT_VAULT_APPROVED_HOT_PROJECTIONS"
+    ],
+    "clientOSPreserved": true,
+    "browserViewNeedsNativeDevicePassport": false,
+    "nativeDeviceAccessNeedsFreshPassport": true,
+    "virtualTabletIsRemoteSandbox": true,
+    "productPreviewRequiresDeviceStorage": false,
+    "deviceExportRequiresExplicitApproval": true
   },
   "autonomousWork": {
     "workerModes": [
@@ -283,7 +306,13 @@
     "backgroundMaintenance": true,
     "idempotentSideEffects": true,
     "explicitBlockedEvidence": true,
-    "workforceMaySelfExpandAuthority": false
+    "workforceMaySelfExpandAuthority": false,
+    "namedWorkerSingleActiveAuthorityLease": true,
+    "namedWorkerSourceMustBeFencedBeforeDestinationActive": true,
+    "transferPreservesSameAgentId": true,
+    "transferLatencyZeroGuaranteed": false,
+    "multipleReadOnlyViewsAllowed": true,
+    "organizationScopedDataGrantsRequired": true
   },
   "standardOperationEnvelope": [
     "instanceId",
@@ -328,7 +357,11 @@
     "deviceDiscoveryMeansExecutionAdmitted": false,
     "simulated1000NodesMeans1000RealDevices": false,
     "noUserDeviceMeansNoPhysicalCompute": false,
-    "veritasMustBeIndependent": true
+    "veritasMustBeIndependent": true,
+    "noFullDownloadIsCurrentLiveFact": false,
+    "singleLeaseCrossLocationIsCurrentLiveFact": false,
+    "thinNativeAdapterCanBypassOS": false,
+    "noPhysicalDeviceImpliesNoComputeAnywhere": false
   },
   "referencedSourceRepos": [
     "4citeB4U/Machine-Consciousness",
@@ -345,5 +378,48 @@
     "4citeB4U/Leeway-Device-Extension",
     "4citeB4U/LEEWAY-VERITAS",
     "4citeB4U/Receipt-Authority"
-  ]
+  ],
+  "gpuOperatingWorld": {
+    "role": "PERSISTENT_COMPOSED_LEEWAY_OPERATING_ENVIRONMENT",
+    "isOnlyPhysicalAccelerator": false,
+    "isNewGovernanceOwner": false,
+    "canonicalExistingComputeServiceId": "leeway.gpu.service",
+    "noDuplicateRuntimeFabric": true,
+    "noDuplicateMachineConsciousness": true,
+    "noDuplicateFormula": true,
+    "noDuplicateContinuum": true,
+    "noDuplicateVeritas": true,
+    "permanentLogicalInstance": true,
+    "hostedCoreIndependentOfUserDevicesRequired": true,
+    "clientRequiresWholeWorldInstalled": false,
+    "allTasksWithinWorld": true,
+    "physicalGpuSiliconRequiredForEveryOperation": false,
+    "originalPhysicalBackendProofRequiredForAccelerationClaims": true,
+    "deviceBridgeRole": "BOUND_NATIVE_PHYSICAL_ACCESS_GATEWAY",
+    "deviceDataAccessPlane": [
+      "DIGITAL_BRAIN",
+      "CONTINUUM",
+      "DIAGNOSTICS",
+      "CONTENT_VAULT"
+    ],
+    "nativeOperationsStillRequireHostOsPermission": true,
+    "handoff": {
+      "agentId": "UNCHANGED",
+      "source": "RELEASE_OR_FENCE_ACTIVE_LEASE",
+      "destination": "ACQUIRE_EXCLUSIVE_LEASE_AFTER_RECONCILIATION",
+      "state": "CONTINUUM_DURABLE_CHECKPOINT",
+      "fencing": "MONOTONIC_GENERATION",
+      "concurrentActiveLocationsAllowed": false
+    },
+    "operatingWorldAcceptance": [
+      "G-O1",
+      "G-O2",
+      "G-O3",
+      "G-O4",
+      "G-O5",
+      "G-O6",
+      "G-O7",
+      "G-O8"
+    ]
+  }
 }
