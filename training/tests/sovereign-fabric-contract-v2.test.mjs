@@ -196,6 +196,6 @@ test('eight GPU operating world acceptance gates are specified and not productio
  const t=doc(),g=contract.gpuOperatingWorld;
  assert.deepEqual(g.operatingWorldAcceptance,Array.from({length:8},(_,i)=>'G-O'+(i+1)));
  for(const gate of g.operatingWorldAcceptance)assert.ok(t.includes(gate+':'),gate);
- assert.match(t,/single active authoritative execution lease/i);
+ assert.match(t,/at most one current authoritative active execution location\/lease/i);
  assert.match(t,/no device must download the complete LeeWay GPU/i);
 });
