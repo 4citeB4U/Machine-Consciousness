@@ -70,9 +70,9 @@ test('PCIe packing never invents physical bandwidth',()=>{
 });
 test('GPU logical availability is not perpetual hardware activity or every control instruction',()=>{
  const c=contract.computation;
- assert.equal(c.physicalGpuAlwaysBusy,false);
+ assert.equal(c.cpuExecutionRequired,true);
  assert.equal(c.physicalGpuNeededForEveryAction,false);
- assert.equal(c.qualifiedPhysicalProviderRequiredForGpuClaims,true);
+ assert.equal(c.physicalClientGpuProviderAllowed,false);
  assert.equal(c.noZeroLatencyGuarantee,true);
  assert.match(c.nonGpuTasks,/CPU/);
 });
@@ -137,7 +137,7 @@ test('original cross-repo map remains separate, and existing source roles are re
 
 test('GPU is the persistent operating world, not a physical GPU used for every action',()=>{
  const g=contract.gpuOperatingWorld;
- assert.equal(g.role,'PERSISTENT_COMPOSED_LEEWAY_OPERATING_ENVIRONMENT');
+ assert.equal(g.role,'PERSISTENT_FORMULA_DEVELOPED_SOFTWARE_GPU_OPERATING_WORLD');
  assert.equal(g.permanentLogicalInstance,true);
  assert.equal(g.isOnlyPhysicalAccelerator,false);
  assert.equal(g.physicalGpuSiliconRequiredForEveryOperation,false);
@@ -198,4 +198,35 @@ test('eight GPU operating world acceptance gates are specified and not productio
  for(const gate of g.operatingWorldAcceptance)assert.ok(t.includes(gate+':'),gate);
  assert.match(t,/at most one current authoritative active execution location\/lease/i);
  assert.match(t,/no device must download the complete LeeWay GPU/i);
+});
+
+test('physical host GPU is not a Leeway provider, optional accelerator, or fallback',()=>{
+ const g=contract.gpuOperatingWorld,c=contract.computation,t=doc();
+ assert.equal(g.usesClientPhysicalGraphicsGpu,false);
+ assert.equal(g.physicalGraphicsGpuAvailableAsFallback,false);
+ assert.equal(g.physicalGraphicsGpuOptionalAcceleration,false);
+ assert.equal(g.physicalGraphicsGpuPlacementAllowed,false);
+ assert.equal(c.physicalGraphicsGpuUsedForLeewayComputation,false);
+ assert.equal(c.physicalGraphicsGpuFallbackAllowed,false);
+ assert.equal(c.physicalGraphicsGpuOptionalAccelerationAllowed,false);
+ assert.equal(c.hostGraphicsGpuDiscoveryDoesNotEnrollProvider,true);
+ assert.equal(c.backendSupport,'APPROVED_SOFTWARE_GPU_ON_HOST_CPU_RAM_ONLY');
+ assert.match(t,/not LeeWay providers, fallbacks, optional accelerators or placement targets/);
+});
+test('Formula GPU mathematical workload uses CPU and RAM; client GPU is irrelevant',()=>{
+ const c=contract.computation,g=contract.gpuOperatingWorld;
+ assert.equal(c.cpuExecutionRequired,true);
+ assert.equal(c.ramExecutionRequired,true);
+ assert.equal(g.canonicalExecutionSubstrate,'LEEWAY_HOST_CPU_AND_RAM');
+ assert.equal(g.softwareCpuExecutionEvidenceRequired,true);
+ assert.equal(c.missingSoftwareModelCodecPolicy,'NOT_AVAILABLE_NO_PHYSICAL_GPU_FALLBACK');
+ assert.equal(contract.evidenceBoundaries.cpuSoftwareGpuProductionEndToEndVerified,false);
+});
+test('21 GPU components reflect Creator specification, not a fabricated source inventory',()=>{
+ const c=contract.computation,g=contract.gpuOperatingWorld;
+ assert.equal(c.creatorSpecifiedLogicalGpuComponents,21);
+ assert.equal(c.gpuComponentEnumerationState,'NOT_SOURCE_ENUMERATED');
+ assert.equal(g.creatorSpecifiedLogicalGpuComponents,21);
+ assert.equal(g.gpuComponentInventoryStatus,'CREATOR_SPECIFIED_SOURCE_INVENTORY_PENDING');
+ assert.equal(contract.evidenceBoundaries.creators21GpuComponentsAreSourceVerified,false);
 });
