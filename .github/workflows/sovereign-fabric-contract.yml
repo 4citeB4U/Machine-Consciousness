@@ -37,6 +37,7 @@ jobs:
       - name: Execute source-boundary regressions and preserve exact output
         shell: bash
         run: |
+          set +e
           set -uo pipefail
           mkdir -p .source-evidence
           node --test --test-reporter=tap training/tests/sovereign-fabric-contract-v2.test.mjs > .source-evidence/source-tests.tap 2>&1
