@@ -48,7 +48,7 @@ A user device may be lost, destroyed, disconnected or replaced while a previousl
 2. Runtime Fabric authoritative workplane, lease renewal, scheduled worker supervision, retries, incident and quarantine control.
 3. Continuum durable checkpoints, owner-scoped encrypted object lineage, experience graph and reconstruction metadata.
 4. Model Hub catalog, accepted model routes and residency policy, with at least one verified viable inference path for model-dependent work.
-5. LeeWay GPU **unified operating-world product identity** continuously composed from original Machine Consciousness, Runtime, Formula, Model Hub, Continuum and qualified compute adapters; physical accelerator dispatch remains a subordinate GPU-compute function.
+5. LeeWay GPU **persistent Formula-developed software computing world**, mathematically executing on the available LeeWay host's CPU/RAM. The client's physical graphics GPU is not a LeeWay provider.
 6. Voice/Live connection services, event and media routing, and offline outgoing message queues when no audience device is connected.
 7. Authenticated identity, Formula, independent Veritas and Receipt Authority integrations with explicit unavailable/hold states.
 8. Durable monitoring, supervisor, renewal and recovery that do not depend on a browser tab remaining open.
@@ -57,7 +57,7 @@ A user device may be lost, destroyed, disconnected or replaced while a previousl
 
 - Device Bridge supplies native permissions, sensory sources, UI actions and hardware status when a device is connected and authorized.
 - Each host Digital Brain/Diagnostics owns its local body facts and device-specific measurements. Losing that host loses **unreplicated** local evidence, but not independently admitted Continuum history.
-- CPU, RAM, camera, microphone, speaker, PCIe link, physical GPU and native model runtime belong to their respective host. They cannot be operated while that host is actually absent or powered down.
+- CPU, RAM, camera, microphone, speaker, PCIe, the physical graphics GPU and native model runtime belong to their respective host. LeeWay software math requires CPU/RAM on an available LeeWay execution host; a client's physical graphics GPU is exclusively the client's OS resource, never LeeWay compute.
 - Federate Web may import explicitly authorized remote resource offers; it is not a hidden peer-to-peer claim over all networks.
 
 **Always-on means the service identity/supervisor has uninterrupted *desired availability*, failover and observable SLOs. It does not require any single GPU chip at full utilization, prohibit standby or bypass host power/sleep. Continuous 24/7 accelerator capacity requires real powered infrastructure and a measured resource budget.**
@@ -72,7 +72,7 @@ A user device may be lost, destroyed, disconnected or replaced while a previousl
 | Formula | Canonical evaluation + math mappings and representation/codec policy | Measured window, typed data, workload and authority context | Task-bound decision and specific reversible representation proof when applicable |
 | Model Hub | Model identity, provider adapter, weight lifecycle, resident model set | Inference request authorized by Machine Consciousness + Runtime | Bounded model proposal; no tool authority |
 | LeeWay GPU operating world | One persistent *composed* product environment; not an additional controller | Existing Machine Consciousness / Runtime / Formula / Continuum / compute components | Continuous agent world identity and access surfaces; original owners retain each underlying authority |
-| LeeWay GPU compute service | Compute admission and logical accelerator API, host backend dispatch | Authorized workload, model/codec instructions, memory lease | Measured physical or CPU backend execution result, not governance |
+| LeeWay Formula software GPU service | Original CPU/RAM-executed software math and working sets | Authorized mathematical/voice/vision/model workloads and assets | Measured CPU/RAM software output; no host graphics GPU provider or fallback |
 | LDWMD | Actual working-set/VRAM lease and physical buffer accounting | Workload resource requirements | Allocation and release evidence; not durable Continuum |
 | PCIe/Interconnect adapter | Approved host↔device transfer representation, packing, locality and scheduling | Exact typed buffers and transfer limits | Integrity-checked physical transfer/readback; no invented lanes |
 | Digital Brain | Source documents, private record catalog, local body knowledge and diagnostics | Approved host files and Continuum authorized object IDs | Owner-scope file views/index and measured host status |
@@ -119,7 +119,7 @@ This **does not reassign** canonical authority: Machine Consciousness still owns
    │ Machine Consciousness / Agent Lee                        │
    │ Runtime Fabric jobs, single-presence workers and leases │
    │ Standards + Formula                                      │
-   │ Model Hub + GPU compute + LDWMD + PCIe / CPU backends    │
+   │ Model Hub + Formula software GPU + LDWMD / CPU + RAM    │
    │ Digital Brain + Continuum + Content Vault               │
    │ Voice + Vision + Live + Edge RTC + Federate Web          │
    │ Veritas + Receipt Authority + Learning boundaries       │
@@ -138,7 +138,7 @@ This **does not reassign** canonical authority: Machine Consciousness still owns
                    Android OS and approved native APIs
 \`\`\`
 
-The "planet" does not materialize when a person launches a browser; it is already operating on actual always-powered, independently durable compute/storage infrastructure. Losing every user device does not cancel already admitted digital tasks. Without surviving compute and storage anywhere, live execution is impossible: retain state as BLOCKED/QUEUED_RECOVERY rather than reporting completion. Always available logical service does not require one graphics card to remain at 100% utilization.
+The planet operates on powered CPU/RAM/storage infrastructure independent of client devices. A graphics card is not a LeeWay compute dependency at all. Losing the only client device does not cancel authorized digital work when an independent CPU execution home remains available. Without powered CPU, RAM, and required storage anywhere, active work is unavailable and must remain checkpointed or blocked.
 
 ### 6.2 No full ecosystem download; thin connection contracts
 
@@ -175,11 +175,19 @@ The host operating system remains the actual authority for local file access, pr
 
 The Tablet belongs to the user's sole Agent Lee. It provides desktop-like windows, resize, workflow view, code/product preview and sandboxed run/inspection for work hosted inside the LeeWay operating world. App previews run in isolated, measured worker containers or approved sandbox environments; the preview is not an unsolicited installation on the client's PC. Tablet and floating widget use **one live authoritative session state**, not duplicated application state. Outputs are retained in Continuum and represented in the Digital Brain index. Owner may later approve export/download/deploy to a physical device or enterprise repository; no device-local installation is a prerequisite to making or reviewing the product.
 
-### 6.6 LeeWay GPU is always part of operation, without hardware myths
+### 6.6 LeeWay GPU uses its own Formula software on CPU/RAM — never the client's graphics GPU
 
-Every agent action, request, file movement, inference, voice/vision turn or worker assignment traverses the **LeeWay GPU operating world** for scheduling/representation/resource accounting and the applicable original authority gates. When numerical, tensor, visual, audio, model or transform work benefits from it, the bounded GPU compute service can dispatch to a qualified physical GPU through LDWMD and backend adapters. When the work is native file I/O, network, persistence, cryptographic policy or OS operations, the operating environment uses the actual CPU, network, storage and OS services, while still remaining inside the **same named LeeWay operating world**.
+**Strict compute boundary:** LeeWay GPU is a persistent Formula-developed *software mathematical GPU system*, not the graphics card installed in a computer. Every task passes through this system's original operating services. Its numerical processing, memory representations, model inference, image/voice/vision processing and other implemented workloads run as LeeWay-owned software on an authorized **CPU and RAM**, available on a qualified operating host. The host's CUDA, D3D12, Vulkan, Metal or other physical graphics-GPU compute devices are **not** LeeWay providers, fallbacks, optional accelerators or placement targets.
 
-This is not an occasional external model-call helper. It is the continuously available software service identity and coordinated operating environment. The physical GPU compute engine remains a replaceable subsystem with explicit hardware evidence; the computing home must remain alive independently of client devices. Its actual service startup uses the original \`leeway.gpu.service\`, Runtime Fabric and existing Device Bridge GPU API—not a new central orchestrator. Hardware or host failure triggers supervised replacement/queuing/recovery, not cloning Agent Lee.
+The user's physical GPU belongs to the user's OS and applications. The user's browser may independently use its OS graphics stack to *display* a LeeWay UI; that does not turn those display instructions into LeeWay GPU processing. Diagnostics may observe a graphics card only under appropriate permissions, never automatically enroll it for compute.
+
+**Twenty-one GPU components:** The Creator specifies **21 internal LeeWay GPU components** (logical software mathematics/processing engines). Their actual names, source origins, executable implementations and individual health states have not been enumerated in the reviewed branch; classify the count as **CREATOR_SPECIFIED_SOURCE_INVENTORY_PENDING**, not 21 verified operating physical GPUs. Original component owners must deliver a source-pinned inventory, per-component Formula mapping and CPU test before admission. Do not invent component names.
+
+**CPU, not client GPU:** LeeWay has no separate hardware CPU of its own. Its software executes using the CPU/RAM of an available computing host. When the host is an independently running service, that CPU need not belong to the user's phone or computer. Without any available powered CPU/RAM, processing cannot proceed and work must remain checkpointed/blocked. The concept of a 24/7 LeeWay world is a service availability requirement, not a claim of processor-free arithmetic.
+
+**Image/model/voice output:** LeeWay's own implemented software algorithms, model weights and codecs must actually exist and execute on CPU/RAM to claim an image, inference or speech result. An unavailable model/codec produces a recorded NOT_AVAILABLE/QUEUED result. It never silently dispatches to the user's physical GPU.
+
+**Source-history boundary:** Existing D3D12/CUDA/Vulkan host GPU experiments retain their original historical evidence, but do not grant canonical runtime authority or change this software-only product requirement. This architecture source change alone does not deactivate all existing adapters or prove live GPU-independent generation; owner-reviewed integration and physical negative tests must follow.
 
 ### 6.7 Acceptance for this specific correction
 
@@ -189,7 +197,7 @@ This is not an occasional external model-call helper. It is the continuously ava
 - **G-O4:** Move one named worker between authorized Wisconsin/Texas service locations with same agentId; verify source lease revocation/fencing, destination lease acquisition, exact checkpoint/context restoration, failure/replay cases and no simultaneous action.
 - **G-O5:** Lose the only user device while an admitted product job runs. Independently hosted work completes; replacement device recovers the same result from Continuum. Never require a full environment download.
 - **G-O6:** Create a website and preview it on the Tablet. Inspect through Digital Brain/Continuum without permanent device-local project storage, then explicitly export and verify output to the physical device.
-- **G-O7:** Document an exact non-model task crossing the unified operating environment and actual CPU/OS execution without falsely claiming physical GPU silicon dispatched. Separately demonstrate real GPU-bound model/voice/vision execution with physical leases and receipts.
+- **G-O7:** Demonstrate real Formula-developed software GPU mathematical, model, image, voice and vision work on CPU/RAM with host graphics GPU compute entirely unavailable. Assert no vendor physical GPU fallback or placement, require actual output and original evidence.
 - **G-O8:** Fail all external compute nodes while users retain only a browser. Correct result is SERVICE_UNAVAILABLE/RECOVERY_QUEUED, not a fabricated self-running GPU.
 
 **Evidence boundary:** Previous component/integration tests supplied by the Creator are important engineering evidence and must be preserved. This new single-presence, no-full-download, always-on-service design requires its *own* G-O1–G-O8 live verification before claiming these exact product behaviors are deployed.
@@ -238,7 +246,7 @@ Model Hub is not Agent Lee's identity. The models become capabilities Agent Lee 
 
 **Vision** uses user/device-authorized camera, screen or stored visual sources through Device Bridge. Frame sampling, encoding, multimodal inference, redaction and evidence can use GPU when available. Losing the only camera terminates *live physical observation*, but does not stop work that only needs previously retained authorized data. No source may imply omnipresent vision without actual sensors.
 
-**Edge RTC** provides live low-latency audio/video paths and transport telemetry. **LeeWay Live** supplies the user-facing continuous presence and reconnection experience, not an independent identity or compute authority. **Federate Web** imports scoped resource offers and routes across separate security domains. None is a surrogate for durable task storage, authorization or GPU silicon.
+**Edge RTC** provides live low-latency audio/video paths and transport telemetry. **LeeWay Live** supplies user-facing presence/reconnection, not a second runtime. **Federate Web** imports scoped resource offers. None substitutes for durable storage, authorization, or actual host CPU/RAM execution of LeeWay software GPU mathematics.
 
 When external LLMs join through Device Bridge, their voice and vision privileges must be explicit session-scoped capabilities. A connected model does not automatically receive a microphone, camera, universal host control or permission to speak through a shared speaker.
 
@@ -280,7 +288,7 @@ Every governed message must carry or resolve:
 - instanceId, ownerScope, operationId, causalityId, stage and idempotencyKey;
 - responsible authority, caller role, requested capability, exact device/workload target and approved limits;
 - original content/media digest, typed format, declared codec, exact-vs-lossy policy and reconstruction/quality profile;
-- resource assignment and compute backend state, GPU/CPU/VRAM/PCIe budget and physical evidence or NOT_EXECUTED;
+- resource assignment and compute backend state, LeeWay software GPU/host CPU/RAM and transfer budget with actual physical CPU evidence or NOT_EXECUTED;
 - Formula decision reference and actual execution identity, Veritas PRE/POST references, original Receipt Authority record and Continuum checkpoint/readback status;
 - non-secret provenance, permission/revocation state, failure and resume instructions.
 
@@ -302,7 +310,7 @@ A6. Golden Formula demonstrates byte-identical file roundtrip and original hash 
 
 A7. PCIe packed-batch A/B benchmark on identical physical hardware: measured raw/encoded bytes, x-link generation/width, throughput, copies, decoder overhead, sync, end-to-end latency, reconstructed hashes, VRAM pressure, Formula receipts and net benefit. No claimed lane multiplication.
 
-A8. The unified LeeWay GPU operating world routes every task through the same existing service/authority composition, while its subordinate qualified GPU compute service handles eligible voice, visual and model workloads and records physical execution and LDWMD leases. CPU/OS work remains inside the operating environment without fabricating GPU silicon use; verify G-O1–G-O8.
+A8. The LeeWay GPU world coordinates all governed tasks through the original services. Its Formula-developed software GPU mathematics uses host CPU/RAM for eligible voice, visual, image and model workloads; the user device's physical graphics GPU is not a provider, optional accelerator or fallback. Verify real software results and G-O1–G-O8.
 
 A9. Digital Brain, Content Vault and Continuum show one file/content ID across fast thumbnail, original document, experience/honeycomb and newly enrolled device; correct expiry, permissions and missing-cache fallback.
 
