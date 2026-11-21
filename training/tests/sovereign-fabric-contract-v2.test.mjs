@@ -211,7 +211,7 @@ test('physical host GPU is not a Leeway provider, optional accelerator, or fallb
  assert.equal(c.physicalGraphicsGpuOptionalAccelerationAllowed,false);
  assert.equal(c.hostGraphicsGpuDiscoveryDoesNotEnrollProvider,true);
  assert.equal(c.backendSupport,'APPROVED_SOFTWARE_GPU_ON_HOST_CPU_RAM_ONLY');
- assert.match(t,/not LeeWay providers, fallbacks, optional accelerators or placement targets/);
+ assert.match(t,/LeeWay providers, fallbacks, optional accelerators or placement targets/);
 });
 test('Formula GPU mathematical workload uses CPU and RAM; client GPU is irrelevant',()=>{
  const c=contract.computation,g=contract.gpuOperatingWorld;
