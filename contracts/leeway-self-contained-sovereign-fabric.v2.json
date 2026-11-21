@@ -220,13 +220,22 @@
   },
   "computation": {
     "logicalGpuServiceDesiredAvailability": "CONTINUOUS",
-    "physicalGpuAlwaysBusy": false,
+    "leewayGpuMeaning": "FORMULA_DEVELOPED_SOFTWARE_GPU_OPERATING_WORLD",
+    "cpuExecutionRequired": true,
+    "ramExecutionRequired": true,
+    "physicalClientGpuProviderAllowed": false,
+    "physicalGraphicsGpuUsedForLeewayComputation": false,
+    "physicalGraphicsGpuFallbackAllowed": false,
+    "physicalGraphicsGpuOptionalAccelerationAllowed": false,
     "physicalGpuNeededForEveryAction": false,
-    "qualifiedPhysicalProviderRequiredForGpuClaims": true,
-    "gpuWorkloadAdmission": "RUNTIME_FORMULA_LDWMD_DEVICE_VERITAS_EVIDENCE",
-    "backendSupport": "PLATFORM_SCOPED_QUALIFIED_NOT_UNIVERSAL",
-    "nonGpuTasks": "CPU_IO_NETWORK_AS_APPROPRIATE",
+    "hostGraphicsGpuDiscoveryDoesNotEnrollProvider": true,
+    "gpuWorkloadAdmission": "RUNTIME_FORMULA_LDWMD_SOFTWARE_CPU_EVIDENCE_VERITAS",
+    "backendSupport": "APPROVED_SOFTWARE_GPU_ON_HOST_CPU_RAM_ONLY",
+    "nonGpuTasks": "HOST_CPU_IO_NETWORK_AS_APPROPRIATE",
+    "missingSoftwareModelCodecPolicy": "NOT_AVAILABLE_NO_PHYSICAL_GPU_FALLBACK",
     "resourceUnavailability": "DEGRADED_OR_QUEUED_WITH_EVIDENCE",
+    "creatorSpecifiedLogicalGpuComponents": 21,
+    "gpuComponentEnumerationState": "NOT_SOURCE_ENUMERATED",
     "noZeroLatencyGuarantee": true
   },
   "interconnect": {
@@ -361,7 +370,10 @@
     "noFullDownloadIsCurrentLiveFact": false,
     "singleLeaseCrossLocationIsCurrentLiveFact": false,
     "thinNativeAdapterCanBypassOS": false,
-    "noPhysicalDeviceImpliesNoComputeAnywhere": false
+    "noPhysicalDeviceImpliesNoComputeAnywhere": false,
+    "creators21GpuComponentsAreSourceVerified": false,
+    "hostPhysicalGraphicsGpuIsLeewayCompute": false,
+    "cpuSoftwareGpuProductionEndToEndVerified": false
   },
   "referencedSourceRepos": [
     "4citeB4U/Machine-Consciousness",
@@ -380,7 +392,7 @@
     "4citeB4U/Receipt-Authority"
   ],
   "gpuOperatingWorld": {
-    "role": "PERSISTENT_COMPOSED_LEEWAY_OPERATING_ENVIRONMENT",
+    "role": "PERSISTENT_FORMULA_DEVELOPED_SOFTWARE_GPU_OPERATING_WORLD",
     "isOnlyPhysicalAccelerator": false,
     "isNewGovernanceOwner": false,
     "canonicalExistingComputeServiceId": "leeway.gpu.service",
@@ -394,7 +406,7 @@
     "clientRequiresWholeWorldInstalled": false,
     "allTasksWithinWorld": true,
     "physicalGpuSiliconRequiredForEveryOperation": false,
-    "originalPhysicalBackendProofRequiredForAccelerationClaims": true,
+    "originalPhysicalBackendProofRequiredForAccelerationClaims": false,
     "deviceBridgeRole": "BOUND_NATIVE_PHYSICAL_ACCESS_GATEWAY",
     "deviceDataAccessPlane": [
       "DIGITAL_BRAIN",
@@ -420,6 +432,14 @@
       "G-O6",
       "G-O7",
       "G-O8"
-    ]
+    ],
+    "creatorSpecifiedLogicalGpuComponents": 21,
+    "gpuComponentInventoryStatus": "CREATOR_SPECIFIED_SOURCE_INVENTORY_PENDING",
+    "canonicalExecutionSubstrate": "LEEWAY_HOST_CPU_AND_RAM",
+    "usesClientPhysicalGraphicsGpu": false,
+    "physicalGraphicsGpuAvailableAsFallback": false,
+    "physicalGraphicsGpuOptionalAcceleration": false,
+    "physicalGraphicsGpuPlacementAllowed": false,
+    "softwareCpuExecutionEvidenceRequired": true
   }
 }
