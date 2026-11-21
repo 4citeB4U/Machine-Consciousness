@@ -134,3 +134,68 @@ test('original cross-repo map remains separate, and existing source roles are re
  assert.ok(contract.referencedSourceRepos.includes('4citeB4U/LeeWay-Edge-GPU'));
  assert.ok(contract.referencedSourceRepos.includes('4citeB4U/Leeway-Device-Extension'));
 });
+
+test('GPU is the persistent operating world, not a physical GPU used for every action',()=>{
+ const g=contract.gpuOperatingWorld;
+ assert.equal(g.role,'PERSISTENT_COMPOSED_LEEWAY_OPERATING_ENVIRONMENT');
+ assert.equal(g.permanentLogicalInstance,true);
+ assert.equal(g.isOnlyPhysicalAccelerator,false);
+ assert.equal(g.physicalGpuSiliconRequiredForEveryOperation,false);
+ assert.equal(g.allTasksWithinWorld,true);
+ assert.equal(g.canonicalExistingComputeServiceId,'leeway.gpu.service');
+ for(const k of ['noDuplicateRuntimeFabric','noDuplicateMachineConsciousness','noDuplicateFormula','noDuplicateContinuum','noDuplicateVeritas'])
+   assert.equal(g[k],true,k);
+});
+test('no full ecosystem download; browser-only access never grants native device capabilities',()=>{
+ const d=contract.deviceEnrollment,g=contract.gpuOperatingWorld;
+ assert.equal(d.fullEcosystemDownloadRequired,false);
+ assert.equal(g.clientRequiresWholeWorldInstalled,false);
+ assert.equal(d.browserOnlyRemoteWorkspaceSupported,true);
+ assert.equal(d.browserOnlyNativeDevicePrivileges,false);
+ assert.equal(d.nativeAdapterOptionalForPhysicalAccess,true);
+ assert.equal(d.nativeDeviceAccessNeedsFreshPassport,true);
+ assert.equal(d.browserViewNeedsNativeDevicePassport,false);
+ assert.equal(d.clientOSPreserved,true);
+ assert.deepEqual(g.deviceDataAccessPlane,['DIGITAL_BRAIN','CONTINUUM','DIAGNOSTICS','CONTENT_VAULT']);
+ assert.equal(g.nativeOperationsStillRequireHostOsPermission,true);
+});
+test('one named employee can have many views but only one live authoritative execution lease',()=>{
+ const a=contract.autonomousWork,g=contract.gpuOperatingWorld.handoff;
+ assert.equal(contract.coreDesign.oneAuthoritativeAgentLeePerOwnerScope,true);
+ assert.equal(contract.coreDesign.oneActiveExecutionLocationPerNamedWorker,true);
+ assert.equal(a.namedWorkerSingleActiveAuthorityLease,true);
+ assert.equal(a.multipleReadOnlyViewsAllowed,true);
+ assert.equal(g.concurrentActiveLocationsAllowed,false);
+ assert.equal(g.agentId,'UNCHANGED');
+ assert.match(g.source,/RELEASE_OR_FENCE/);
+ assert.match(g.destination,/ACQUIRE_EXCLUSIVE_LEASE/);
+ assert.equal(a.transferLatencyZeroGuaranteed,false);
+});
+test('student and enterprise share one ecosystem with separately authorized organization scopes',()=>{
+ assert.equal(contract.coreDesign.enterpriseAndStudentSameCoreDifferentAuthorizedScopes,true);
+ assert.equal(contract.autonomousWork.organizationScopedDataGrantsRequired,true);
+ assert.equal(contract.coreDesign.humanPresentForEveryStep,false);
+ assert.equal(contract.coreDesign.newPermissionWithoutOwnerAuthority,false);
+});
+test('Virtual Tablet previews output in the remote sandbox, exporting to a device is optional',()=>{
+ const d=contract.deviceEnrollment;
+ assert.equal(d.virtualTabletIsRemoteSandbox,true);
+ assert.equal(d.productPreviewRequiresDeviceStorage,false);
+ assert.equal(d.deviceExportRequiresExplicitApproval,true);
+ assert.equal(contract.contentModel.canonicalOwner,'LEEWAY_CONTINUUM');
+});
+test('device loss keeps core remotely available only with independent physical infrastructure',()=>{
+ const g=contract.gpuOperatingWorld,c=contract.coreDesign;
+ assert.equal(g.hostedCoreIndependentOfUserDevicesRequired,true);
+ assert.equal(c.physicalHardwareRequiredSomewhere,true);
+ assert.match(c.noUserDeviceState,/CONTINUE_ON_INDEPENDENT_RUNTIME_OR_QUEUED_RECOVERY/);
+ assert.equal(contract.evidenceBoundaries.noFullDownloadIsCurrentLiveFact,false);
+ assert.equal(contract.evidenceBoundaries.singleLeaseCrossLocationIsCurrentLiveFact,false);
+});
+test('eight GPU operating world acceptance gates are specified and not production-certified',()=>{
+ const t=doc(),g=contract.gpuOperatingWorld;
+ assert.deepEqual(g.operatingWorldAcceptance,Array.from({length:8},(_,i)=>'G-O'+(i+1)));
+ for(const gate of g.operatingWorldAcceptance)assert.ok(t.includes(gate+':'),gate);
+ assert.match(t,/single active authoritative execution lease/i);
+ assert.match(t,/no device must download the complete LeeWay GPU/i);
+});
