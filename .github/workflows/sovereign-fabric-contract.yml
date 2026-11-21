@@ -1,0 +1,57 @@
+# LEEWAY HEADER — DO NOT REMOVE
+# REGION: LEEWAY.MACHINE_CONSCIOUSNESS.SOVEREIGN_FABRIC.CI
+# TAG: LEEWAY.SOVEREIGN.FABRIC.V2.SOURCE_QUALIFICATION
+# 5WH:
+# WHAT = Check proposed one-instance sovereign fabric source invariants.
+# WHY = Prevent CI/source claims from being mistaken for 24/7 GPU or full device-loss acceptance.
+# WHO = LeeWay Machine Consciousness source contributors under Creator/Standards.
+# WHERE = .github/workflows/sovereign-fabric-contract.yml.
+# WHEN = 2026-11-21.
+# HOW = Node source checks, source invariant unit tests, hash-recorded PASS/FAIL artifact.
+# LICENSE = Existing repository terms.
+# AUTHORITY = SOURCE_CI_ONLY, no actual host, Veritas, receipt or live recovery admission.
+name: Sovereign Fabric V2 Source Contract
+on:
+  pull_request:
+    paths:
+      - 'docs/architecture/leeway-self-contained-sovereign-operating-fabric-v2.md'
+      - 'contracts/leeway-self-contained-sovereign-fabric.v2.json'
+      - 'training/tests/sovereign-fabric-contract-v2.test.mjs'
+      - '.github/workflows/sovereign-fabric-contract.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source-contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate test and declarative contract
+        run: |
+          node --check training/tests/sovereign-fabric-contract-v2.test.mjs
+          node --input-type=module -e "import fs from 'node:fs'; const c=JSON.parse(fs.readFileSync('contracts/leeway-self-contained-sovereign-fabric.v2.json','utf8')); if(c.schema!=='leeway.sovereign.operating-fabric.v2')process.exit(1);"
+      - name: Execute source-boundary regressions and preserve exact output
+        shell: bash
+        run: |
+          set +e
+          set -uo pipefail
+          mkdir -p .source-evidence
+          node --test --test-reporter=tap training/tests/sovereign-fabric-contract-v2.test.mjs > .source-evidence/source-tests.tap 2>&1
+          result=$?
+          sha256sum .source-evidence/source-tests.tap > .source-evidence/source-tests.sha256
+          printf '{"schema":"leeway.sovereign.fabric.v2.source-proof","commit":"%s","exitCode":%d,"productionVerified":false,"physicalGpuVerified":false}\n' "${GITHUB_SHA}" "${result}" > .source-evidence/qualification.json
+          cat .source-evidence/source-tests.tap
+          exit "${result}"
+      - name: Preserve original source test output for PASS or FAIL
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sovereign-fabric-source-${{ github.run_id }}-${{ github.run_attempt }}
+          path: .source-evidence/
+          include-hidden-files: true
+          if-no-files-found: warn
+          retention-days: 90

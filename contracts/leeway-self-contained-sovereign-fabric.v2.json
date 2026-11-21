@@ -1,0 +1,445 @@
+{
+  "_header": {
+    "LEEWAY_HEADER": "DO NOT REMOVE",
+    "REGION": "LEEWAY.MACHINE_CONSCIOUSNESS.SOVEREIGN_FABRIC.CONTRACT",
+    "TAG": "LEEWAY.SOVEREIGN.OPERATING_FABRIC.V2",
+    "WHAT": "Machine-readable architecture requirements for a portable, continuously available single LeeWay instance",
+    "WHY": "Prevent loss of device, model, voice, vision, data or GPU from silently redefining Machine Consciousness identity or work durability",
+    "WHO": "Creator authority, original source owners; outside contributor authored candidate, not Agent Lee",
+    "WHERE": "contracts/leeway-self-contained-sovereign-fabric.v2.json",
+    "WHEN": "2026-11-21",
+    "HOW": "Enforce identity/authority boundaries, content model, resource proofs, recovery acceptance",
+    "LICENSE": "Existing repository terms",
+    "STATUS": "SOURCE_REVIEW_ONLY_NOT_PRODUCTION"
+  },
+  "schema": "leeway.sovereign.operating-fabric.v2",
+  "version": 2,
+  "sourceQualification": "SOURCE_REVIEW_ONLY",
+  "originalAuthorityMap": "docs/architecture/leeway-cross-repository-integration-v1.md",
+  "architectureSpecification": "docs/architecture/leeway-self-contained-sovereign-operating-fabric-v2.md",
+  "coreDesign": {
+    "logicalIdentityScope": "OIDC_ISSUER_SUBJECT_TO_OPAQUE_INSTANCE",
+    "namedIdentity": "AGENT_LEE",
+    "controlOwner": "LEEWAY_MACHINE_CONSCIOUSNESS",
+    "workplaneOwner": "LEEWAY_RUNTIME_FABRIC",
+    "deviceBodies": "DISTINCT_SIGNED_DEVICES_SAME_LOGICAL_INSTANCE",
+    "maximumDesignDeviceCount": 1000,
+    "singleWriterFencingRequired": true,
+    "humanPresentForEveryStep": false,
+    "newPermissionWithoutOwnerAuthority": false,
+    "physicalHardwareRequiredSomewhere": true,
+    "independentlyDurableComputeRequiredForZeroClientDevices": true,
+    "noExternalComputeOutcome": "BLOCKED_OR_DURABLY_QUEUED_NOT_COMPLETED",
+    "fullyInstalledOnUserDeviceRequired": false,
+    "oneAuthoritativeAgentLeePerOwnerScope": true,
+    "oneActiveExecutionLocationPerNamedWorker": true,
+    "multiWindowViewsAreNotNewWorkers": true,
+    "enterpriseAndStudentSameCoreDifferentAuthorizedScopes": true,
+    "noUserDeviceState": "CONTINUE_ON_INDEPENDENT_RUNTIME_OR_QUEUED_RECOVERY"
+  },
+  "requiredAlwaysOnLogicalServices": [
+    "MACHINE_CONSCIOUSNESS",
+    "RUNTIME_FABRIC_SUPERVISOR",
+    "CONTINUUM_CHECKPOINTS_AND_OBJECTS",
+    "MODEL_HUB_REGISTRY",
+    "LEEWAY_GPU_COMPUTE_COORDINATION",
+    "IDENTITY_AND_FORMULA_BINDINGS",
+    "VOICE_LIVE_SESSION_SERVICES",
+    "RECEIPT_RECOVERY_MONITOR"
+  ],
+  "authorities": {
+    "machineConsciousness": {
+      "owns": "GOAL_POLICY_ORCHESTRATION_AND_AGENT_LEE_IDENTITY",
+      "cannotOwn": [
+        "INDEPENDENT_VERITAS_SIGNER",
+        "FORMULA_KERNEL",
+        "CANONICAL_RECEIPT_APPEND",
+        "HOST_HARDWARE"
+      ]
+    },
+    "runtimeFabric": {
+      "owns": "DURABLE_WORKPLANE_AND_SCHEDULER",
+      "cannotOwn": [
+        "MODEL_IDENTITY",
+        "FORMULA_KERNEL",
+        "VERITAS_SELF_APPROVAL"
+      ]
+    },
+    "formula": {
+      "owns": "MATHEMATICAL_EVALUATION_AND_REPRESENTATION_POLICY",
+      "cannotOwn": [
+        "RECEIPT_MINTING",
+        "PHYSICAL_EXECUTION",
+        "VERITAS_CERTIFICATION"
+      ]
+    },
+    "gpu": {
+      "owns": "LOGICAL_COMPUTE_SERVICE_AND_PHYSICAL_BACKEND_ROUTING",
+      "cannotOwn": [
+        "AUTHORIZATION",
+        "MODEL_POLICY",
+        "DURABLE_CONTINUUM_OBJECTS"
+      ]
+    },
+    "modelHub": {
+      "owns": "MODEL_CATALOG_ADAPTER_RESIDENCY_AND_SWAP",
+      "cannotOwn": [
+        "DIRECT_DEVICE_EXECUTION",
+        "ISSUER_AUTHORITY",
+        "AGENT_LEE_IDENTITY"
+      ]
+    },
+    "deviceBridge": {
+      "owns": "ENROLLED_NATIVE_DEVICE_CAPABILITIES",
+      "cannotOwn": [
+        "CROSS_DEVICE_OWNER_IDENTITY",
+        "GLOBAL_TASK_AUTHORITY",
+        "INDEPENDENT_VERITAS"
+      ]
+    },
+    "digitalBrain": {
+      "owns": "BODY_LOCAL_FACTS_AND_OWNER_CONTENT_INDEX",
+      "cannotOwn": [
+        "CROSS_OWNER_RAW_FILES",
+        "CENTRAL_FABRIC_WORKPLANE"
+      ]
+    },
+    "contentVault": {
+      "owns": "AUTHORIZED_HOT_MEDIA_PROJECTIONS_AND_CACHE",
+      "cannotOwn": [
+        "CANONICAL_OBJECT_AUTHORITY",
+        "UNREVOCABLE_ACCESS"
+      ]
+    },
+    "continuum": {
+      "owns": "DURABLE_OWNER_SCOPED_OBJECTS_EXPERIENCES_AND_CHECKPOINTS",
+      "cannotOwn": [
+        "PHYSICAL_VRAM",
+        "INDEPENDENT_VERITAS",
+        "PERMISSION_EXPANSION"
+      ]
+    },
+    "voiceFabric": {
+      "owns": "SPEECH_IDENTITY_ORDER_INTERRUPT_AND_OUTPUT",
+      "cannotOwn": [
+        "TASK_AUTHORITY",
+        "CANONICAL_IDENTITY_ISSUER"
+      ]
+    },
+    "visionFabric": {
+      "owns": "AUTHORIZED_VISUAL_OBSERVATIONS",
+      "cannotOwn": [
+        "UNAUTHORIZED_SENSORS",
+        "AUTONOMOUS_NATIVE_CONTROL"
+      ]
+    },
+    "edgeRTC": {
+      "owns": "BOUNDED_LIVE_AUDIO_VIDEO_TRANSPORT",
+      "cannotOwn": [
+        "CANONICAL_OWNER_STORAGE",
+        "VERITAS_CERTIFICATION"
+      ]
+    },
+    "leewayLive": {
+      "owns": "CONTINUOUS_USER_PRESENCE_AND_RECONNECTION_SURFACE",
+      "cannotOwn": [
+        "SECOND_RUNTIME",
+        "PHYSICAL_GPU"
+      ]
+    },
+    "federateWeb": {
+      "owns": "SCOPED_EXTERNAL_RESOURCE_OFFERS_AND_ROUTES",
+      "cannotOwn": [
+        "UNRESTRICTED_NETWORK_CONTROL",
+        "SECOND_BRAIN"
+      ]
+    },
+    "extension": {
+      "owns": "SIGNED_INSTALL_AND_APPROVED_DEVICE_ENROLLMENT_ENTRY",
+      "cannotOwn": [
+        "RECOVERY_SECRET_AUTHORITY",
+        "BROWSER_PRIVILEGED_EXECUTOR"
+      ]
+    },
+    "veritas": {
+      "owns": "INDEPENDENT_SIGNED_PRE_POST_DECISIONS",
+      "cannotOwn": [
+        "SELF_APPROVAL",
+        "FORMULA_REPLACEMENT",
+        "EXECUTOR_PRIVILEGES"
+      ]
+    },
+    "receiptAuthority": {
+      "owns": "ACTUAL_APPEND_ONLY_RECEIPT_CUSTODY",
+      "cannotOwn": [
+        "INVENTED_EXECUTION",
+        "MODEL_TOOL_AUTHORITY"
+      ]
+    },
+    "learningLedger": {
+      "owns": "QUALIFIED_RECEIPT_BACKED_LEARNING",
+      "cannotOwn": [
+        "PRODUCTION_GRANTS",
+        "SOURCE_TRUTH"
+      ]
+    },
+    "ldwmd": {
+      "owns": "ACTUAL_VRAM_WORKING_SET_LEASES",
+      "cannotOwn": [
+        "DURABLE_CONTINUUM_MEMORY"
+      ]
+    }
+  },
+  "contentModel": {
+    "canonicalOwner": "LEEWAY_CONTINUUM",
+    "logicalContentId": "CONTENT_ADDRESSED_SHA256",
+    "digitalBrainRole": "OWNER_CONTENT_INDEX_PLUS_BODY_LOCAL_FACTS",
+    "honeycombRole": "CONTINUUM_EXPERIENCE_PROJECTION",
+    "contentVaultRole": "REVOCABLE_ENCRYPTED_HOT_CACHE_AND_THUMBNAILS",
+    "exactObjectReconstructionRequired": true,
+    "cacheMissPolicy": "CANONICAL_READBACK_OR_UNAVAILABLE",
+    "privacyDefault": "NO_SILENT_CROSS_DEVICE_DATA_UPLOAD",
+    "remoteBackup": "EXPLICIT_ENCRYPTED_APPROVED_SCOPE"
+  },
+  "formula": {
+    "everyGovernedOperationReceivesFormulaContext": true,
+    "exactDataTransform": "REVERSIBLE_OR_ORIGINAL",
+    "reconstructionValidation": [
+      "EXACT_ORIGINAL_BYTE_LENGTH",
+      "EXACT_SHA256"
+    ],
+    "incompressiblePolicy": "PRESERVE_ORIGINAL_REPRESENTATION",
+    "modelWeightTransform": "LOSSY_TRANSFORM_ONLY_WITH_SEPARATE_QUALITY_EVALUATION",
+    "semanticSummaries": "PROJECTION_WITH_ORIGINAL_PROVENANCE",
+    "neverCompressAway": [
+      "SIGNATURES",
+      "OWNER_AUTHORIZATION",
+      "AUDIT_ORIGINALS",
+      "VERITAS_EVIDENCE"
+    ]
+  },
+  "computation": {
+    "logicalGpuServiceDesiredAvailability": "CONTINUOUS",
+    "leewayGpuMeaning": "FORMULA_DEVELOPED_SOFTWARE_GPU_OPERATING_WORLD",
+    "cpuExecutionRequired": true,
+    "ramExecutionRequired": true,
+    "physicalClientGpuProviderAllowed": false,
+    "physicalGraphicsGpuUsedForLeewayComputation": false,
+    "physicalGraphicsGpuFallbackAllowed": false,
+    "physicalGraphicsGpuOptionalAccelerationAllowed": false,
+    "physicalGpuNeededForEveryAction": false,
+    "hostGraphicsGpuDiscoveryDoesNotEnrollProvider": true,
+    "gpuWorkloadAdmission": "RUNTIME_FORMULA_LDWMD_SOFTWARE_CPU_EVIDENCE_VERITAS",
+    "backendSupport": "APPROVED_SOFTWARE_GPU_ON_HOST_CPU_RAM_ONLY",
+    "nonGpuTasks": "HOST_CPU_IO_NETWORK_AS_APPROPRIATE",
+    "missingSoftwareModelCodecPolicy": "NOT_AVAILABLE_NO_PHYSICAL_GPU_FALLBACK",
+    "resourceUnavailability": "DEGRADED_OR_QUEUED_WITH_EVIDENCE",
+    "creatorSpecifiedLogicalGpuComponents": 21,
+    "gpuComponentEnumerationState": "NOT_SOURCE_ENUMERATED",
+    "noZeroLatencyGuarantee": true
+  },
+  "interconnect": {
+    "logicalCapsule": "BOUNDED_TYPED_CHUNKED_TRANSFER",
+    "originalItemsIndividuallyHashed": true,
+    "maxItemsPerCapsule": "MEASURED_BUFFER_AND_LINK_BUDGET",
+    "cannotMultiplyPhysicalPcieLanes": true,
+    "optimizationTarget": "MORE_USEFUL_WORK_PER_PHYSICAL_BYTE",
+    "acceptance": [
+      "MEASURED_BANDWIDTH",
+      "MEASURED_TRANSFER_BYTES",
+      "COPY_COUNT",
+      "SYNC_COST",
+      "DECODE_COST",
+      "BYTE_EXACT_READBACK"
+    ]
+  },
+  "modelHub": {
+    "modelAuthority": "MACHINE_CONSCIOUSNESS_RUNTIME_FORMULA",
+    "directProviderModelToolExecution": false,
+    "desiredWarmCountMin": 1,
+    "desiredWarmCountMax": 2,
+    "warmResidencySubjectToRealMemory": true,
+    "coldWeightsRetainedByApprovedCanonicalStore": true,
+    "providerAdapters": [
+      "OLLAMA",
+      "HUGGING_FACE",
+      "LLAMA_CPP",
+      "VLLM",
+      "TRANSFORMERS",
+      "LEEWAY_GPU_QUALIFIED"
+    ],
+    "inferenceResult": "PROPOSAL_NOT_ACTION"
+  },
+  "deviceEnrollment": {
+    "instanceSurvivesTotalDeviceLoss": true,
+    "lostDeviceIsNotMandatoryRecoveryFactor": true,
+    "existingChromeExtensionCanInitiateEnrollment": true,
+    "chromeExtensionCannotGrantOSPrivileges": true,
+    "newDeviceNeedsFreshKeyAndGrant": true,
+    "sameSessionViews": [
+      "AGENT_VIRTUAL_TABLET",
+      "FLOATING_WIDGET",
+      "EXTENSION",
+      "LEEWAY_LIVE"
+    ],
+    "publicDistribution": "SIGNED_INSTALLER_PLUS_INTEGRITY_AND_VERSION",
+    "recovery": "INDEPENDENT_SURVIVABLE_AUTH_AND_ENCRYPTED_CONTINUUM_READBACK",
+    "fullEcosystemDownloadRequired": false,
+    "browserOnlyRemoteWorkspaceSupported": true,
+    "nativeAdapterOptionalForPhysicalAccess": true,
+    "browserOnlyNativeDevicePrivileges": false,
+    "thinLocalInterfaces": [
+      "DEVICE_BRIDGE_NATIVE_WHEN_AUTHORIZED",
+      "DIGITAL_BRAIN_SCOPED_DEVICE_INTERFACE",
+      "CONTINUUM_SCOPED_SYNC_INTERFACE",
+      "DIAGNOSTICS_NATIVE_FACTS",
+      "CONTENT_VAULT_APPROVED_HOT_PROJECTIONS"
+    ],
+    "clientOSPreserved": true,
+    "browserViewNeedsNativeDevicePassport": false,
+    "nativeDeviceAccessNeedsFreshPassport": true,
+    "virtualTabletIsRemoteSandbox": true,
+    "productPreviewRequiresDeviceStorage": false,
+    "deviceExportRequiresExplicitApproval": true
+  },
+  "autonomousWork": {
+    "workerModes": [
+      "RUNNING",
+      "LEASED",
+      "PAUSED_RESIDENT",
+      "STANDBY",
+      "HIBERNATED",
+      "FAILED"
+    ],
+    "originalTaskContinuesWithoutUserDevice": true,
+    "backgroundMaintenance": true,
+    "idempotentSideEffects": true,
+    "explicitBlockedEvidence": true,
+    "workforceMaySelfExpandAuthority": false,
+    "namedWorkerSingleActiveAuthorityLease": true,
+    "namedWorkerSourceMustBeFencedBeforeDestinationActive": true,
+    "transferPreservesSameAgentId": true,
+    "transferLatencyZeroGuaranteed": false,
+    "multipleReadOnlyViewsAllowed": true,
+    "organizationScopedDataGrantsRequired": true
+  },
+  "standardOperationEnvelope": [
+    "instanceId",
+    "ownerScope",
+    "operationId",
+    "causalityId",
+    "stage",
+    "idempotencyKey",
+    "authority",
+    "capability",
+    "target",
+    "originalContentSha256",
+    "representationPolicy",
+    "formulaDecisionRef",
+    "computeBackendState",
+    "executionIdentity",
+    "physicalEvidenceRef",
+    "veritasPreRef",
+    "veritasPostRef",
+    "canonicalReceiptRef",
+    "continuumReadbackState",
+    "resumePoint"
+  ],
+  "acceptanceIds": [
+    "A1",
+    "A2",
+    "A3",
+    "A4",
+    "A5",
+    "A6",
+    "A7",
+    "A8",
+    "A9",
+    "A10",
+    "A11",
+    "A12"
+  ],
+  "evidenceBoundaries": {
+    "specificationIsProductionProof": false,
+    "sourceCiIsPhysicalGpuProof": false,
+    "catalogMeansWeightsLoaded": false,
+    "deviceDiscoveryMeansExecutionAdmitted": false,
+    "simulated1000NodesMeans1000RealDevices": false,
+    "noUserDeviceMeansNoPhysicalCompute": false,
+    "veritasMustBeIndependent": true,
+    "noFullDownloadIsCurrentLiveFact": false,
+    "singleLeaseCrossLocationIsCurrentLiveFact": false,
+    "thinNativeAdapterCanBypassOS": false,
+    "noPhysicalDeviceImpliesNoComputeAnywhere": false,
+    "creators21GpuComponentsAreSourceVerified": false,
+    "hostPhysicalGraphicsGpuIsLeewayCompute": false,
+    "cpuSoftwareGpuProductionEndToEndVerified": false
+  },
+  "referencedSourceRepos": [
+    "4citeB4U/Machine-Consciousness",
+    "4citeB4U/Leeway-Runtime-Fabric",
+    "4citeB4U/Leeway-formula-live",
+    "4citeB4U/LeeWay-Edge-GPU",
+    "4citeB4U/LeeWay-Model-Hub",
+    "4citeB4U/LeeWay-Continuum",
+    "4citeB4U/LEEWAY-DEVICE-BRIDGE",
+    "4citeB4U/LeeWay-Voice-Fabric",
+    "4citeB4U/Leeway-live",
+    "4citeB4U/Leeway-Federate-Web",
+    "4citeB4U/LeeWay-Edge-RTC",
+    "4citeB4U/Leeway-Device-Extension",
+    "4citeB4U/LEEWAY-VERITAS",
+    "4citeB4U/Receipt-Authority"
+  ],
+  "gpuOperatingWorld": {
+    "role": "PERSISTENT_FORMULA_DEVELOPED_SOFTWARE_GPU_OPERATING_WORLD",
+    "isOnlyPhysicalAccelerator": false,
+    "isNewGovernanceOwner": false,
+    "canonicalExistingComputeServiceId": "leeway.gpu.service",
+    "noDuplicateRuntimeFabric": true,
+    "noDuplicateMachineConsciousness": true,
+    "noDuplicateFormula": true,
+    "noDuplicateContinuum": true,
+    "noDuplicateVeritas": true,
+    "permanentLogicalInstance": true,
+    "hostedCoreIndependentOfUserDevicesRequired": true,
+    "clientRequiresWholeWorldInstalled": false,
+    "allTasksWithinWorld": true,
+    "physicalGpuSiliconRequiredForEveryOperation": false,
+    "originalPhysicalBackendProofRequiredForAccelerationClaims": false,
+    "deviceBridgeRole": "BOUND_NATIVE_PHYSICAL_ACCESS_GATEWAY",
+    "deviceDataAccessPlane": [
+      "DIGITAL_BRAIN",
+      "CONTINUUM",
+      "DIAGNOSTICS",
+      "CONTENT_VAULT"
+    ],
+    "nativeOperationsStillRequireHostOsPermission": true,
+    "handoff": {
+      "agentId": "UNCHANGED",
+      "source": "RELEASE_OR_FENCE_ACTIVE_LEASE",
+      "destination": "ACQUIRE_EXCLUSIVE_LEASE_AFTER_RECONCILIATION",
+      "state": "CONTINUUM_DURABLE_CHECKPOINT",
+      "fencing": "MONOTONIC_GENERATION",
+      "concurrentActiveLocationsAllowed": false
+    },
+    "operatingWorldAcceptance": [
+      "G-O1",
+      "G-O2",
+      "G-O3",
+      "G-O4",
+      "G-O5",
+      "G-O6",
+      "G-O7",
+      "G-O8"
+    ],
+    "creatorSpecifiedLogicalGpuComponents": 21,
+    "gpuComponentInventoryStatus": "CREATOR_SPECIFIED_SOURCE_INVENTORY_PENDING",
+    "canonicalExecutionSubstrate": "LEEWAY_HOST_CPU_AND_RAM",
+    "usesClientPhysicalGraphicsGpu": false,
+    "physicalGraphicsGpuAvailableAsFallback": false,
+    "physicalGraphicsGpuOptionalAcceleration": false,
+    "physicalGraphicsGpuPlacementAllowed": false,
+    "softwareCpuExecutionEvidenceRequired": true
+  }
+}
