@@ -15,6 +15,9 @@ on:
     paths:
       - 'training/reference/model-support-convergence.mjs'
       - 'training/tests/model-support-convergence.test.mjs'
+      - 'training/reference/matrix-objective-composition.mjs'
+      - 'training/tests/matrix-objective-composition.test.mjs'
+      - 'docs/architecture/matrix-machine-consciousness-composition-20261122.md'
       - '.github/workflows/model-support-convergence.yml'
   workflow_dispatch:
 permissions:
@@ -36,5 +39,7 @@ jobs:
         run: |
           node --check training/reference/model-support-convergence.mjs
           node --check training/tests/model-support-convergence.test.mjs
+          node --check training/reference/matrix-objective-composition.mjs
+          node --check training/tests/matrix-objective-composition.test.mjs
       - name: Pure owner-source and denial tests
-        run: node --test training/tests/model-support-convergence.test.mjs
+        run: node --test training/tests/model-support-convergence.test.mjs training/tests/matrix-objective-composition.test.mjs
