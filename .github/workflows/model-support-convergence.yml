@@ -1,0 +1,45 @@
+# LEEWAY HEADER — DO NOT REMOVE
+# REGION: LEEWAY.MACHINE_CONSCIOUSNESS.SUPPORT_TEAM.CI
+# TAG: LEEWAY.MACHINE_CONSCIOUSNESS.SUPPORT_TEAM.CONVERGENCE.CI
+# 5WH:
+# WHAT = Validate bounded model assistance and native Machine Consciousness worker proposals.
+# WHY = Models can critique and propose but cannot self-create workers or act as Veritas.
+# WHO = Creator and Machine Consciousness source owner; GPT-6 external support contributor.
+# WHERE = .github/workflows/model-support-convergence.yml.
+# WHEN = 2026-11-22.
+# HOW = Run Node syntax and source-only negative tests on three supported CI operating systems.
+# LICENSE = Existing repository terms unchanged.
+name: Machine Consciousness model-support source checks
+on:
+  pull_request:
+    paths:
+      - 'training/reference/model-support-convergence.mjs'
+      - 'training/tests/model-support-convergence.test.mjs'
+      - 'training/reference/matrix-objective-composition.mjs'
+      - 'training/tests/matrix-objective-composition.test.mjs'
+      - 'docs/architecture/matrix-machine-consciousness-composition-20261122.md'
+      - '.github/workflows/model-support-convergence.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source-negative-tests:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Syntax check
+        run: |
+          node --check training/reference/model-support-convergence.mjs
+          node --check training/tests/model-support-convergence.test.mjs
+          node --check training/reference/matrix-objective-composition.mjs
+          node --check training/tests/matrix-objective-composition.test.mjs
+      - name: Pure owner-source and denial tests
+        run: node --test training/tests/model-support-convergence.test.mjs training/tests/matrix-objective-composition.test.mjs
